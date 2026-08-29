@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-29T17:42:30.488Z",
+  "generatedAt": "2026-08-29T21:00:44.298Z",
   "count": 128,
   "skills": [
     {
@@ -8,7 +8,7 @@
       "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/autoplan/SKILL.md",
+      "path": "skills/community/gstack/autoplan/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -16,7 +16,7 @@
       "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/design-html/SKILL.md",
+      "path": "skills/community/gstack/design-html/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -24,7 +24,7 @@
       "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/design-shotgun/SKILL.md",
+      "path": "skills/community/gstack/design-shotgun/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -32,7 +32,7 @@
       "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open on excalidraw.com, and rendered SVG + PNG. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/diagram/SKILL.md",
+      "path": "skills/community/gstack/diagram/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -40,7 +40,7 @@
       "description": "Run a relentless, one-question-at-a-time interview that stress-tests a plan, design, architecture, or decision before any work starts. Walks the decision tree branch by branch, resolving dependencies in order, and gives a recommended answer with every question. Use when the user says 'grill me', 'grill me on this', 'stress-test this plan', 'poke holes in this', 'interrogate my design', 'challenge my thinking', 'pressure-test this idea', or wants soft spots in a plan surfaced before building.",
       "domain": "design",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/grill-me/SKILL.md",
+      "path": "skills/personal/grill-me/SKILL.md",
       "version": null
     },
     {
@@ -48,7 +48,7 @@
       "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/openclaw/skills/gstack-openclaw-office-hours/SKILL.md",
+      "path": "skills/community/gstack/openclaw/skills/gstack-openclaw-office-hours/SKILL.md",
       "version": null
     },
     {
@@ -56,7 +56,7 @@
       "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/ios-clean/SKILL.md",
+      "path": "skills/community/gstack/ios-clean/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -64,7 +64,7 @@
       "description": "Visual design audit for iOS apps on real hardware. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/ios-design-review/SKILL.md",
+      "path": "skills/community/gstack/ios-design-review/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -72,7 +72,7 @@
       "description": "Autonomous iOS bug fixer. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/ios-fix/SKILL.md",
+      "path": "skills/community/gstack/ios-fix/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -80,7 +80,7 @@
       "description": "Live-device iOS QA for SwiftUI apps. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/ios-qa/SKILL.md",
+      "path": "skills/community/gstack/ios-qa/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -88,7 +88,7 @@
       "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/ios-sync/SKILL.md",
+      "path": "skills/community/gstack/ios-sync/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -96,7 +96,7 @@
       "description": "YC Office Hours — two modes. Startup mode: six forcing questions that expose demand reality, status quo, desperate specificity, narrowest wedge, observation, and future-fit. Builder mode: design thinking brainstorming for side projects, hackathons, learning, and open source. Saves a design doc. Use when asked to \"brainstorm this\", \"I have an idea\", \"help me think through this\", \"office hours\", or \"is this worth building\". Proactively invoke this skill (do NOT answer directly) when the user describes a new product idea, asks whether something is worth building, wants to think through design decisions for something that doesn't exist yet, or is exploring a concept before any code is written. Use before /plan-ceo-review or /plan-eng-review. (gstack)",
       "domain": "design",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/office-hours/SKILL.md",
+      "path": "skills/personal/office-hours/SKILL.md",
       "version": "2.0.0"
     },
     {
@@ -104,7 +104,7 @@
       "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
       "domain": "design",
       "collection": "gstack",
-      "path": "collections/gstack/plan-design-review/SKILL.md",
+      "path": "skills/community/gstack/plan-design-review/SKILL.md",
       "version": "2.0.0"
     },
     {
@@ -112,7 +112,7 @@
       "description": "Design charts and tables using Edward Tufte's data-visualization methodology from The Visual Display of Quantitative Information. Use when the user asks for Tufte-style charts, high data-ink visuals, small multiples, minimal/clean charts, executive-grade graphics, or says to apply Tufte principles, maximize data-ink, remove chartjunk, or design for comparison and analytical clarity. Tool-agnostic — applies to matplotlib, plotly, D3, ggplot, Excel, or any rendering tool.",
       "domain": "design",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/tufte-charts/SKILL.md",
+      "path": "skills/personal/tufte-charts/SKILL.md",
       "version": null
     },
     {
@@ -120,7 +120,7 @@
       "description": "OpenAI Codex CLI wrapper — three modes. (gstack)",
       "domain": "engineering",
       "collection": "gstack",
-      "path": "collections/gstack/codex/SKILL.md",
+      "path": "skills/community/gstack/codex/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -128,7 +128,7 @@
       "description": "Live developer experience audit. (gstack)",
       "domain": "engineering",
       "collection": "gstack",
-      "path": "collections/gstack/devex-review/SKILL.md",
+      "path": "skills/community/gstack/devex-review/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -136,7 +136,7 @@
       "description": "Pair a remote AI agent with your browser. (gstack)",
       "domain": "engineering",
       "collection": "gstack",
-      "path": "collections/gstack/pair-agent/SKILL.md",
+      "path": "skills/community/gstack/pair-agent/SKILL.md",
       "version": "0.1.0"
     },
     {
@@ -144,7 +144,7 @@
       "description": "Interactive developer experience plan review. (gstack)",
       "domain": "engineering",
       "collection": "gstack",
-      "path": "collections/gstack/plan-devex-review/SKILL.md",
+      "path": "skills/community/gstack/plan-devex-review/SKILL.md",
       "version": "2.0.0"
     },
     {
@@ -152,7 +152,7 @@
       "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)",
       "domain": "engineering",
       "collection": "gstack",
-      "path": "collections/gstack/plan-tune/SKILL.md",
+      "path": "skills/community/gstack/plan-tune/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -160,7 +160,7 @@
       "description": "When the user wants to plan, design, or implement an A/B test or experiment. Also use when the user mentions \\\"A/B test,\\\" \\\"split test,\\\" \\\"experiment,\\\" \\\"test this change,\\\" \\\"variant copy,\\\" \\\"multivariate test,\\\" \\\"hypothesis,\\\" \\\"should I test this,\\\" \\\"which version is better,\\\" \\\"test two versions,\\\" \\\"statistical significance,\\\" or \\\"how long should I run this test.\\\" Use this whenever someone is comparing two approaches and wants to measure which performs better. For tracking implementation, see analytics-tracking. For page-level conversion optimization, see page-cro.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/ab-test-setup/SKILL.md",
+      "path": "skills/personal/marketing/ab-test-setup/SKILL.md",
       "version": null
     },
     {
@@ -168,7 +168,7 @@
       "description": "When the user wants to generate, iterate, or scale ad creative — headlines, descriptions, primary text, or full ad variations — for any paid advertising platform. Also use when the user mentions 'ad copy variations,' 'ad creative,' 'generate headlines,' 'RSA headlines,' 'bulk ad copy,' 'ad iterations,' 'creative testing,' 'ad performance optimization,' 'write me some ads,' 'Facebook ad copy,' 'Google ad headlines,' 'LinkedIn ad text,' or 'I need more ad variations.' Use this whenever someone needs to produce ad copy at scale or iterate on existing ads. For campaign strategy and targeting, see paid-ads. For landing page copy, see copywriting.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/ad-creative/SKILL.md",
+      "path": "skills/personal/marketing/ad-creative/SKILL.md",
       "version": null
     },
     {
@@ -176,7 +176,7 @@
       "description": "When the user wants to optimize content for AI search engines, get cited by LLMs, or appear in AI-generated answers. Also use when the user mentions 'AI SEO,' 'AEO,' 'GEO,' 'LLMO,' 'answer engine optimization,' 'generative engine optimization,' 'LLM optimization,' 'AI Overviews,' 'optimize for ChatGPT,' 'optimize for Perplexity,' 'AI citations,' 'AI visibility,' 'zero-click search,' 'how do I show up in AI answers,' 'LLM mentions,' or 'optimize for Claude/Gemini.' Use this whenever someone wants their content to be cited or surfaced by AI assistants and AI search engines. For traditional technical and on-page SEO audits, see seo-audit. For structured data implementation, see schema-markup.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/ai-seo/SKILL.md",
+      "path": "skills/personal/marketing/ai-seo/SKILL.md",
       "version": null
     },
     {
@@ -184,7 +184,7 @@
       "description": "When the user wants to set up, improve, or audit analytics tracking and measurement. Also use when the user mentions \\\"set up tracking,\\\" \\\"GA4,\\\" \\\"Google Analytics,\\\" \\\"conversion tracking,\\\" \\\"event tracking,\\\" \\\"UTM parameters,\\\" \\\"tag manager,\\\" \\\"GTM,\\\" \\\"analytics implementation,\\\" \\\"tracking plan,\\\" \\\"how do I measure this,\\\" \\\"track conversions,\\\" \\\"attribution,\\\" \\\"Mixpanel,\\\" \\\"Segment,\\\" \\\"are my events firing,\\\" or \\\"analytics isn't working.\\\" Use this whenever someone asks how to know if something is working or wants to measure marketing results. For A/B test measurement, see ab-test-setup.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/analytics-tracking/SKILL.md",
+      "path": "skills/personal/marketing/analytics-tracking/SKILL.md",
       "version": null
     },
     {
@@ -192,7 +192,7 @@
       "description": "Cross-model benchmark for gstack skills. (gstack)",
       "domain": "marketing",
       "collection": "gstack",
-      "path": "collections/gstack/benchmark-models/SKILL.md",
+      "path": "skills/community/gstack/benchmark-models/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -200,7 +200,7 @@
       "description": "When the user wants to reduce churn, build cancellation flows, set up save offers, recover failed payments, or implement retention strategies. Also use when the user mentions 'churn,' 'cancel flow,' 'offboarding,' 'save offer,' 'dunning,' 'failed payment recovery,' 'win-back,' 'retention,' 'exit survey,' 'pause subscription,' 'involuntary churn,' 'people keep canceling,' 'churn rate is too high,' 'how do I keep users,' or 'customers are leaving.' Use this whenever someone is losing subscribers or wants to build systems to prevent it. For post-cancel win-back email sequences, see email-sequence. For in-app upgrade paywalls, see paywall-upgrade-cro.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/churn-prevention/SKILL.md",
+      "path": "skills/personal/marketing/churn-prevention/SKILL.md",
       "version": null
     },
     {
@@ -208,7 +208,7 @@
       "description": "Write B2B cold emails and follow-up sequences that get replies. Use when the user wants to write cold outreach emails, prospecting emails, cold email campaigns, sales development emails, or SDR emails. Also use when the user mentions \\\"cold outreach,\\\" \\\"prospecting email,\\\" \\\"outbound email,\\\" \\\"email to leads,\\\" \\\"reach out to prospects,\\\" \\\"sales email,\\\" \\\"follow-up email sequence,\\\" \\\"nobody's replying to my emails,\\\" or \\\"how do I write a cold email.\\\" Covers subject lines, opening lines, body copy, CTAs, personalization, and multi-touch follow-up sequences. For warm/lifecycle email sequences, see email-sequence. For sales collateral beyond emails, see sales-enablement.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/cold-email/SKILL.md",
+      "path": "skills/personal/marketing/cold-email/SKILL.md",
       "version": null
     },
     {
@@ -216,7 +216,7 @@
       "description": "When the user wants to create competitor comparison or alternative pages for SEO and sales enablement. Also use when the user mentions 'alternative page,' 'vs page,' 'competitor comparison,' 'comparison page,' '[Product] vs [Product],' '[Product] alternative,' 'competitive landing pages,' 'how do we compare to X,' 'battle card,' or 'competitor teardown.' Use this for any content that positions your product against competitors. Covers four formats: singular alternative, plural alternatives, you vs competitor, and competitor vs competitor. For sales-specific competitor docs, see sales-enablement.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/competitor-alternatives/SKILL.md",
+      "path": "skills/personal/marketing/competitor-alternatives/SKILL.md",
       "version": null
     },
     {
@@ -224,7 +224,7 @@
       "description": "When the user wants to edit, review, or improve existing marketing copy. Also use when the user mentions 'edit this copy,' 'review my copy,' 'copy feedback,' 'proofread,' 'polish this,' 'make this better,' 'copy sweep,' 'tighten this up,' 'this reads awkwardly,' 'clean up this text,' 'too wordy,' or 'sharpen the messaging.' Use this when the user already has copy and wants it improved rather than rewritten from scratch. For writing new copy, see copywriting.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/copy-editing/SKILL.md",
+      "path": "skills/personal/marketing/copy-editing/SKILL.md",
       "version": null
     },
     {
@@ -232,7 +232,7 @@
       "description": "When the user wants to write, rewrite, or improve marketing copy for any page — including homepage, landing pages, pricing pages, feature pages, about pages, or product pages. Also use when the user says \\\"write copy for,\\\" \\\"improve this copy,\\\" \\\"rewrite this page,\\\" \\\"marketing copy,\\\" \\\"headline help,\\\" \\\"CTA copy,\\\" \\\"value proposition,\\\" \\\"tagline,\\\" \\\"subheadline,\\\" \\\"hero section copy,\\\" \\\"above the fold,\\\" \\\"this copy is weak,\\\" \\\"make this more compelling,\\\" or \\\"help me describe my product.\\\" Use this whenever someone is working on website text that needs to persuade or convert. For email copy, see email-sequence. For popup copy, see popup-cro. For editing existing copy, see copy-editing.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/copywriting/SKILL.md",
+      "path": "skills/personal/marketing/copywriting/SKILL.md",
       "version": null
     },
     {
@@ -240,7 +240,7 @@
       "description": "When the user wants to create or optimize an email sequence, drip campaign, automated email flow, or lifecycle email program. Also use when the user mentions \\\"email sequence,\\\" \\\"drip campaign,\\\" \\\"nurture sequence,\\\" \\\"onboarding emails,\\\" \\\"welcome sequence,\\\" \\\"re-engagement emails,\\\" \\\"email automation,\\\" \\\"lifecycle emails,\\\" \\\"trigger-based emails,\\\" \\\"email funnel,\\\" \\\"email workflow,\\\" \\\"what emails should I send,\\\" \\\"welcome series,\\\" or \\\"email cadence.\\\" Use this for any multi-email automated flow. For cold outreach emails, see cold-email. For in-app onboarding, see onboarding-cro.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/email-sequence/SKILL.md",
+      "path": "skills/personal/marketing/email-sequence/SKILL.md",
       "version": null
     },
     {
@@ -248,7 +248,7 @@
       "description": "When the user wants to optimize any form that is NOT signup/registration — including lead capture forms, contact forms, demo request forms, application forms, survey forms, or checkout forms. Also use when the user mentions \\\"form optimization,\\\" \\\"lead form conversions,\\\" \\\"form friction,\\\" \\\"form fields,\\\" \\\"form completion rate,\\\" \\\"contact form,\\\" \\\"nobody fills out our form,\\\" \\\"form abandonment,\\\" \\\"too many fields,\\\" \\\"demo request form,\\\" or \\\"lead form isn't converting.\\\" Use this for any non-signup form that captures information. For signup/registration forms, see signup-flow-cro. For popups containing forms, see popup-cro.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/form-cro/SKILL.md",
+      "path": "skills/personal/marketing/form-cro/SKILL.md",
       "version": null
     },
     {
@@ -256,7 +256,7 @@
       "description": "When the user wants to plan, evaluate, or build a free tool for marketing purposes — lead generation, SEO value, or brand awareness. Also use when the user mentions \\\"engineering as marketing,\\\" \\\"free tool,\\\" \\\"marketing tool,\\\" \\\"calculator,\\\" \\\"generator,\\\" \\\"interactive tool,\\\" \\\"lead gen tool,\\\" \\\"build a tool for leads,\\\" \\\"free resource,\\\" \\\"ROI calculator,\\\" \\\"grader tool,\\\" \\\"audit tool,\\\" \\\"should I build a free tool,\\\" or \\\"tools for lead gen.\\\" Use this whenever someone wants to build something useful and give it away to attract leads or earn links. For downloadable content lead magnets (ebooks, checklists, templates), see lead-magnets.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/free-tool-strategy/SKILL.md",
+      "path": "skills/personal/marketing/free-tool-strategy/SKILL.md",
       "version": null
     },
     {
@@ -264,7 +264,7 @@
       "description": "When the user wants to plan a product launch, feature announcement, or release strategy. Also use when the user mentions 'launch,' 'Product Hunt,' 'feature release,' 'announcement,' 'go-to-market,' 'beta launch,' 'early access,' 'waitlist,' 'product update,' 'how do I launch this,' 'launch checklist,' 'GTM plan,' or 'we're about to ship.' Use this whenever someone is preparing to release something publicly. For ongoing marketing after launch, see marketing-ideas.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/launch-strategy/SKILL.md",
+      "path": "skills/personal/marketing/launch-strategy/SKILL.md",
       "version": null
     },
     {
@@ -272,7 +272,7 @@
       "description": "When the user wants to create, plan, or optimize a lead magnet for email capture or lead generation. Also use when the user mentions \\\"lead magnet,\\\" \\\"gated content,\\\" \\\"content upgrade,\\\" \\\"downloadable,\\\" \\\"ebook,\\\" \\\"cheat sheet,\\\" \\\"checklist,\\\" \\\"template download,\\\" \\\"opt-in,\\\" \\\"freebie,\\\" \\\"PDF download,\\\" \\\"resource library,\\\" \\\"content offer,\\\" \\\"email capture content,\\\" \\\"Notion template,\\\" \\\"spreadsheet template,\\\" or \\\"what should I give away for emails.\\\" Use this for planning what to create and how to distribute it. For interactive tools as lead magnets, see free-tool-strategy. For writing the actual content, see copywriting. For the email sequence after capture, see email-sequence.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/lead-magnets/SKILL.md",
+      "path": "skills/personal/marketing/lead-magnets/SKILL.md",
       "version": null
     },
     {
@@ -280,7 +280,7 @@
       "description": "Marketing skills for Perplexity Computer. CRO, copywriting, SEO, analytics, growth engineering, sales enablement, and more. Use when the user wants help with any marketing task — conversion optimization, writing copy, SEO audits, email sequences, paid ads, pricing strategy, launch planning, or any growth-related work. This is the parent skill that orchestrates 33 specialized marketing sub-skills. Built by Corey Haines, adapted from github.com/coreyhaines31/marketingskills.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/SKILL.md",
+      "path": "skills/personal/marketing/SKILL.md",
       "version": null
     },
     {
@@ -288,7 +288,7 @@
       "description": "When the user needs marketing ideas, inspiration, or strategies for their SaaS or software product. Also use when the user asks for 'marketing ideas,' 'growth ideas,' 'how to market,' 'marketing strategies,' 'marketing tactics,' 'ways to promote,' 'ideas to grow,' 'what else can I try,' 'I don't know how to market this,' 'brainstorm marketing,' or 'what marketing should I do.' Use this as a starting point whenever someone is stuck or looking for inspiration on how to grow. For specific channel execution, see the relevant skill (paid-ads, social-content, email-sequence, etc.).",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/marketing-ideas/SKILL.md",
+      "path": "skills/personal/marketing/marketing-ideas/SKILL.md",
       "version": null
     },
     {
@@ -296,7 +296,7 @@
       "description": "When the user wants to apply psychological principles, mental models, or behavioral science to marketing. Also use when the user mentions 'psychology,' 'mental models,' 'cognitive bias,' 'persuasion,' 'behavioral science,' 'why people buy,' 'decision-making,' 'consumer behavior,' 'anchoring,' 'social proof,' 'scarcity,' 'loss aversion,' 'framing,' or 'nudge.' Use this whenever someone wants to understand or leverage how people think and make decisions in a marketing context.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/marketing-psychology/SKILL.md",
+      "path": "skills/personal/marketing/marketing-psychology/SKILL.md",
       "version": null
     },
     {
@@ -304,7 +304,7 @@
       "description": "When the user wants to optimize post-signup onboarding, user activation, first-run experience, or time-to-value. Also use when the user mentions \\\"onboarding flow,\\\" \\\"activation rate,\\\" \\\"user activation,\\\" \\\"first-run experience,\\\" \\\"empty states,\\\" \\\"onboarding checklist,\\\" \\\"aha moment,\\\" \\\"new user experience,\\\" \\\"users aren't activating,\\\" \\\"nobody completes setup,\\\" \\\"low activation rate,\\\" \\\"users sign up but don't use the product,\\\" \\\"time to value,\\\" or \\\"first session experience.\\\" Use this whenever users are signing up but not sticking around. For signup/registration optimization, see signup-flow-cro. For ongoing email sequences, see email-sequence.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/onboarding-cro/SKILL.md",
+      "path": "skills/personal/marketing/onboarding-cro/SKILL.md",
       "version": null
     },
     {
@@ -312,7 +312,7 @@
       "description": "When the user wants to optimize, improve, or increase conversions on any marketing page — including homepage, landing pages, pricing pages, feature pages, or blog posts. Also use when the user says \\\"CRO,\\\" \\\"conversion rate optimization,\\\" \\\"this page isn't converting,\\\" \\\"improve conversions,\\\" \\\"why isn't this page working,\\\" \\\"my landing page sucks,\\\" \\\"nobody's converting,\\\" \\\"low conversion rate,\\\" \\\"bounce rate is too high,\\\" \\\"people leave without signing up,\\\" or \\\"this page needs work.\\\" Use this even if the user just shares a URL and asks for feedback — they probably want conversion help. For signup/registration flows, see signup-flow-cro. For post-signup activation, see onboarding-cro. For forms outside of signup, see form-cro. For popups/modals, see popup-cro.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/page-cro/SKILL.md",
+      "path": "skills/personal/marketing/page-cro/SKILL.md",
       "version": null
     },
     {
@@ -320,7 +320,7 @@
       "description": "When the user wants to create or optimize in-app paywalls, upgrade screens, upsell modals, or feature gates. Also use when the user mentions \\\"paywall,\\\" \\\"upgrade screen,\\\" \\\"upgrade modal,\\\" \\\"upsell,\\\" \\\"feature gate,\\\" \\\"convert free to paid,\\\" \\\"freemium conversion,\\\" \\\"trial expiration screen,\\\" \\\"limit reached screen,\\\" \\\"plan upgrade prompt,\\\" \\\"in-app pricing,\\\" \\\"free users won't upgrade,\\\" \\\"trial to paid conversion,\\\" or \\\"how do I get users to pay.\\\" Use this for any in-product moment where you're asking users to upgrade. Distinct from public pricing pages (see page-cro) — this focuses on in-product upgrade moments where the user has already experienced value. For pricing decisions, see pricing-strategy.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/paywall-upgrade-cro/SKILL.md",
+      "path": "skills/personal/marketing/paywall-upgrade-cro/SKILL.md",
       "version": null
     },
     {
@@ -328,7 +328,7 @@
       "description": "When the user wants to create or optimize popups, modals, overlays, slide-ins, or banners for conversion purposes. Also use when the user mentions \\\"exit intent,\\\" \\\"popup conversions,\\\" \\\"modal optimization,\\\" \\\"lead capture popup,\\\" \\\"email popup,\\\" \\\"announcement banner,\\\" \\\"overlay,\\\" \\\"collect emails with a popup,\\\" \\\"exit popup,\\\" \\\"scroll trigger,\\\" \\\"sticky bar,\\\" or \\\"notification bar.\\\" Use this for any overlay or interrupt-style conversion element. For forms outside of popups, see form-cro. For general page conversion optimization, see page-cro.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/popup-cro/SKILL.md",
+      "path": "skills/personal/marketing/popup-cro/SKILL.md",
       "version": null
     },
     {
@@ -336,7 +336,7 @@
       "description": "When the user wants help with pricing decisions, packaging, or monetization strategy. Also use when the user mentions 'pricing,' 'pricing tiers,' 'freemium,' 'free trial,' 'packaging,' 'price increase,' 'value metric,' 'Van Westendorp,' 'willingness to pay,' 'monetization,' 'how much should I charge,' 'my pricing is wrong,' 'pricing page,' 'annual vs monthly,' 'per seat pricing,' or 'should I offer a free plan.' Use this whenever someone is figuring out what to charge or how to structure their plans. For in-app upgrade screens, see paywall-upgrade-cro.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/pricing-strategy/SKILL.md",
+      "path": "skills/personal/marketing/pricing-strategy/SKILL.md",
       "version": null
     },
     {
@@ -344,7 +344,7 @@
       "description": "When the user wants to create or update their product marketing context document. Also use when the user mentions 'product context,' 'marketing context,' 'set up context,' 'positioning,' 'who is my target audience,' 'describe my product,' 'ICP,' 'ideal customer profile,' or wants to avoid repeating foundational information across marketing tasks. Use this at the start of any new project before using other marketing skills — it creates `product-marketing-context.md` that all other skills reference for product, audience, and positioning context.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/product-marketing-context/SKILL.md",
+      "path": "skills/personal/marketing/product-marketing-context/SKILL.md",
       "version": null
     },
     {
@@ -352,7 +352,7 @@
       "description": "When the user wants to create SEO-driven pages at scale using templates and data. Also use when the user mentions \\\"programmatic SEO,\\\" \\\"template pages,\\\" \\\"pages at scale,\\\" \\\"directory pages,\\\" \\\"location pages,\\\" \\\"[keyword] + [city] pages,\\\" \\\"comparison pages,\\\" \\\"integration pages,\\\" \\\"building many pages for SEO,\\\" \\\"pSEO,\\\" \\\"generate 100 pages,\\\" \\\"data-driven pages,\\\" or \\\"templated landing pages.\\\" Use this whenever someone wants to create many similar pages targeting different keywords or locations. For auditing existing SEO issues, see seo-audit. For content strategy planning, see content-strategy.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/programmatic-seo/SKILL.md",
+      "path": "skills/personal/marketing/programmatic-seo/SKILL.md",
       "version": null
     },
     {
@@ -360,7 +360,7 @@
       "description": "When the user wants to create, optimize, or analyze a referral program, affiliate program, or word-of-mouth strategy. Also use when the user mentions 'referral,' 'affiliate,' 'ambassador,' 'word of mouth,' 'viral loop,' 'refer a friend,' 'partner program,' 'referral incentive,' 'how to get referrals,' 'customers referring customers,' or 'affiliate payout.' Use this whenever someone wants existing users or partners to bring in new customers. For launch-specific virality, see launch-strategy.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/referral-program/SKILL.md",
+      "path": "skills/personal/marketing/referral-program/SKILL.md",
       "version": null
     },
     {
@@ -368,7 +368,7 @@
       "description": "When the user wants help with revenue operations, lead lifecycle management, or marketing-to-sales handoff processes. Also use when the user mentions 'RevOps,' 'revenue operations,' 'lead scoring,' 'lead routing,' 'MQL,' 'SQL,' 'pipeline stages,' 'deal desk,' 'CRM automation,' 'marketing-to-sales handoff,' 'data hygiene,' 'leads aren't getting to sales,' 'pipeline management,' 'lead qualification,' or 'when should marketing hand off to sales.' Use this for anything involving the systems and processes that connect marketing to revenue. For cold outreach emails, see cold-email. For email drip campaigns, see email-sequence. For pricing decisions, see pricing-strategy.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/revops/SKILL.md",
+      "path": "skills/personal/marketing/revops/SKILL.md",
       "version": null
     },
     {
@@ -376,7 +376,7 @@
       "description": "When the user wants to create sales collateral, pitch decks, one-pagers, objection handling docs, or demo scripts. Also use when the user mentions 'sales deck,' 'pitch deck,' 'one-pager,' 'leave-behind,' 'objection handling,' 'deal-specific ROI analysis,' 'demo script,' 'talk track,' 'sales playbook,' 'proposal template,' 'buyer persona card,' 'help my sales team,' 'sales materials,' or 'what should I give my sales reps.' Use this for any document or asset that helps a sales team close deals. For competitor comparison pages and battle cards, see competitor-alternatives. For marketing website copy, see copywriting. For cold outreach emails, see cold-email.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/sales-enablement/SKILL.md",
+      "path": "skills/personal/marketing/sales-enablement/SKILL.md",
       "version": null
     },
     {
@@ -384,7 +384,7 @@
       "description": "When the user wants to add, fix, or optimize schema markup and structured data on their site. Also use when the user mentions \\\"schema markup,\\\" \\\"structured data,\\\" \\\"JSON-LD,\\\" \\\"rich snippets,\\\" \\\"schema.org,\\\" \\\"FAQ schema,\\\" \\\"product schema,\\\" \\\"review schema,\\\" \\\"breadcrumb schema,\\\" \\\"Google rich results,\\\" \\\"knowledge panel,\\\" \\\"star ratings in search,\\\" or \\\"add structured data.\\\" Use this whenever someone wants their pages to show enhanced results in Google. For broader SEO issues, see seo-audit. For AI search optimization, see ai-seo.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/schema-markup/SKILL.md",
+      "path": "skills/personal/marketing/schema-markup/SKILL.md",
       "version": null
     },
     {
@@ -392,7 +392,7 @@
       "description": "When the user wants to audit, review, or diagnose SEO issues on their site. Also use when the user mentions \\\"SEO audit,\\\" \\\"technical SEO,\\\" \\\"why am I not ranking,\\\" \\\"SEO issues,\\\" \\\"on-page SEO,\\\" \\\"meta tags review,\\\" \\\"SEO health check,\\\" \\\"my traffic dropped,\\\" \\\"lost rankings,\\\" \\\"not showing up in Google,\\\" \\\"site isn't ranking,\\\" \\\"Google update hit me,\\\" \\\"page speed,\\\" \\\"core web vitals,\\\" \\\"crawl errors,\\\" or \\\"indexing issues.\\\" Use this even if the user just says something vague like \\\"my SEO is bad\\\" or \\\"help with SEO\\\" — start with an audit. For building pages at scale to target keywords, see programmatic-seo. For adding structured data, see schema-markup. For AI search optimization, see ai-seo.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/seo-audit/SKILL.md",
+      "path": "skills/personal/marketing/seo-audit/SKILL.md",
       "version": null
     },
     {
@@ -400,7 +400,7 @@
       "description": "When the user wants to optimize signup, registration, account creation, or trial activation flows. Also use when the user mentions \\\"signup conversions,\\\" \\\"registration friction,\\\" \\\"signup form optimization,\\\" \\\"free trial signup,\\\" \\\"reduce signup dropoff,\\\" \\\"account creation flow,\\\" \\\"people aren't signing up,\\\" \\\"signup abandonment,\\\" \\\"trial conversion rate,\\\" \\\"nobody completes registration,\\\" \\\"too many steps to sign up,\\\" or \\\"simplify our signup.\\\" Use this whenever the user has a signup or registration flow that isn't performing. For post-signup onboarding, see onboarding-cro. For lead capture forms (not account creation), see form-cro.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/signup-flow-cro/SKILL.md",
+      "path": "skills/personal/marketing/signup-flow-cro/SKILL.md",
       "version": null
     },
     {
@@ -408,7 +408,7 @@
       "description": "When the user wants to plan, map, or restructure their website's page hierarchy, navigation, URL structure, or internal linking. Also use when the user mentions \\\"sitemap,\\\" \\\"site map,\\\" \\\"visual sitemap,\\\" \\\"site structure,\\\" \\\"page hierarchy,\\\" \\\"information architecture,\\\" \\\"IA,\\\" \\\"navigation design,\\\" \\\"URL structure,\\\" \\\"breadcrumbs,\\\" \\\"internal linking strategy,\\\" \\\"website planning,\\\" \\\"what pages do I need,\\\" \\\"how should I organize my site,\\\" or \\\"site navigation.\\\" Use this whenever someone is planning what pages a website should have and how they connect. NOT for XML sitemaps (that's technical SEO — see seo-audit). For SEO audits, see seo-audit. For structured data, see schema-markup.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/site-architecture/SKILL.md",
+      "path": "skills/personal/marketing/site-architecture/SKILL.md",
       "version": null
     },
     {
@@ -416,7 +416,7 @@
       "description": "Meta-skill that wraps every other skill invocation with the SkillOpt discipline (Yang et al., Microsoft + SJTU + Tongji + Fudan, May 2026, arXiv:2605.23904v2). Treats each skill document as the trainable external state of a frozen agent and uses bounded add/delete/replace edits, a held-out validation gate, a rejected-edit buffer, and an epoch-wise slow/meta update to improve the skill over time. Load this skill on every future skill call — whenever the agent loads any user, space, org, or built-in skill, also load skillopt and run the SkillOpt loop around the target skill's execution. Use for skill optimization, skill self-improvement, skill auditing, propose-and-test prompt evolution, controllable text-space optimization, and producing a portable best_skill.md artifact without changing model weights.",
       "domain": "marketing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/skillopt/SKILL.md",
+      "path": "skills/personal/skillopt/SKILL.md",
       "version": null
     },
     {
@@ -424,7 +424,7 @@
       "description": "Generate a premium, 5-slide editorial travel slideshow (Instagram + TikTok) from structured research outputs using real-image retrieval instructions and strict May We Travel brand rules. Use when the user asks to \"generate slides\", \"create content\", \"build a slideshow\", \"make travel slides\", \"content for Instagram\", \"content for TikTok\", or any travel content generation task for the May We Travel brand.",
       "domain": "media",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/content-generator/SKILL.md",
+      "path": "skills/personal/content-generator/SKILL.md",
       "version": null
     },
     {
@@ -432,7 +432,7 @@
       "description": "When the user wants to plan a content strategy, decide what content to create, or figure out what topics to cover. Also use when the user mentions \\\"content strategy,\\\" \\\"what should I write about,\\\" \\\"content ideas,\\\" \\\"blog strategy,\\\" \\\"topic clusters,\\\" \\\"content planning,\\\" \\\"editorial calendar,\\\" \\\"content marketing,\\\" \\\"content roadmap,\\\" \\\"what content should I create,\\\" \\\"blog topics,\\\" \\\"content pillars,\\\" or \\\"I don't know what to write.\\\" Use this whenever someone needs help deciding what content to produce, not just writing it. For writing individual pieces, see copywriting. For SEO-specific audits, see seo-audit. For social media content specifically, see social-content.",
       "domain": "media",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/content-strategy/SKILL.md",
+      "path": "skills/personal/marketing/content-strategy/SKILL.md",
       "version": null
     },
     {
@@ -440,7 +440,7 @@
       "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)",
       "domain": "media",
       "collection": "gstack",
-      "path": "collections/gstack/design-consultation/SKILL.md",
+      "path": "skills/community/gstack/design-consultation/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -448,7 +448,7 @@
       "description": "Add captions or subtitles to an existing single-subject talking-head video without editing the footage. Use for plain verbatim captions, cinematic captions embedded behind the subject, VFX captions, “炸/特效/酷炫字幕,” or a named identity from the 35-style catalog. Route by visual identity, not by backend engine. The quiet `anchor` rail is the default; embed every word only when the user explicitly wants a fully cinematic treatment. The workflow runs locally end to end, including transcription and subject matting; split multi-shot footage before applying it.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/embedded-captions/SKILL.md",
+      "path": "skills/community/hyperframes/skills/embedded-captions/SKILL.md",
       "version": null
     },
     {
@@ -456,7 +456,7 @@
       "description": "Turn arbitrary text — an article, notes, a topic, a brief — into a faceless explainer video: there is no site or footage to capture, so the visuals are invented per scene (typography, abstract graphics, diagrams, data-viz). Use for topic explainers, concept breakdowns, how-tos, listicles. Not a video built from a website (/product-launch-video — promo or tour). Unclear → /hyperframes.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/faceless-explainer/SKILL.md",
+      "path": "skills/community/hyperframes/skills/faceless-explainer/SKILL.md",
       "version": null
     },
     {
@@ -464,7 +464,7 @@
       "description": "Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) (REST/CLI), connector-assisted motion when available, and shaders from a connector or native export. Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/figma/SKILL.md",
+      "path": "skills/community/hyperframes/skills/figma/SKILL.md",
       "version": null
     },
     {
@@ -472,7 +472,7 @@
       "description": "Author or edit a custom HyperFrames composition when no specialized workflow fits, or when BRIEF.md sets flow: companion. Use for longer or multi-scene pieces, brand and sizzle reels, montages, static loops, static title cards, footage remixes, and freeform builds. Use motion-graphics instead for a short unnarrated motion-first unit, including an animated title. Route fresh creation through hyperframes before using this skill.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/general-video/SKILL.md",
+      "path": "skills/community/hyperframes/skills/general-video/SKILL.md",
       "version": null
     },
     {
@@ -480,7 +480,7 @@
       "description": "Mandatory entry point: read this first for any request to make, create, edit, animate, or render a video, animation, or motion graphic, including a promo, explainer, captioned clip, title card, overlay, slideshow or interactive deck, Remotion port, or any HyperFrames HTML composition. Also use it to inspect, diagnose, validate, preview, publish, or batch-render an existing HyperFrames project. Inputs may be a website URL, GitHub PR, Figma design or URL, text or brief, existing footage, or music. It resumes project state, captures intent when applicable, selects and installs the owning workflow, and routes domain capabilities. HyperFrames is the default output framework unless the user explicitly chooses another framework for the deliverable or asks only to record a browser session.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/hyperframes/SKILL.md",
+      "path": "skills/community/hyperframes/skills/hyperframes/SKILL.md",
       "version": null
     },
     {
@@ -488,7 +488,7 @@
       "description": "All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND the seven runtime adapters (GSAP default, plus Lottie, Three.js, Anime.js, CSS keyframes, Web Animations API, TypeGPU). Use for any motion or animation task: pick 2-4 rules and compose, or load a blueprint, or look up runtime-specific API (e.g. GSAP eases / Lottie player / Three.js mixer). Also covers auditing an existing composition's choreography (animation map) and 24 named text-animation effects. HyperFrames-native: single paused timeline, seek-safe, deterministic.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/hyperframes-animation/SKILL.md",
+      "path": "skills/community/hyperframes/skills/hyperframes-animation/SKILL.md",
       "version": null
     },
     {
@@ -496,7 +496,7 @@
       "description": "Use when audio already placed in a HyperFrames composition needs to be mixed: fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking, a music bed that fights a voiceover (voiceover carve), effects on a track (EQ, compressor, limiter, gate, saturation, delay, reverb, chorus, phaser, bitcrush), automation envelopes drawn on a track's volume or any effect parameter, or one submix bus carrying a chain, a fader and an automation clock for several tracks at once (`<hf-audio-group>`). Don't use for sourcing or generating audio — finding BGM, SFX, or making a voiceover is `/media-use`. Don't use for clip timing or track layout, which is `/hyperframes-core`.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/hyperframes-audio/SKILL.md",
+      "path": "skills/community/hyperframes/skills/hyperframes-audio/SKILL.md",
       "version": null
     },
     {
@@ -504,7 +504,7 @@
       "description": "Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot, compare, grade-compare, preview, play, present, beats, keyframes, single or batch render, publish, cloud, cloudrun, feedback, lambda, doctor, browser, info, upgrade, skills, compositions, docs, benchmark, telemetry, transcribe, auth, tts, and remove-background. Also use when diagnosing build or render failures. validate, inspect, and layout are deprecated aliases; use check. Covers local, HeyGen-hosted cloud, AWS Lambda, and Google Cloud Run rendering.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/hyperframes-cli/SKILL.md",
+      "path": "skills/community/hyperframes/skills/hyperframes-cli/SKILL.md",
       "version": null
     },
     {
@@ -512,7 +512,7 @@
       "description": "The HyperFrames composition contract — build one renderable project. Use for composition structure, the `data-*` timing attributes, `class=\"clip\"`, tracks, sub-compositions, variables, framework-owned media playback, deterministic-render rules, and validation. Also covers Tailwind projects and the STORYBOARD.md / SCRIPT.md plan formats. Read before writing composition HTML.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/hyperframes-core/SKILL.md",
+      "path": "skills/community/hyperframes/skills/hyperframes-core/SKILL.md",
       "version": null
     },
     {
@@ -520,7 +520,7 @@
       "description": "Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat planning, audio-reactive visuals, composition patterns, and brand / style decisions. For atomic motion patterns and scene blueprints, use `hyperframes-animation`.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/hyperframes-creative/SKILL.md",
+      "path": "skills/community/hyperframes/skills/hyperframes-creative/SKILL.md",
       "version": null
     },
     {
@@ -528,7 +528,7 @@
       "description": "Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe 2D/3D keyframes; also for GSAP, CSS keyframes, Anime.js, WAAPI, FLIP, paths, masks, SVG morph/draw, text trails, 3D depth, or `hyperframes keyframes` diagnostics. Don't use for broad scene strategy, brand design, media sourcing, captions, or general video planning.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/hyperframes-keyframes/SKILL.md",
+      "path": "skills/community/hyperframes/skills/hyperframes-keyframes/SKILL.md",
       "version": null
     },
     {
@@ -536,7 +536,7 @@
       "description": "Install, discover, and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add or hyperframes catalog, installing one item or every block matching a tag, wiring an installed item into index.html, or working with hyperframes.json. Covers discovery, install locations, block sub-composition wiring, component snippet merging, and authoring a new block or component to contribute upstream (idea → scaffold → validate → PR).",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/hyperframes-registry/SKILL.md",
+      "path": "skills/community/hyperframes/skills/hyperframes-registry/SKILL.md",
       "version": null
     },
     {
@@ -544,7 +544,7 @@
       "description": "Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague feedback that real footage looks dark, flat, boring, should feel retro/camcorder/print/ASCII, needs privacy, or needs a media reveal.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/media-use/SKILL.md",
+      "path": "skills/community/hyperframes/skills/media-use/SKILL.md",
       "version": null
     },
     {
@@ -552,7 +552,7 @@
       "description": "A short, design-led motion graphic where motion is the message — kinetic typography, stat count-up, chart/data-viz hit, logo sting / brand lockup, lower-third / callout / social overlay, animated map (highlight regions, connect places, zoom to a location), animated tweet / news-article / headline, webpage / UI animation (scroll, cursor, callouts), or fusing a real image's geometry into a chart. Usually under 10s (up to ~30s), no narration or live-action subject; renders to MP4 or transparent overlay. Longer / narrated / multi-scene → /general-video. Unclear → /hyperframes.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/motion-graphics/SKILL.md",
+      "path": "skills/community/hyperframes/skills/motion-graphics/SKILL.md",
       "version": null
     },
     {
@@ -560,7 +560,7 @@
       "description": "Turn a music track (an audio file, a video to pull audio from, or a track generated from a mood brief) into a beat-synced video — lyric video, slideshow, or kinetic promo. The music drives all pacing; any user-supplied images/videos are cut onto the same beat grid, and a complete video needs zero assets. Narrated pieces → the input-matched workflow (see /hyperframes). Unclear → /hyperframes.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/music-to-video/SKILL.md",
+      "path": "skills/community/hyperframes/skills/music-to-video/SKILL.md",
       "version": null
     },
     {
@@ -568,7 +568,7 @@
       "description": "When the user wants help with paid advertising campaigns on Google Ads, Meta (Facebook/Instagram), LinkedIn, Twitter/X, or other ad platforms. Also use when the user mentions 'PPC,' 'paid media,' 'ROAS,' 'CPA,' 'ad campaign,' 'retargeting,' 'audience targeting,' 'Google Ads,' 'Facebook ads,' 'LinkedIn ads,' 'ad budget,' 'cost per click,' 'ad spend,' or 'should I run ads.' Use this for campaign strategy, audience targeting, bidding, and optimization. For bulk ad creative generation and iteration, see ad-creative. For landing page optimization, see page-cro.",
       "domain": "media",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/paid-ads/SKILL.md",
+      "path": "skills/personal/marketing/paid-ads/SKILL.md",
       "version": null
     },
     {
@@ -576,7 +576,7 @@
       "description": "Turn a GitHub pull request (a PR URL, owner/repo#N, or 'this PR' in a checked-out repo) into a code-change explainer video — changelog, feature reveal, fix, or refactor walkthrough built from the diff, commits, and files: the input is a code change, not a website. Not a product promo (/product-launch-video) or a no-PR topic explainer (/faceless-explainer). Unclear → /hyperframes.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/pr-to-video/SKILL.md",
+      "path": "skills/community/hyperframes/skills/pr-to-video/SKILL.md",
       "version": null
     },
     {
@@ -584,7 +584,7 @@
       "description": "Turn a product or marketing URL, pasted script, or brief into a product launch / promo video — SaaS promos, feature reveals, product demos, app and company launches. Use when the user wants to market, launch, promote, or reveal a product; the default for any commercial URL. Site tours / showcases of a website route here too — the brief carries the show-it-as-is intent. Unclear → /hyperframes.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/product-launch-video/SKILL.md",
+      "path": "skills/community/hyperframes/skills/product-launch-video/SKILL.md",
       "version": null
     },
     {
@@ -592,7 +592,7 @@
       "description": "Turn raw project notes, transcripts, and code into a polished Substack-ready 1-page recap article. Interviews the user about a single project with structured questions, then writes a markdown article in their voice (first person, light on 'I', casual-but-professional, ~4-5/10 technical depth — plain-English first, jargon only when it earns its keep). Follows a fixed editorial template inspired by the Gegenpressing recap: italic epigraph, origin story, what-it-is, end-to-end loop, design calls, AI stack, thoughts overall. Frames betting/trading projects as engineering playgrounds, not financial advice. Use when the user asks for a 'project recap', 'Substack 1-pager', 'write up my project', 'portfolio article', 'project writeup', 'recap article', or wants to turn a project into a blog post.",
       "domain": "media",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/project-recap-substack/SKILL.md",
+      "path": "skills/personal/project-recap-substack/SKILL.md",
       "version": null
     },
     {
@@ -600,7 +600,7 @@
       "description": "Port an existing Remotion (React) composition''s source to HyperFrames HTML. Use ONLY on an explicit ask to port/convert/migrate/translate a Remotion source — one-way, Remotion-only. A passing Remotion mention, reference-only code, or \"make something like my Remotion video\" is a fresh build (/general-video). Unclear → /hyperframes.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/remotion-to-hyperframes/SKILL.md",
+      "path": "skills/community/hyperframes/skills/remotion-to-hyperframes/SKILL.md",
       "version": null
     },
     {
@@ -608,7 +608,7 @@
       "description": "Author a HyperFrames slideshow — a presentation, pitch deck, or interactive deck with discrete slides, fragment reveals, branching, hotspot navigation, and built-in presenter mode with speaker notes; also converts an existing page into a deck. Output is a navigable deck, not a rendered MP4. If the user didn't explicitly ask for a slideshow, confirm before authoring. Unclear → /hyperframes.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/slideshow/SKILL.md",
+      "path": "skills/community/hyperframes/skills/slideshow/SKILL.md",
       "version": null
     },
     {
@@ -616,7 +616,7 @@
       "description": "When the user wants help creating, scheduling, or optimizing social media content for LinkedIn, Twitter/X, Instagram, TikTok, Facebook, or other platforms. Also use when the user mentions 'LinkedIn post,' 'Twitter thread,' 'social media,' 'content calendar,' 'social scheduling,' 'engagement,' 'viral content,' 'what should I post,' 'repurpose this content,' 'tweet ideas,' 'LinkedIn carousel,' 'social media strategy,' or 'grow my following.' Use this for any social media content creation, repurposing, or scheduling task. For broader content strategy, see content-strategy.",
       "domain": "media",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/marketing/social-content/SKILL.md",
+      "path": "skills/personal/marketing/social-content/SKILL.md",
       "version": null
     },
     {
@@ -624,7 +624,7 @@
       "description": "Package an existing talking-head / interview / podcast video with timed, designed GRAPHIC OVERLAY cards — kinetic titles, lower-thirds, data callouts, quotes, side panels, picture-in-picture — synced to the transcript, on a 16:9 / 9:16 / 4:5 canvas of your choice; the clip plays untouched underneath. Trigger on \"graphic overlays\", \"on-screen graphics\", \"package / dress up my video\". Not plain subtitles (/embedded-captions). Unclear → /hyperframes.",
       "domain": "media",
       "collection": "hyperframes",
-      "path": "collections/hyperframes/skills/talking-head-recut/SKILL.md",
+      "path": "skills/community/hyperframes/skills/talking-head-recut/SKILL.md",
       "version": null
     },
     {
@@ -632,7 +632,7 @@
       "description": "Restore working context saved earlier by /context-save. (gstack)",
       "domain": "orchestration",
       "collection": "gstack",
-      "path": "collections/gstack/context-restore/SKILL.md",
+      "path": "skills/community/gstack/context-restore/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -640,7 +640,7 @@
       "description": "Save working context. (gstack)",
       "domain": "orchestration",
       "collection": "gstack",
-      "path": "collections/gstack/context-save/SKILL.md",
+      "path": "skills/community/gstack/context-save/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -648,7 +648,7 @@
       "description": "Router for the gstack skill suite. (gstack)",
       "domain": "orchestration",
       "collection": "gstack",
-      "path": "collections/gstack/SKILL.md",
+      "path": "skills/community/gstack/SKILL.md",
       "version": "1.2.0"
     },
     {
@@ -656,7 +656,7 @@
       "description": "Manage project learnings.",
       "domain": "orchestration",
       "collection": "gstack",
-      "path": "collections/gstack/learn/SKILL.md",
+      "path": "skills/community/gstack/learn/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -664,7 +664,7 @@
       "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
       "domain": "orchestration",
       "collection": "gstack",
-      "path": "collections/gstack/setup-gbrain/SKILL.md",
+      "path": "skills/community/gstack/setup-gbrain/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -672,7 +672,7 @@
       "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. (gstack)",
       "domain": "orchestration",
       "collection": "gstack",
-      "path": "collections/gstack/sync-gbrain/SKILL.md",
+      "path": "skills/community/gstack/sync-gbrain/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -680,7 +680,7 @@
       "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/browse/SKILL.md",
+      "path": "skills/community/gstack/browse/SKILL.md",
       "version": "1.1.0"
     },
     {
@@ -688,7 +688,7 @@
       "description": "Post-deploy canary monitoring. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/canary/SKILL.md",
+      "path": "skills/community/gstack/canary/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -696,7 +696,7 @@
       "description": "Safety guardrails for destructive commands. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/careful/SKILL.md",
+      "path": "skills/community/gstack/careful/SKILL.md",
       "version": "0.1.0"
     },
     {
@@ -704,7 +704,7 @@
       "description": "Restrict file edits to a specific directory for the session. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/freeze/SKILL.md",
+      "path": "skills/community/gstack/freeze/SKILL.md",
       "version": "0.1.0"
     },
     {
@@ -712,7 +712,7 @@
       "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/openclaw/skills/gstack-openclaw-ceo-review/SKILL.md",
+      "path": "skills/community/gstack/openclaw/skills/gstack-openclaw-ceo-review/SKILL.md",
       "version": null
     },
     {
@@ -720,7 +720,7 @@
       "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective.",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/openclaw/skills/gstack-openclaw-retro/SKILL.md",
+      "path": "skills/community/gstack/openclaw/skills/gstack-openclaw-retro/SKILL.md",
       "version": null
     },
     {
@@ -728,7 +728,7 @@
       "description": "Upgrade gstack to the latest version.",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/gstack-upgrade/SKILL.md",
+      "path": "skills/community/gstack/gstack-upgrade/SKILL.md",
       "version": "1.1.0"
     },
     {
@@ -736,7 +736,7 @@
       "description": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/guard/SKILL.md",
+      "path": "skills/community/gstack/guard/SKILL.md",
       "version": "0.1.0"
     },
     {
@@ -744,7 +744,7 @@
       "description": "Code quality dashboard. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/health/SKILL.md",
+      "path": "skills/community/gstack/health/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -752,7 +752,7 @@
       "description": "Land and deploy workflow. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/land-and-deploy/SKILL.md",
+      "path": "skills/community/gstack/land-and-deploy/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -760,7 +760,7 @@
       "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/landing-report/SKILL.md",
+      "path": "skills/community/gstack/landing-report/SKILL.md",
       "version": "0.1.0"
     },
     {
@@ -768,7 +768,7 @@
       "description": "CEO/founder-mode plan review. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/plan-ceo-review/SKILL.md",
+      "path": "skills/community/gstack/plan-ceo-review/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -776,7 +776,7 @@
       "description": "Eng manager-mode plan review. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/plan-eng-review/SKILL.md",
+      "path": "skills/community/gstack/plan-eng-review/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -784,7 +784,7 @@
       "description": "Systematically QA test a web application and fix bugs found. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/qa/SKILL.md",
+      "path": "skills/community/gstack/qa/SKILL.md",
       "version": "2.0.0"
     },
     {
@@ -792,7 +792,7 @@
       "description": "Report-only QA testing. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/qa-only/SKILL.md",
+      "path": "skills/community/gstack/qa-only/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -800,7 +800,7 @@
       "description": "Pre-landing PR review. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/review/SKILL.md",
+      "path": "skills/community/gstack/review/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -808,7 +808,7 @@
       "description": "Configure deployment settings for /land-and-deploy.",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/setup-deploy/SKILL.md",
+      "path": "skills/community/gstack/setup-deploy/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -816,7 +816,7 @@
       "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/ship/SKILL.md",
+      "path": "skills/community/gstack/ship/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -824,7 +824,7 @@
       "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
       "domain": "quality-and-release",
       "collection": "gstack",
-      "path": "collections/gstack/unfreeze/SKILL.md",
+      "path": "skills/community/gstack/unfreeze/SKILL.md",
       "version": "0.1.0"
     },
     {
@@ -832,7 +832,7 @@
       "description": "Performance regression detection using the browse daemon. (gstack)",
       "domain": "research-and-browser",
       "collection": "gstack",
-      "path": "collections/gstack/benchmark/SKILL.md",
+      "path": "skills/community/gstack/benchmark/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -840,7 +840,7 @@
       "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.",
       "domain": "research-and-browser",
       "collection": "gstack",
-      "path": "collections/gstack/openclaw/skills/gstack-openclaw-investigate/SKILL.md",
+      "path": "skills/community/gstack/openclaw/skills/gstack-openclaw-investigate/SKILL.md",
       "version": null
     },
     {
@@ -848,7 +848,7 @@
       "description": "Scrape the Hacker News front page (titles, points, comment counts).",
       "domain": "research-and-browser",
       "collection": "gstack",
-      "path": "collections/gstack/browser-skills/hackernews-frontpage/SKILL.md",
+      "path": "skills/community/gstack/browser-skills/hackernews-frontpage/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -856,7 +856,7 @@
       "description": "Systematic debugging with root cause investigation. (gstack)",
       "domain": "research-and-browser",
       "collection": "gstack",
-      "path": "collections/gstack/investigate/SKILL.md",
+      "path": "skills/community/gstack/investigate/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -864,7 +864,7 @@
       "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
       "domain": "research-and-browser",
       "collection": "gstack",
-      "path": "collections/gstack/open-gstack-browser/SKILL.md",
+      "path": "skills/community/gstack/open-gstack-browser/SKILL.md",
       "version": "0.2.0"
     },
     {
@@ -872,7 +872,7 @@
       "description": "Pull data from a web page. (gstack)",
       "domain": "research-and-browser",
       "collection": "gstack",
-      "path": "collections/gstack/scrape/SKILL.md",
+      "path": "skills/community/gstack/scrape/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -880,7 +880,7 @@
       "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
       "domain": "research-and-browser",
       "collection": "gstack",
-      "path": "collections/gstack/setup-browser-cookies/SKILL.md",
+      "path": "skills/community/gstack/setup-browser-cookies/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -888,7 +888,7 @@
       "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
       "domain": "research-and-browser",
       "collection": "gstack",
-      "path": "collections/gstack/skillify/SKILL.md",
+      "path": "skills/community/gstack/skillify/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -896,7 +896,7 @@
       "description": "Use when the user asks to build, update, or monitor the Low Block betting intelligence web application. Also use for \"show me the dashboard\", \"update the picks UI\", \"give me weekend picks\", \"deploy the web app\", and \"update the odds\". This skill produces a fully functional web application that surfaces Low Block pipeline outputs (match totals over/under) with production-grade reliability and Framna-inspired editorial design.",
       "domain": "sports",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/footy-edge-webapp-agent/SKILL.md",
+      "path": "skills/personal/footy-edge-webapp-agent/SKILL.md",
       "version": null
     },
     {
@@ -904,7 +904,7 @@
       "description": "Chief Security Officer mode. (gstack)",
       "domain": "strategy-and-product",
       "collection": "gstack",
-      "path": "collections/gstack/cso/SKILL.md",
+      "path": "skills/community/gstack/cso/SKILL.md",
       "version": "2.0.0"
     },
     {
@@ -912,7 +912,7 @@
       "description": "YC Office Hours — two modes. (gstack)",
       "domain": "strategy-and-product",
       "collection": "gstack",
-      "path": "collections/gstack/office-hours/SKILL.md",
+      "path": "skills/community/gstack/office-hours/SKILL.md",
       "version": "2.0.0"
     },
     {
@@ -920,7 +920,7 @@
       "description": "Weekly engineering retrospective. (gstack)",
       "domain": "strategy-and-product",
       "collection": "gstack",
-      "path": "collections/gstack/retro/SKILL.md",
+      "path": "skills/community/gstack/retro/SKILL.md",
       "version": "2.0.0"
     },
     {
@@ -928,7 +928,7 @@
       "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
       "domain": "strategy-and-product",
       "collection": "gstack",
-      "path": "collections/gstack/spec/SKILL.md",
+      "path": "skills/community/gstack/spec/SKILL.md",
       "version": "0.1.0"
     },
     {
@@ -936,7 +936,7 @@
       "description": ">-",
       "domain": "travel",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/bar-selector/SKILL.md",
+      "path": "skills/personal/bar-selector/SKILL.md",
       "version": null
     },
     {
@@ -944,7 +944,7 @@
       "description": ">-",
       "domain": "travel",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/hotel-selector/SKILL.md",
+      "path": "skills/personal/hotel-selector/SKILL.md",
       "version": null
     },
     {
@@ -952,7 +952,7 @@
       "description": ">-",
       "domain": "travel",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/nightlife-selector/SKILL.md",
+      "path": "skills/personal/nightlife-selector/SKILL.md",
       "version": null
     },
     {
@@ -960,7 +960,7 @@
       "description": ">-",
       "domain": "travel",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/restaurant-selector/SKILL.md",
+      "path": "skills/personal/restaurant-selector/SKILL.md",
       "version": null
     },
     {
@@ -968,7 +968,7 @@
       "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)",
       "domain": "writing",
       "collection": "gstack",
-      "path": "collections/gstack/design-review/SKILL.md",
+      "path": "skills/community/gstack/design-review/SKILL.md",
       "version": "2.0.0"
     },
     {
@@ -976,7 +976,7 @@
       "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
       "domain": "writing",
       "collection": "gstack",
-      "path": "collections/gstack/document-generate/SKILL.md",
+      "path": "skills/community/gstack/document-generate/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -984,7 +984,7 @@
       "description": "Post-ship documentation update. (gstack)",
       "domain": "writing",
       "collection": "gstack",
-      "path": "collections/gstack/document-release/SKILL.md",
+      "path": "skills/community/gstack/document-release/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -992,7 +992,7 @@
       "description": "Interview-to-Article meta-post kit. Runs a structured Master Interviewer that extracts project constraints, technical stakes, and human narrative from any project, then transforms the transcript into a Substack-ready markdown recap using a fixed template and CTA placement matrix. Includes a Voice-Calibration checklist tuned to Manny's Gegenpressing-style voice (first person minimal-I, casual-but-professional, ~4-5/10 technical depth, em-dash discipline, no cringe hype). Use when the user asks to 'interview me about a project', 'run the master interviewer', 'turn this transcript into an article', 'draft a project writeup from notes', 'build a Substack post from an interview', or wants a structured capture-to-article workflow. This is the upstream capture layer for the project-recap-substack skill; run this first when starting from scratch, then hand the Transcript Summary to project-recap-substack for the final draft.",
       "domain": "writing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/interview-to-article/SKILL.md",
+      "path": "skills/personal/interview-to-article/SKILL.md",
       "version": null
     },
     {
@@ -1000,7 +1000,7 @@
       "description": "Turn any markdown file into a publication-quality PDF. (gstack)",
       "domain": "writing",
       "collection": "gstack",
-      "path": "collections/gstack/make-pdf/SKILL.md",
+      "path": "skills/community/gstack/make-pdf/SKILL.md",
       "version": "1.0.0"
     },
     {
@@ -1008,7 +1008,7 @@
       "description": "Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI.",
       "domain": "writing",
       "collection": "no-ai-slop",
-      "path": "collections/no-ai-slop/skills/no-ai-slop/SKILL.md",
+      "path": "skills/community/no-ai-slop/skills/no-ai-slop/SKILL.md",
       "version": null
     },
     {
@@ -1016,7 +1016,7 @@
       "description": "Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI.",
       "domain": "writing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/no-ai-slop/SKILL.md",
+      "path": "skills/personal/no-ai-slop/SKILL.md",
       "version": null
     },
     {
@@ -1024,7 +1024,7 @@
       "description": ">-",
       "domain": "writing",
       "collection": "perplexity-user",
-      "path": "skills/perplexity-user/resume-builder/SKILL.md",
+      "path": "skills/personal/resume-builder/SKILL.md",
       "version": null
     }
   ]

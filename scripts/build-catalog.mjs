@@ -44,10 +44,10 @@ function frontmatter(source) {
 }
 
 function collectionFor(relativePath) {
-  const match = relativePath.match(/^collections\/([^/]+)/);
-  if (match) return match[1];
-  if (relativePath.startsWith("skills/perplexity-user/")) return "perplexity-user";
-  return relativePath.startsWith("skills/") ? "first-party" : "uncategorized";
+  const community = relativePath.match(/^skills\/community\/([^/]+)/);
+  if (community) return community[1];
+  if (relativePath.startsWith("skills/personal/")) return "perplexity-user";
+  return "uncategorized";
 }
 
 function domainFor(name, relativePath, description) {
@@ -123,18 +123,5 @@ for (const domain of domains) {
 }
 
 await writeFile(path.join(root, "CATALOG.md"), catalogMarkdown);
-
-const mapsDirectory = path.join(root, "vault/maps");
-await mkdir(mapsDirectory, { recursive: true });
-
-for (const domain of domains) {
-  const entries = skills.filter((skill) => skill.domain === domain);
-  let markdown = `---\ntype: map-of-content\ndomain: ${domain}\ngenerated: true\n---\n\n# ${title(domain)}\n\n[← Vault](../README.md) · [Full catalog](../../CATALOG.md)\n\n`;
-  for (const skill of entries) {
-    const link = path.relative(mapsDirectory, path.join(root, skill.path)).split(path.sep).join("/");
-    markdown += `- [${skill.name}](${link}) · \`${skill.collection}\` — ${skill.description}\n`;
-  }
-  await writeFile(path.join(mapsDirectory, `${domain}.md`), markdown);
-}
 
 console.log(`Indexed ${skills.length} skills across ${domains.length} domains.`);

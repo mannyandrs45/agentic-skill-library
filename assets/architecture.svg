@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500" role="img">
+  <title>Three-layer skill library architecture</title>
+  <desc>Community and personal skills flow into one generated catalog, supported by registry and maintenance scripts.</desc>
+  <rect width="1200" height="500" rx="24" fill="#F7F6F2"/>
+  <text x="64" y="68" fill="#28251D" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="750">A smaller mental model</text>
+  <text x="64" y="100" fill="#6D6B66" font-family="ui-sans-serif, system-ui, sans-serif" font-size="17">One skill tree. One index. One maintenance layer.</text>
+  <g font-family="ui-sans-serif, system-ui, sans-serif">
+    <rect x="64" y="150" width="300" height="248" rx="20" fill="#E5F2F1" stroke="#01696F" stroke-width="2"/>
+    <circle cx="104" cy="190" r="18" fill="#01696F"/>
+    <text x="104" y="197" text-anchor="middle" fill="#FFF" font-size="18" font-weight="750">1</text>
+    <text x="138" y="198" fill="#153D40" font-size="25" font-weight="750">SKILLS</text>
+    <text x="96" y="244" fill="#28251D" font-size="18" font-weight="700">community/</text>
+    <text x="96" y="272" fill="#5D6765" font-size="16">gstack · HyperFrames</text>
+    <text x="96" y="298" fill="#5D6765" font-size="16">no-ai-slop</text>
+    <line x1="96" y1="322" x2="332" y2="322" stroke="#9BC7C4"/>
+    <text x="96" y="354" fill="#28251D" font-size="18" font-weight="700">personal/</text>
+    <text x="96" y="382" fill="#5D6765" font-size="16">Perplexity Computer exports</text>
+    <path d="M380 274h82" fill="none" stroke="#006494" stroke-width="4"/>
+    <path d="M452 263l16 11-16 11" fill="none" stroke="#006494" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="482" y="150" width="300" height="248" rx="20" fill="#E8F0F7" stroke="#006494" stroke-width="2"/>
+    <circle cx="522" cy="190" r="18" fill="#006494"/>
+    <text x="522" y="197" text-anchor="middle" fill="#FFF" font-size="18" font-weight="750">2</text>
+    <text x="556" y="198" fill="#17384B" font-size="25" font-weight="750">CATALOG</text>
+    <text x="514" y="256" fill="#28251D" font-size="21" font-weight="700">CATALOG.md</text>
+    <text x="514" y="286" fill="#5D6670" font-size="16">The only human index</text>
+    <text x="514" y="338" fill="#28251D" font-size="21" font-weight="700">catalog.json</text>
+    <text x="514" y="368" fill="#5D6670" font-size="16">The machine-readable twin</text>
+    <path d="M798 274h82" fill="none" stroke="#7A39BB" stroke-width="4"/>
+    <path d="M870 263l16 11-16 11" fill="none" stroke="#7A39BB" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="900" y="150" width="236" height="248" rx="20" fill="#F1EAF8" stroke="#7A39BB" stroke-width="2"/>
+    <circle cx="940" cy="190" r="18" fill="#7A39BB"/>
+    <text x="940" y="197" text-anchor="middle" fill="#FFF" font-size="18" font-weight="750">3</text>
+    <text x="974" y="198" fill="#472267" font-size="25" font-weight="750">MAINTAIN</text>
+    <text x="932" y="256" fill="#28251D" font-size="20" font-weight="700">registry/</text>
+    <text x="932" y="285" fill="#665C6D" font-size="16">sources · policy</text>
+    <text x="932" y="338" fill="#28251D" font-size="20" font-weight="700">scripts/</text>
+    <text x="932" y="367" fill="#665C6D" font-size="16">sync · build · validate</text>
+  </g>
+  <text x="600" y="458" text-anchor="middle" fill="#7A7974" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">README → CATALOG → SKILL.md</text>
+</svg>

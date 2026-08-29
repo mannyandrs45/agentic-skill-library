@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img">
+  <title>Agentic Skill Library</title>
+  <desc>128 field-tested workflows for agents that plan, build, write, research, and ship.</desc>
+  <rect width="1200" height="420" rx="28" fill="#101C24"/>
+  <circle cx="1080" cy="70" r="220" fill="#01696F" opacity=".34"/>
+  <circle cx="1130" cy="360" r="260" fill="#7A39BB" opacity=".20"/>
+  <circle cx="70" cy="410" r="170" fill="#DA7101" opacity=".20"/>
+  <g fill="none" stroke="#74D4DA" stroke-width="2" opacity=".72">
+    <path d="M858 99h92l46 80-46 80h-92l-46-80z"/>
+    <path d="M962 179h92l46 80-46 80h-92l-46-80z"/>
+    <path d="M754 179h92l46 80-46 80h-92l-46-80z"/>
+  </g>
+  <g fill="#74D4DA">
+    <circle cx="858" cy="99" r="6"/><circle cx="950" cy="99" r="6"/>
+    <circle cx="996" cy="179" r="6"/><circle cx="950" cy="259" r="6"/>
+    <circle cx="858" cy="259" r="6"/><circle cx="812" cy="179" r="6"/>
+    <circle cx="1054" cy="339" r="6"/><circle cx="754" cy="179" r="6"/>
+  </g>
+  <text x="72" y="92" fill="#74D4DA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" letter-spacing="2">OPEN SKILL VAULT · v0.2</text>
+  <text x="72" y="180" fill="#F7F6F2" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="760">Agentic Skill Library</text>
+  <text x="72" y="235" fill="#BFD0D5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25">Field-tested workflows for agents that plan, build, write,</text>
+  <text x="72" y="270" fill="#BFD0D5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25">research, design, market, and ship.</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">
+    <rect x="72" y="326" width="148" height="46" rx="23" fill="#01696F"/>
+    <text x="146" y="355" text-anchor="middle" fill="#FFFFFF">128 SKILLS</text>
+    <rect x="234" y="326" width="148" height="46" rx="23" fill="#006494"/>
+    <text x="308" y="355" text-anchor="middle" fill="#FFFFFF">11 DOMAINS</text>
+    <rect x="396" y="326" width="192" height="46" rx="23" fill="#7A39BB"/>
+    <text x="492" y="355" text-anchor="middle" fill="#FFFFFF">4 COLLECTIONS</text>
+  </g>
+</svg>

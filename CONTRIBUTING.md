@@ -17,7 +17,7 @@ A proposed skill should satisfy most of these criteria:
 
 ## Add a first-party skill
 
-1. Create `skills/<domain>/<skill-name>/SKILL.md`.
+1. Create `skills/personal/<skill-name>/SKILL.md`.
 2. Add YAML frontmatter with at least `name` and `description`.
 3. Keep supporting references inside the same skill directory.
 4. Add an evaluation note or fixture that exercises both a positive and negative trigger.
@@ -39,7 +39,7 @@ source: first-party
 
 1. Confirm the license permits redistribution.
 2. Add the source to `registry/sources.json`.
-3. Import it under `collections/<collection-name>/`.
+3. Import it under `skills/community/<collection-name>/`.
 4. Preserve the upstream license.
 5. Extend `scripts/sync-upstreams.mjs`.
 6. Explain why the collection earns a place in the vault.

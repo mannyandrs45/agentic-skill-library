@@ -1,71 +1,97 @@
-# Agentic Skill Library
+<p align="center">
+  <img src="assets/hero.svg" alt="Agentic Skill Library: 128 field-tested skills for agents that plan, build, write, research, and ship" width="100%">
+</p>
 
-> A curated, inspectable vault of production-grade agent skills, operating systems, and reusable workflows.
+<p align="center">
+  <a href="CATALOG.md"><img alt="128 skills" src="https://img.shields.io/badge/skills-128-01696F?style=flat-square"></a>
+  <a href="CATALOG.md"><img alt="11 domains" src="https://img.shields.io/badge/domains-11-006494?style=flat-square"></a>
+  <a href="skills/personal/README.md"><img alt="48 personal skills" src="https://img.shields.io/badge/personal-48-7A39BB?style=flat-square"></a>
+  <a href="SOURCES.md"><img alt="3 community sources" src="https://img.shields.io/badge/community_sources-3-DA7101?style=flat-square"></a>
+  <a href="https://github.com/mannyandrs45/agentic-skill-library/actions/workflows/validate.yml"><img alt="validation status" src="https://img.shields.io/github/actions/workflow/status/mannyandrs45/agentic-skill-library/validate.yml?style=flat-square&amp;label=validation"></a>
+</p>
 
-This repository is not a list of prompts. It is a working library for studying how strong agent systems route requests, gather context, constrain tools, validate work, and preserve quality across long tasks.
+<p align="center">
+  A curated library of executable agent workflows. Browse a skill, inspect its decisions and guardrails, then adapt it to your harness.
+</p>
 
-The library combines four layers:
+## Pick a path
 
-1. **Upstream collections** preserve high-signal, runnable skill systems with their original licenses and provenance.
-2. **Perplexity user skills** preserve portable, user-owned skills as they run inside Computer.
-3. **The vault** adds human navigation through maps of content, categories, and cross-links.
-4. **The registry** provides machine-readable metadata for search, evaluation, installation, and future tooling.
+| I want to… | Start here |
+| --- | --- |
+| Find the right workflow | **[Browse all 128 skills →](CATALOG.md)** |
+| Study complete agent systems | **[Explore community collections →](skills/community/)** |
+| Reuse Manny's Computer skills | **[Open personal skills →](skills/personal/README.md)** |
+| Port a skill to another agent | **[Read the portability guide →](docs/PORTABILITY.md)** |
+| Add or update a skill | **[Read the contribution guide →](CONTRIBUTING.md)** |
 
-## Start here
+## One library, three layers
 
-- [Atlas](ATLAS.md): the shortest route into the repository.
-- [Generated catalog](CATALOG.md): every indexed skill, grouped by domain.
-- [Vault](vault/README.md): Obsidian-style navigation and maps of content.
-- [Architecture](docs/ARCHITECTURE.md): why the repository is structured this way.
-- [Portability](docs/PORTABILITY.md): how to adapt skills across agent harnesses.
-- [Sources](SOURCES.md): upstream provenance, licenses, and snapshot policy.
-- [Contributing](CONTRIBUTING.md): the acceptance bar for new skills.
+<p align="center">
+  <img src="assets/architecture.svg" alt="Simplified repository architecture: skills feed a generated catalog, maintained by lightweight tools" width="100%">
+</p>
 
-## Included collections
-
-| Collection | What it contributes | Import policy |
-| --- | --- | --- |
-| [gstack](collections/gstack/README.md) | A complete software-building operating system with strategy, design, engineering, QA, release, browsing, and memory workflows | Full source snapshot |
-| [no-ai-slop](collections/no-ai-slop/README.md) | A focused editorial skill with explicit detection and rewrite behavior | Full source snapshot |
-| [HyperFrames](collections/hyperframes/README.md) | Twenty composable skills for agent-authored video, motion, media, and rendering | Skills-only snapshot |
-| [Perplexity user skills](skills/perplexity-user/README.md) | Portable user-scoped skills exported from Perplexity Computer, including a 33-skill marketing system | User-owned snapshot |
-
-## Design principles
-
-- **Skills are executable operating procedures.** A useful skill defines triggers, inputs, tool boundaries, decision points, outputs, and verification.
-- **Collections stay attributable.** Vendored upstream work keeps its license and source identity.
-- **Navigation is separate from source.** Curated notes can evolve without rewriting imported projects.
-- **Human and machine readers are peers.** Markdown maps support browsing; JSON supports automation.
-- **Examples must be safe to publish.** Never include client secrets, private work artifacts, credentials, or personal data.
-- **Quality beats volume.** A small skill with clear routing and a hard validation loop is more useful than a large prompt with vague advice.
-
-## Repository layout
+Everything runnable lives in `skills/`. Everything discoverable is generated into `CATALOG.md`. Everything needed to keep the library trustworthy lives in `registry/` and `scripts/`.
 
 ```text
-.
-├── collections/        # Preserved upstream source snapshots
-├── skills/             # User-owned and first-party portable skills
-├── vault/              # Human navigation, maps, and platform notes
-├── registry/           # Machine-readable catalog and provenance
-├── docs/               # Architecture and portability guidance
-├── scripts/            # Catalog, validation, and sync tooling
-├── ATLAS.md            # Curated front door
-└── CATALOG.md          # Generated full index
+skills/
+├── community/          # Attributed upstream systems
+│   ├── gstack/
+│   ├── hyperframes/
+│   └── no-ai-slop/
+└── personal/           # Publication-safe Perplexity Computer skills
+
+CATALOG.md              # The only index
+registry/               # Provenance and machine metadata
+scripts/                # Import, sync, catalog, validate
 ```
 
-## Local commands
+That is the whole architecture. There is no parallel vault, second atlas, or duplicate navigation hierarchy.
+
+## What is inside
+
+<p align="center">
+  <img src="assets/collection-mix.svg" alt="Collection composition: 59 gstack skills, 48 Perplexity personal skills, 20 HyperFrames skills, and one no-ai-slop skill" width="100%">
+</p>
+
+| Collection | Skills | Best for |
+| --- | ---: | --- |
+| **[gstack](skills/community/gstack/README.md)** | 59 | Product thinking, engineering, QA, release, browser work, and long-running agent operations |
+| **[Personal](skills/personal/README.md)** | 48 | Marketing, travel, writing, sports intelligence, visualization, and Perplexity Computer workflows |
+| **[HyperFrames](skills/community/hyperframes/README.md)** | 20 | Video, motion, audio, captions, and media production |
+| **[no-ai-slop](skills/community/no-ai-slop/README.md)** | 1 | Detecting and removing synthetic writing patterns without flattening voice |
+
+## What counts as a skill
+
+A skill is an executable operating procedure, not a persona or a bag of tips. Strong entries make six things clear:
+
+1. **Trigger:** when the skill runs, and when it should not.
+2. **Inputs:** what context it needs before acting.
+3. **Workflow:** the sequence and decision branches.
+4. **Tools:** what it may use and where confirmation is required.
+5. **Output:** the artifact or action it must produce.
+6. **Verification:** how the agent knows the work is done.
+
+## Use the library
 
 ```bash
-npm run catalog
+git clone https://github.com/mannyandrs45/agentic-skill-library.git
+cd agentic-skill-library
+
 npm run validate
 npm run sync:upstreams
 npm run import:perplexity -- /path/to/exported/user/skills
 ```
 
-`npm run catalog` rebuilds the generated Markdown and JSON indexes. `npm run validate` checks manifests, links, licenses, provenance, and generated-file freshness. `npm run sync:upstreams` refreshes the three upstream snapshots and updates their pinned commit identifiers.
+`sync:upstreams` refreshes pinned community snapshots. `import:perplexity` imports only the publication-safe allowlist, so private Springs Labs operating playbooks remain reference-only.
 
-`npm run import:perplexity -- <source-directory>` refreshes only the allowlisted, publication-safe Perplexity user skills. Sensitive business playbooks stay reference-only until a redacted public edition exists.
+## Principles
 
-## Status
+- **Useful over numerous.** Every skill should change agent behavior.
+- **Source stays visible.** Community work keeps its license and exact commit.
+- **One front door.** The README explains; the catalog indexes.
+- **Portable by design.** Workflow invariants stay separate from harness-specific tools.
+- **Private means private.** Client data, credentials, and sensitive operating rules never enter the published tree.
 
-This is the first foundation commit. The next stage is to add independently authored skills, evaluation fixtures, compatibility adapters, and concise field notes showing why each selected workflow is worth keeping.
+<p align="center">
+  <strong>Start with the <a href="CATALOG.md">skill catalog</a>.</strong>
+</p>

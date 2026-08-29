@@ -1,6 +1,6 @@
-# Perplexity Computer user skills
+# Personal skills
 
-This directory contains publication-safe snapshots of user-owned skills exported from Perplexity Computer. They are separated from upstream collections because their source of truth is the user's Perplexity skill library rather than a public GitHub repository.
+This directory contains publication-safe snapshots of user-owned skills exported from Perplexity Computer. Their source of truth is the user's Perplexity skill library rather than a public GitHub repository.
 
 Snapshot date: 2026-08-29.
 
@@ -23,4 +23,3 @@ Files are copied with their supporting references and scripts intact. Some manif
 The current Springs Labs skills are not committed here. They contain exact pricing, capacity thresholds, contracting terms, private operating rules, and personal business context. Their names and reasons for withholding are tracked in [`registry/perplexity-user-skills.json`](../../registry/perplexity-user-skills.json).
 
 The import script uses an explicit allowlist. A new user skill is never published merely because it appears in the runtime directory.
-

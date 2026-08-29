@@ -1,6 +1,6 @@
 # Sources and provenance
 
-The `collections/` directory contains source snapshots from external repositories. Each collection retains its upstream license. The top-level MIT license applies only to original curation, scripts, registry files, and documentation in this repository; it does not replace collection-specific licenses.
+`skills/community/` contains source snapshots from external repositories. Each collection retains its upstream license. The top-level MIT license applies only to original curation, scripts, registry files, and documentation in this repository; it does not replace collection-specific licenses.
 
 ## Snapshot policy
 
@@ -17,21 +17,21 @@ The `collections/` directory contains source snapshots from external repositorie
 - Repository: https://github.com/garrytan/gstack
 - License: MIT
 - Scope: full repository snapshot, excluding Git metadata
-- Local path: `collections/gstack/`
+- Local path: `skills/community/gstack/`
 
 ### no-ai-slop
 
 - Repository: https://github.com/petergyang/no-ai-slop
 - License: MIT
 - Scope: full repository snapshot, excluding Git metadata
-- Local path: `collections/no-ai-slop/`
+- Local path: `skills/community/no-ai-slop/`
 
 ### HyperFrames
 
 - Repository: https://github.com/heygen-com/hyperframes
 - License: Apache-2.0
 - Scope: `skills/` plus the upstream license
-- Local path: `collections/hyperframes/`
+- Local path: `skills/community/hyperframes/`
 
 ## Attribution rules
 

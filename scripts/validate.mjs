@@ -22,7 +22,6 @@ async function markdownFiles(directory) {
 
 for (const required of [
   "README.md",
-  "ATLAS.md",
   "CATALOG.md",
   "CONTRIBUTING.md",
   "SOURCES.md",
@@ -82,11 +81,10 @@ for (const skill of catalog.skills) {
 }
 
 const authoredMarkdown = [
-  ...["README.md", "ATLAS.md", "CONTRIBUTING.md", "SOURCES.md"].map((file) =>
+  ...["README.md", "CONTRIBUTING.md", "SOURCES.md"].map((file) =>
     path.join(root, file),
   ),
   ...(await markdownFiles(path.join(root, "docs"))),
-  ...(await markdownFiles(path.join(root, "vault"))),
 ];
 
 for (const file of authoredMarkdown) {

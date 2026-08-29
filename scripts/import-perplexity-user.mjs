@@ -13,7 +13,7 @@ if (!sourceRoot) {
 const registry = JSON.parse(
   await readFile(path.join(root, "registry/perplexity-user-skills.json"), "utf8"),
 );
-const destinationRoot = path.join(root, "skills/perplexity-user");
+const destinationRoot = path.join(root, "skills/personal");
 
 for (const name of registry.included) {
   const source = path.resolve(sourceRoot, name);
@@ -37,4 +37,3 @@ console.log(
   `Imported ${registry.included.length} publication-safe user skills. ` +
     `${registry.referenceOnly.length} private skills remained reference-only.`,
 );
-

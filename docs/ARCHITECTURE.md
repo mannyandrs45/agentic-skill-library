@@ -1,29 +1,30 @@
-# Repository architecture
+# Architecture
 
-The repository separates source, interpretation, and machine metadata. That separation keeps upstream projects updateable while allowing the library to develop its own point of view.
+The repository has one job: make strong agent skills easy to inspect, find, and maintain. It uses three layers.
 
-## Collections
-
-`collections/` holds attributable source snapshots. A collection may be an entire agent operating system or a focused skill package. Imported files are not silently normalized because directory structure, helper scripts, templates, and references are often part of the skill's actual behavior.
+![Three-layer repository architecture](../assets/architecture.svg)
 
 ## Skills
 
-`skills/` is reserved for first-party or materially adapted work. A future skill belongs here when this repository owns its maintenance and can explain its evaluation standard.
+Every runnable workflow lives under one tree:
 
-## Vault
+- `skills/community/` contains pinned, attributed upstream systems.
+- `skills/personal/` contains publication-safe, user-owned skills exported from Perplexity Computer.
 
-`vault/` is the human knowledge graph. Maps of content group skills by the job they perform rather than the repository they came from. Notes use normal Markdown links so they work on GitHub and remain compatible with Obsidian.
+Imported projects keep their internal structure because references, scripts, and templates can be part of runtime behavior.
 
-## Registry
+## Catalog
 
-`registry/catalog.json` is generated from every accepted `SKILL.md`. It records name, description, source collection, path, and inferred domain. `registry/sources.json` records upstream commits and import modes. These files are the foundation for a future searchable interface, installer, compatibility matrix, or evaluation dashboard.
+`CATALOG.md` is the only human index. `registry/catalog.json` is the same index for machines. Both are generated from `SKILL.md` manifests.
 
-## Scripts
+## Maintenance
 
-- `build-catalog.mjs` scans manifests and generates the catalog and maps.
-- `validate.mjs` checks structure, metadata, provenance, licenses, and generated output.
-- `sync-upstreams.mjs` refreshes source snapshots and pinned commits.
+- `registry/` records source commits, licenses, and publication policy.
+- `scripts/` imports personal skills, refreshes community snapshots, rebuilds the catalog, and validates links and provenance.
+- `.github/workflows/validate.yml` runs the same validation on every change.
 
-## Why not submodules?
+There is no separate vault or second navigation hierarchy. The README is the landing page, the catalog is the index, and the skill tree is the library.
 
-Submodules preserve history but make casual browsing, cloning, and downstream indexing less reliable. Pinned snapshots make the repository self-contained. Exact source commits retain reproducibility, and the sync script keeps updates deliberate and reviewable.
+## Why snapshots instead of submodules
+
+Pinned snapshots keep the repository self-contained and searchable. Exact upstream commits preserve reproducibility, while the sync script keeps updates deliberate.
