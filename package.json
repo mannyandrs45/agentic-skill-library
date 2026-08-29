@@ -1,0 +1,15 @@
+{
+  "name": "agentic-skill-library",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A curated, linked vault of production-grade agent skills and workflows.",
+  "type": "module",
+  "scripts": {
+    "catalog": "node scripts/build-catalog.mjs",
+    "validate": "node scripts/validate.mjs",
+    "sync:upstreams": "node scripts/sync-upstreams.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

@@ -1,0 +1,647 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-08-29T17:21:52.759Z",
+  "count": 80,
+  "skills": [
+    {
+      "name": "autoplan",
+      "description": "Auto-review pipeline — reads the full CEO, design, eng, and DX review skills from disk and runs them sequentially with auto-decisions using 6 decision principles. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/autoplan/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "design-html",
+      "description": "Design finalization: generates production-quality Pretext-native HTML/CSS. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/design-html/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "design-shotgun",
+      "description": "Design shotgun: generate multiple AI design variants, open a comparison board, collect structured feedback, and iterate. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/design-shotgun/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "diagram",
+      "description": "Turn an English description (or mermaid source) into a diagram triplet: the source, an editable .excalidraw file you can open on excalidraw.com, and rendered SVG + PNG. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/diagram/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-openclaw-office-hours",
+      "description": "Use when asked to brainstorm, evaluate whether an idea is worth building, run office hours, or think through a new product idea or design direction before any code is written.",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/openclaw/skills/gstack-openclaw-office-hours/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "ios-clean",
+      "description": "Remove the DebugBridge SPM package and all #if DEBUG wiring from an iOS app. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/ios-clean/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ios-design-review",
+      "description": "Visual design audit for iOS apps on real hardware. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/ios-design-review/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ios-fix",
+      "description": "Autonomous iOS bug fixer. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/ios-fix/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ios-qa",
+      "description": "Live-device iOS QA for SwiftUI apps. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/ios-qa/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ios-sync",
+      "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/ios-sync/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "plan-design-review",
+      "description": "Designer's eye plan review — interactive, like CEO and Eng review. (gstack)",
+      "domain": "design",
+      "collection": "gstack",
+      "path": "collections/gstack/plan-design-review/SKILL.md",
+      "version": "2.0.0"
+    },
+    {
+      "name": "codex",
+      "description": "OpenAI Codex CLI wrapper — three modes. (gstack)",
+      "domain": "engineering",
+      "collection": "gstack",
+      "path": "collections/gstack/codex/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "devex-review",
+      "description": "Live developer experience audit. (gstack)",
+      "domain": "engineering",
+      "collection": "gstack",
+      "path": "collections/gstack/devex-review/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "pair-agent",
+      "description": "Pair a remote AI agent with your browser. (gstack)",
+      "domain": "engineering",
+      "collection": "gstack",
+      "path": "collections/gstack/pair-agent/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "name": "plan-devex-review",
+      "description": "Interactive developer experience plan review. (gstack)",
+      "domain": "engineering",
+      "collection": "gstack",
+      "path": "collections/gstack/plan-devex-review/SKILL.md",
+      "version": "2.0.0"
+    },
+    {
+      "name": "plan-tune",
+      "description": "Self-tuning question sensitivity + developer psychographic for gstack (v1: observational). (gstack)",
+      "domain": "engineering",
+      "collection": "gstack",
+      "path": "collections/gstack/plan-tune/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "design-consultation",
+      "description": "Design consultation: understands your product, researches the landscape, proposes a complete design system (aesthetic, typography, color, layout, spacing, motion), and generates font+color preview... (gstack)",
+      "domain": "media",
+      "collection": "gstack",
+      "path": "collections/gstack/design-consultation/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "embedded-captions",
+      "description": "Add captions or subtitles to an existing single-subject talking-head video without editing the footage. Use for plain verbatim captions, cinematic captions embedded behind the subject, VFX captions, “炸/特效/酷炫字幕,” or a named identity from the 35-style catalog. Route by visual identity, not by backend engine. The quiet `anchor` rail is the default; embed every word only when the user explicitly wants a fully cinematic treatment. The workflow runs locally end to end, including transcription and subject matting; split multi-shot footage before applying it.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/embedded-captions/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "faceless-explainer",
+      "description": "Turn arbitrary text — an article, notes, a topic, a brief — into a faceless explainer video: there is no site or footage to capture, so the visuals are invented per scene (typography, abstract graphics, diagrams, data-viz). Use for topic explainers, concept breakdowns, how-tos, listicles. Not a video built from a website (/product-launch-video — promo or tour). Unclear → /hyperframes.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/faceless-explainer/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "figma",
+      "description": "Import Figma content into a HyperFrames composition — rendered assets, brand tokens, components, storyboard sections → reconstructed motion (frames read as states, not slides) (REST/CLI), connector-assisted motion when available, and shaders from a connector or native export. Use when the user pastes a figma.com link or asks to bring a Figma design, frame, logo, brand, or animation into a video/composition.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/figma/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "general-video",
+      "description": "Author or edit a custom HyperFrames composition when no specialized workflow fits, or when BRIEF.md sets flow: companion. Use for longer or multi-scene pieces, brand and sizzle reels, montages, static loops, static title cards, footage remixes, and freeform builds. Use motion-graphics instead for a short unnarrated motion-first unit, including an animated title. Route fresh creation through hyperframes before using this skill.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/general-video/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hyperframes",
+      "description": "Mandatory entry point: read this first for any request to make, create, edit, animate, or render a video, animation, or motion graphic, including a promo, explainer, captioned clip, title card, overlay, slideshow or interactive deck, Remotion port, or any HyperFrames HTML composition. Also use it to inspect, diagnose, validate, preview, publish, or batch-render an existing HyperFrames project. Inputs may be a website URL, GitHub PR, Figma design or URL, text or brief, existing footage, or music. It resumes project state, captures intent when applicable, selects and installs the owning workflow, and routes domain capabilities. HyperFrames is the default output framework unless the user explicitly chooses another framework for the deliverable or asks only to record a browser session.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/hyperframes/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hyperframes-animation",
+      "description": "All animation knowledge for HyperFrames — atomic motion rules, multi-phase scene blueprints, scene transitions, broader motion-design techniques, AND the seven runtime adapters (GSAP default, plus Lottie, Three.js, Anime.js, CSS keyframes, Web Animations API, TypeGPU). Use for any motion or animation task: pick 2-4 rules and compose, or load a blueprint, or look up runtime-specific API (e.g. GSAP eases / Lottie player / Three.js mixer). Also covers auditing an existing composition's choreography (animation map) and 24 named text-animation effects. HyperFrames-native: single paused timeline, seek-safe, deterministic.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/hyperframes-animation/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hyperframes-audio",
+      "description": "Use when audio already placed in a HyperFrames composition needs to be mixed: fade-in/fade-out, crossfade, track gain or volume, volume automation, ducking, a music bed that fights a voiceover (voiceover carve), effects on a track (EQ, compressor, limiter, gate, saturation, delay, reverb, chorus, phaser, bitcrush), automation envelopes drawn on a track's volume or any effect parameter, or one submix bus carrying a chain, a fader and an automation clock for several tracks at once (`<hf-audio-group>`). Don't use for sourcing or generating audio — finding BGM, SFX, or making a voiceover is `/media-use`. Don't use for clip timing or track layout, which is `/hyperframes-core`.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/hyperframes-audio/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hyperframes-cli",
+      "description": "Use the HyperFrames CLI development loop: init, add, catalog, capture, lint, check, snapshot, compare, grade-compare, preview, play, present, beats, keyframes, single or batch render, publish, cloud, cloudrun, feedback, lambda, doctor, browser, info, upgrade, skills, compositions, docs, benchmark, telemetry, transcribe, auth, tts, and remove-background. Also use when diagnosing build or render failures. validate, inspect, and layout are deprecated aliases; use check. Covers local, HeyGen-hosted cloud, AWS Lambda, and Google Cloud Run rendering.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/hyperframes-cli/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hyperframes-core",
+      "description": "The HyperFrames composition contract — build one renderable project. Use for composition structure, the `data-*` timing attributes, `class=\"clip\"`, tracks, sub-compositions, variables, framework-owned media playback, deterministic-render rules, and validation. Also covers Tailwind projects and the STORYBOARD.md / SCRIPT.md plan formats. Read before writing composition HTML.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/hyperframes-core/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hyperframes-creative",
+      "description": "Non-animation creative direction for HyperFrames videos. Use for design spec (frame.md / design.md) handling, palettes, typography, narration, beat planning, audio-reactive visuals, composition patterns, and brand / style decisions. For atomic motion patterns and scene blueprints, use `hyperframes-animation`.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/hyperframes-creative/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hyperframes-keyframes",
+      "description": "Use when a HyperFrames composition needs a punch-in, punch-out, zoom, reframe, Ken Burns treatment, camera move, visual match/whip handoff, or other seek-safe 2D/3D keyframes; also for GSAP, CSS keyframes, Anime.js, WAAPI, FLIP, paths, masks, SVG morph/draw, text trails, 3D depth, or `hyperframes keyframes` diagnostics. Don't use for broad scene strategy, brand design, media sourcing, captions, or general video planning.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/hyperframes-keyframes/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hyperframes-registry",
+      "description": "Install, discover, and wire registry blocks and components into HyperFrames compositions. Use when running hyperframes add or hyperframes catalog, installing one item or every block matching a tag, wiring an installed item into index.html, or working with hyperframes.json. Covers discovery, install locations, block sub-composition wiring, component snippet merging, and authoring a new block or component to contribute upstream (idea → scaffold → validate → PR).",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/hyperframes-registry/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "media-use",
+      "description": "Agent Media OS, the single skill for every media need in a HyperFrames project. Resolve BGM, SFX, image, icon, brand logo, voice, color grade, or LUT into a frozen local file or paste-ready block + ledger record (one verb, `resolve`); generate via TTS / music / image models when the catalog misses; produce voiceover, transcription, captions, and background removal through one shared audio engine; operate on media (cut / reframe / transform); and reuse assets across projects. Also use for vague feedback that real footage looks dark, flat, boring, should feel retro/camcorder/print/ASCII, needs privacy, or needs a media reveal.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/media-use/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "motion-graphics",
+      "description": "A short, design-led motion graphic where motion is the message — kinetic typography, stat count-up, chart/data-viz hit, logo sting / brand lockup, lower-third / callout / social overlay, animated map (highlight regions, connect places, zoom to a location), animated tweet / news-article / headline, webpage / UI animation (scroll, cursor, callouts), or fusing a real image's geometry into a chart. Usually under 10s (up to ~30s), no narration or live-action subject; renders to MP4 or transparent overlay. Longer / narrated / multi-scene → /general-video. Unclear → /hyperframes.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/motion-graphics/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "music-to-video",
+      "description": "Turn a music track (an audio file, a video to pull audio from, or a track generated from a mood brief) into a beat-synced video — lyric video, slideshow, or kinetic promo. The music drives all pacing; any user-supplied images/videos are cut onto the same beat grid, and a complete video needs zero assets. Narrated pieces → the input-matched workflow (see /hyperframes). Unclear → /hyperframes.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/music-to-video/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "pr-to-video",
+      "description": "Turn a GitHub pull request (a PR URL, owner/repo#N, or 'this PR' in a checked-out repo) into a code-change explainer video — changelog, feature reveal, fix, or refactor walkthrough built from the diff, commits, and files: the input is a code change, not a website. Not a product promo (/product-launch-video) or a no-PR topic explainer (/faceless-explainer). Unclear → /hyperframes.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/pr-to-video/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "product-launch-video",
+      "description": "Turn a product or marketing URL, pasted script, or brief into a product launch / promo video — SaaS promos, feature reveals, product demos, app and company launches. Use when the user wants to market, launch, promote, or reveal a product; the default for any commercial URL. Site tours / showcases of a website route here too — the brief carries the show-it-as-is intent. Unclear → /hyperframes.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/product-launch-video/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "remotion-to-hyperframes",
+      "description": "Port an existing Remotion (React) composition''s source to HyperFrames HTML. Use ONLY on an explicit ask to port/convert/migrate/translate a Remotion source — one-way, Remotion-only. A passing Remotion mention, reference-only code, or \"make something like my Remotion video\" is a fresh build (/general-video). Unclear → /hyperframes.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/remotion-to-hyperframes/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "slideshow",
+      "description": "Author a HyperFrames slideshow — a presentation, pitch deck, or interactive deck with discrete slides, fragment reveals, branching, hotspot navigation, and built-in presenter mode with speaker notes; also converts an existing page into a deck. Output is a navigable deck, not a rendered MP4. If the user didn't explicitly ask for a slideshow, confirm before authoring. Unclear → /hyperframes.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/slideshow/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "talking-head-recut",
+      "description": "Package an existing talking-head / interview / podcast video with timed, designed GRAPHIC OVERLAY cards — kinetic titles, lower-thirds, data callouts, quotes, side panels, picture-in-picture — synced to the transcript, on a 16:9 / 9:16 / 4:5 canvas of your choice; the clip plays untouched underneath. Trigger on \"graphic overlays\", \"on-screen graphics\", \"package / dress up my video\". Not plain subtitles (/embedded-captions). Unclear → /hyperframes.",
+      "domain": "media",
+      "collection": "hyperframes",
+      "path": "collections/hyperframes/skills/talking-head-recut/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "context-restore",
+      "description": "Restore working context saved earlier by /context-save. (gstack)",
+      "domain": "orchestration",
+      "collection": "gstack",
+      "path": "collections/gstack/context-restore/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "context-save",
+      "description": "Save working context. (gstack)",
+      "domain": "orchestration",
+      "collection": "gstack",
+      "path": "collections/gstack/context-save/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack",
+      "description": "Router for the gstack skill suite. (gstack)",
+      "domain": "orchestration",
+      "collection": "gstack",
+      "path": "collections/gstack/SKILL.md",
+      "version": "1.2.0"
+    },
+    {
+      "name": "learn",
+      "description": "Manage project learnings.",
+      "domain": "orchestration",
+      "collection": "gstack",
+      "path": "collections/gstack/learn/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "setup-gbrain",
+      "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
+      "domain": "orchestration",
+      "collection": "gstack",
+      "path": "collections/gstack/setup-gbrain/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "sync-gbrain",
+      "description": "Keep gbrain current with this repo's code and refresh agent search guidance in CLAUDE.md. (gstack)",
+      "domain": "orchestration",
+      "collection": "gstack",
+      "path": "collections/gstack/sync-gbrain/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "browse",
+      "description": "Fast headless browser for QA testing and site dogfooding. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/browse/SKILL.md",
+      "version": "1.1.0"
+    },
+    {
+      "name": "canary",
+      "description": "Post-deploy canary monitoring. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/canary/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "careful",
+      "description": "Safety guardrails for destructive commands. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/careful/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "name": "freeze",
+      "description": "Restrict file edits to a specific directory for the session. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/freeze/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "name": "gstack-openclaw-ceo-review",
+      "description": "Use when asked to review a plan, challenge a proposal, run a CEO review, poke holes in an approach, think bigger about scope, or decide whether to expand or reduce the plan.",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/openclaw/skills/gstack-openclaw-ceo-review/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "gstack-openclaw-retro",
+      "description": "Weekly engineering retrospective. Analyzes commit history, work patterns, and code quality metrics with persistent history and trend tracking. Team-aware with per-person contributions, praise, and growth areas. Use when asked for weekly retro, what shipped this week, or engineering retrospective.",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/openclaw/skills/gstack-openclaw-retro/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "gstack-upgrade",
+      "description": "Upgrade gstack to the latest version.",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/gstack-upgrade/SKILL.md",
+      "version": "1.1.0"
+    },
+    {
+      "name": "guard",
+      "description": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/guard/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "name": "health",
+      "description": "Code quality dashboard. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/health/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "land-and-deploy",
+      "description": "Land and deploy workflow. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/land-and-deploy/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "landing-report",
+      "description": "Read-only queue dashboard for workspace-aware ship. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/landing-report/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "name": "plan-ceo-review",
+      "description": "CEO/founder-mode plan review. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/plan-ceo-review/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "plan-eng-review",
+      "description": "Eng manager-mode plan review. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/plan-eng-review/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "qa",
+      "description": "Systematically QA test a web application and fix bugs found. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/qa/SKILL.md",
+      "version": "2.0.0"
+    },
+    {
+      "name": "qa-only",
+      "description": "Report-only QA testing. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/qa-only/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "review",
+      "description": "Pre-landing PR review. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/review/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "setup-deploy",
+      "description": "Configure deployment settings for /land-and-deploy.",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/setup-deploy/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "ship",
+      "description": "Ship workflow: detect + merge base branch, run tests, review diff, bump VERSION, update CHANGELOG, commit, push, create PR. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/ship/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "unfreeze",
+      "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
+      "domain": "quality-and-release",
+      "collection": "gstack",
+      "path": "collections/gstack/unfreeze/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "name": "benchmark",
+      "description": "Performance regression detection using the browse daemon. (gstack)",
+      "domain": "research-and-browser",
+      "collection": "gstack",
+      "path": "collections/gstack/benchmark/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "gstack-openclaw-investigate",
+      "description": "Use when asked to debug, fix a bug, investigate an error, or do root cause analysis, and when users report errors, stack traces, unexpected behavior, or say something stopped working.",
+      "domain": "research-and-browser",
+      "collection": "gstack",
+      "path": "collections/gstack/openclaw/skills/gstack-openclaw-investigate/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hackernews-frontpage",
+      "description": "Scrape the Hacker News front page (titles, points, comment counts).",
+      "domain": "research-and-browser",
+      "collection": "gstack",
+      "path": "collections/gstack/browser-skills/hackernews-frontpage/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "investigate",
+      "description": "Systematic debugging with root cause investigation. (gstack)",
+      "domain": "research-and-browser",
+      "collection": "gstack",
+      "path": "collections/gstack/investigate/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "open-gstack-browser",
+      "description": "Launch GStack Browser — AI-controlled Chromium with the sidebar extension baked in.",
+      "domain": "research-and-browser",
+      "collection": "gstack",
+      "path": "collections/gstack/open-gstack-browser/SKILL.md",
+      "version": "0.2.0"
+    },
+    {
+      "name": "scrape",
+      "description": "Pull data from a web page. (gstack)",
+      "domain": "research-and-browser",
+      "collection": "gstack",
+      "path": "collections/gstack/scrape/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "setup-browser-cookies",
+      "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
+      "domain": "research-and-browser",
+      "collection": "gstack",
+      "path": "collections/gstack/setup-browser-cookies/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "skillify",
+      "description": "Codify the most recent successful /scrape flow into a permanent browser-skill on disk. (gstack)",
+      "domain": "research-and-browser",
+      "collection": "gstack",
+      "path": "collections/gstack/skillify/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "benchmark-models",
+      "description": "Cross-model benchmark for gstack skills. (gstack)",
+      "domain": "strategy-and-product",
+      "collection": "gstack",
+      "path": "collections/gstack/benchmark-models/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "cso",
+      "description": "Chief Security Officer mode. (gstack)",
+      "domain": "strategy-and-product",
+      "collection": "gstack",
+      "path": "collections/gstack/cso/SKILL.md",
+      "version": "2.0.0"
+    },
+    {
+      "name": "office-hours",
+      "description": "YC Office Hours — two modes. (gstack)",
+      "domain": "strategy-and-product",
+      "collection": "gstack",
+      "path": "collections/gstack/office-hours/SKILL.md",
+      "version": "2.0.0"
+    },
+    {
+      "name": "retro",
+      "description": "Weekly engineering retrospective. (gstack)",
+      "domain": "strategy-and-product",
+      "collection": "gstack",
+      "path": "collections/gstack/retro/SKILL.md",
+      "version": "2.0.0"
+    },
+    {
+      "name": "spec",
+      "description": "Turn vague intent into a precise, executable spec in five phases. (gstack)",
+      "domain": "strategy-and-product",
+      "collection": "gstack",
+      "path": "collections/gstack/spec/SKILL.md",
+      "version": "0.1.0"
+    },
+    {
+      "name": "design-review",
+      "description": "Designer's eye QA: finds visual inconsistency, spacing issues, hierarchy problems, AI slop patterns, and slow interactions — then fixes them. (gstack)",
+      "domain": "writing",
+      "collection": "gstack",
+      "path": "collections/gstack/design-review/SKILL.md",
+      "version": "2.0.0"
+    },
+    {
+      "name": "document-generate",
+      "description": "Generate missing documentation from scratch for a feature, module, or entire project. (gstack)",
+      "domain": "writing",
+      "collection": "gstack",
+      "path": "collections/gstack/document-generate/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "document-release",
+      "description": "Post-ship documentation update. (gstack)",
+      "domain": "writing",
+      "collection": "gstack",
+      "path": "collections/gstack/document-release/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "make-pdf",
+      "description": "Turn any markdown file into a publication-quality PDF. (gstack)",
+      "domain": "writing",
+      "collection": "gstack",
+      "path": "collections/gstack/make-pdf/SKILL.md",
+      "version": "1.0.0"
+    },
+    {
+      "name": "no-ai-slop",
+      "description": "Edit drafts into sharper, more human writing while preserving the writer's personal voice, or detect AI-slop patterns without rewriting. Use when the user wants a draft clearer, more direct, more opinionated, or less AI-sounding, or asks whether writing reads as AI.",
+      "domain": "writing",
+      "collection": "no-ai-slop",
+      "path": "collections/no-ai-slop/skills/no-ai-slop/SKILL.md",
+      "version": null
+    }
+  ]
+}

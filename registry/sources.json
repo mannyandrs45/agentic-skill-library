@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-08-29",
+  "sources": [
+    {
+      "id": "gstack",
+      "repository": "https://github.com/garrytan/gstack",
+      "ref": "main",
+      "commit": "07b59e396c6be5a86619a43151cb9ed62a15ae69",
+      "license": "MIT",
+      "localPath": "collections/gstack",
+      "importMode": "full"
+    },
+    {
+      "id": "no-ai-slop",
+      "repository": "https://github.com/petergyang/no-ai-slop",
+      "ref": "main",
+      "commit": "d30eddb9e04562234f2070b5ee63ca4649d9a05e",
+      "license": "MIT",
+      "localPath": "collections/no-ai-slop",
+      "importMode": "full"
+    },
+    {
+      "id": "hyperframes",
+      "repository": "https://github.com/heygen-com/hyperframes",
+      "ref": "main",
+      "commit": "bddc9e9bba977c4c777fcec246ecfb6ae43286ec",
+      "license": "Apache-2.0",
+      "localPath": "collections/hyperframes",
+      "importMode": "skills-only"
+    }
+  ]
+}
