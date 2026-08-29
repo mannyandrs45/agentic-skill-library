@@ -29,6 +29,7 @@ for (const required of [
   "LICENSE",
   "registry/catalog.json",
   "registry/sources.json",
+  "registry/perplexity-user-skills.json",
 ]) {
   try {
     await access(path.join(root, required));
@@ -61,7 +62,7 @@ const catalog = JSON.parse(
   await readFile(path.join(root, "registry/catalog.json"), "utf8"),
 );
 
-if (catalog.count < 70) fail(`Unexpectedly small catalog: ${catalog.count}`);
+if (catalog.count < 120) fail(`Unexpectedly small catalog: ${catalog.count}`);
 
 const seen = new Map();
 for (const skill of catalog.skills) {

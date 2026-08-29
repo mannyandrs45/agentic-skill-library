@@ -8,7 +8,6 @@ generated: true
 
 [← Vault](../README.md) · [Full catalog](../../CATALOG.md)
 
-- [benchmark-models](../../collections/gstack/benchmark-models/SKILL.md) · `gstack` — Cross-model benchmark for gstack skills. (gstack)
 - [cso](../../collections/gstack/cso/SKILL.md) · `gstack` — Chief Security Officer mode. (gstack)
 - [office-hours](../../collections/gstack/office-hours/SKILL.md) · `gstack` — YC Office Hours — two modes. (gstack)
 - [retro](../../collections/gstack/retro/SKILL.md) · `gstack` — Weekly engineering retrospective. (gstack)

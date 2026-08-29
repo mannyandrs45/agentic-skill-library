@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "scope": "user",
+  "platform": "Perplexity Computer",
+  "snapshotDate": "2026-08-29",
+  "included": [
+    "bar-selector",
+    "content-generator",
+    "footy-edge-webapp-agent",
+    "grill-me",
+    "hotel-selector",
+    "interview-to-article",
+    "marketing",
+    "nightlife-selector",
+    "no-ai-slop",
+    "office-hours",
+    "project-recap-substack",
+    "restaurant-selector",
+    "resume-builder",
+    "skillopt",
+    "tufte-charts"
+  ],
+  "referenceOnly": [
+    {
+      "name": "springs-labs-buckets",
+      "reason": "Contains private pricing and service-boundary rules."
+    },
+    {
+      "name": "springs-labs-orchestrator",
+      "reason": "Contains private operating, capacity, pipeline, and business rules."
+    },
+    {
+      "name": "springs-labs-roadmapping",
+      "reason": "Contains private proposal, costing, and client-delivery methodology."
+    },
+    {
+      "name": "springs-labs-sow",
+      "reason": "Contains private commercial terms and contract defaults."
+    }
+  ],
+  "builtIns": {
+    "policy": "reference-only",
+    "reason": "Perplexity built-in skill definitions are platform-owned and supplied at runtime."
+  }
+}
+

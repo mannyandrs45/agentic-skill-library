@@ -29,6 +29,12 @@ The current workspace also demonstrates useful first-party patterns:
 - Tufte-inspired chart direction
 - bounded skill self-improvement with held-out validation
 
+## Export status
+
+Portable user-owned definitions are now versioned under [`skills/perplexity-user/`](../../skills/perplexity-user/README.md). The export includes supporting references and scripts, not only the top-level manifests.
+
+Built-in Perplexity skills remain names-and-capabilities references because their runtime definitions are platform-owned. Springs Labs operating playbooks remain reference-only because the current versions include private pricing, capacity, contracting, and business rules.
+
 ## What to document here
 
 When a runtime skill proves valuable, add a short field note describing:

@@ -32,6 +32,29 @@ Use this page as the repository's front door. Pick the kind of work you are doin
 - [Writing map](vault/maps/writing.md)
 - [No AI Slop](collections/no-ai-slop/skills/no-ai-slop/SKILL.md)
 - [Document generation](collections/gstack/document-generate/SKILL.md)
+- [Interview to article](skills/perplexity-user/interview-to-article/SKILL.md)
+- [Project recap for Substack](skills/perplexity-user/project-recap-substack/SKILL.md)
+
+## Grow and market products
+
+- [Marketing map](vault/maps/marketing.md)
+- [Marketing router](skills/perplexity-user/marketing/SKILL.md)
+- [Product marketing context](skills/perplexity-user/marketing/product-marketing-context/SKILL.md)
+- [SEO audit](skills/perplexity-user/marketing/seo-audit/SKILL.md)
+- [Conversion review](skills/perplexity-user/marketing/page-cro/SKILL.md)
+
+## Plan travel
+
+- [Travel map](vault/maps/travel.md)
+- [Hotel selector](skills/perplexity-user/hotel-selector/SKILL.md)
+- [Restaurant selector](skills/perplexity-user/restaurant-selector/SKILL.md)
+- [Bar selector](skills/perplexity-user/bar-selector/SKILL.md)
+- [Nightlife selector](skills/perplexity-user/nightlife-selector/SKILL.md)
+
+## Build sports intelligence
+
+- [Sports map](vault/maps/sports.md)
+- [Low Block web-app agent](skills/perplexity-user/footy-edge-webapp-agent/SKILL.md)
 
 ## Make video and motion
 

@@ -46,6 +46,7 @@ function frontmatter(source) {
 function collectionFor(relativePath) {
   const match = relativePath.match(/^collections\/([^/]+)/);
   if (match) return match[1];
+  if (relativePath.startsWith("skills/perplexity-user/")) return "perplexity-user";
   return relativePath.startsWith("skills/") ? "first-party" : "uncategorized";
 }
 
@@ -53,7 +54,10 @@ function domainFor(name, relativePath, description) {
   const text = `${name} ${relativePath} ${description}`.toLowerCase();
   const rules = [
     ["media", /video|motion|frame|caption|audio|music|slideshow|figma|media/],
-    ["writing", /writing|document|pdf|slop|editorial|copy/],
+    ["travel", /hotel|restaurant|nightlife|bar-selector|travel|destination/],
+    ["sports", /footy|soccer|betting|odds|totals/],
+    ["marketing", /marketing|seo|cro|copywriting|copy-editing|cold-email|email-sequence|paid-ads|ad-creative|analytics-tracking|churn|referral|lead-magnet|revops|sales-enablement|pricing-strategy|launch-strategy|social-content/],
+    ["writing", /writing|document|pdf|slop|editorial|article|resume/],
     ["design", /design|diagram|html|interface|ios/],
     ["engineering", /devex|ios-clean|ios-fix|plan-tune|pair-agent|codex/],
     ["quality-and-release", /review|qa|test|ship|deploy|release|guard|health|freeze|canary|land/],

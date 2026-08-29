@@ -4,11 +4,12 @@
 
 This repository is not a list of prompts. It is a working library for studying how strong agent systems route requests, gather context, constrain tools, validate work, and preserve quality across long tasks.
 
-The library combines three layers:
+The library combines four layers:
 
 1. **Upstream collections** preserve high-signal, runnable skill systems with their original licenses and provenance.
-2. **The vault** adds human navigation through maps of content, categories, and cross-links.
-3. **The registry** provides machine-readable metadata for search, evaluation, installation, and future tooling.
+2. **Perplexity user skills** preserve portable, user-owned skills as they run inside Computer.
+3. **The vault** adds human navigation through maps of content, categories, and cross-links.
+4. **The registry** provides machine-readable metadata for search, evaluation, installation, and future tooling.
 
 ## Start here
 
@@ -27,6 +28,7 @@ The library combines three layers:
 | [gstack](collections/gstack/README.md) | A complete software-building operating system with strategy, design, engineering, QA, release, browsing, and memory workflows | Full source snapshot |
 | [no-ai-slop](collections/no-ai-slop/README.md) | A focused editorial skill with explicit detection and rewrite behavior | Full source snapshot |
 | [HyperFrames](collections/hyperframes/README.md) | Twenty composable skills for agent-authored video, motion, media, and rendering | Skills-only snapshot |
+| [Perplexity user skills](skills/perplexity-user/README.md) | Portable user-scoped skills exported from Perplexity Computer, including a 33-skill marketing system | User-owned snapshot |
 
 ## Design principles
 
@@ -42,6 +44,7 @@ The library combines three layers:
 ```text
 .
 ├── collections/        # Preserved upstream source snapshots
+├── skills/             # User-owned and first-party portable skills
 ├── vault/              # Human navigation, maps, and platform notes
 ├── registry/           # Machine-readable catalog and provenance
 ├── docs/               # Architecture and portability guidance
@@ -56,9 +59,12 @@ The library combines three layers:
 npm run catalog
 npm run validate
 npm run sync:upstreams
+npm run import:perplexity -- /path/to/exported/user/skills
 ```
 
 `npm run catalog` rebuilds the generated Markdown and JSON indexes. `npm run validate` checks manifests, links, licenses, provenance, and generated-file freshness. `npm run sync:upstreams` refreshes the three upstream snapshots and updates their pinned commit identifiers.
+
+`npm run import:perplexity -- <source-directory>` refreshes only the allowlisted, publication-safe Perplexity user skills. Sensitive business playbooks stay reference-only until a redacted public edition exists.
 
 ## Status
 

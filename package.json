@@ -7,7 +7,8 @@
   "scripts": {
     "catalog": "node scripts/build-catalog.mjs",
     "validate": "node scripts/validate.mjs",
-    "sync:upstreams": "node scripts/sync-upstreams.mjs"
+    "sync:upstreams": "node scripts/sync-upstreams.mjs",
+    "import:perplexity": "node scripts/import-perplexity-user.mjs"
   },
   "engines": {
     "node": ">=20"
