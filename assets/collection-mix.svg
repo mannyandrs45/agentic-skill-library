@@ -1,26 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="350" viewBox="0 0 1200 350" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img">
   <title>Skills by collection</title>
-  <desc>Of 128 skills, 59 are from gstack, 48 are personal Perplexity skills, 20 are from HyperFrames, and one is from no-ai-slop.</desc>
-  <rect width="1200" height="350" rx="24" fill="#101C24"/>
-  <text x="64" y="62" fill="#F7F6F2" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25" font-weight="750">128 skills, four distinct collections</text>
-  <text x="64" y="94" fill="#AFC2C8" font-family="ui-sans-serif, system-ui, sans-serif" font-size="17">Source identity stays visible. Discovery happens across the whole library.</text>
-  <g transform="translate(64 138)">
-    <rect width="1072" height="68" rx="14" fill="#20323C"/>
-    <path d="M14 0h480v68H14A14 14 0 0 1 0 54V14A14 14 0 0 1 14 0z" fill="#01696F"/>
-    <rect x="494" width="402" height="68" fill="#7A39BB"/>
-    <rect x="896" width="168" height="68" fill="#DA7101"/>
-    <path d="M1064 0h-8v68h8a8 8 0 0 0 8-8V8a8 8 0 0 0-8-8z" fill="#74D4DA"/>
-    <g fill="#FFF" font-family="ui-sans-serif, system-ui, sans-serif" font-size="18" font-weight="750">
-      <text x="24" y="42">gstack · 59</text>
-      <text x="518" y="42">Personal · 48</text>
-      <text x="920" y="42">HyperFrames · 20</text>
-    </g>
-  </g>
+  <desc>A sorted horizontal bar chart. gstack has 59 skills, personal has 48, HyperFrames has 20, and no-ai-slop has one.</desc>
+  <rect width="1200" height="400" fill="#F3EFE5"/>
+  <text x="64" y="60" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="28">Skills by collection</text>
+  <text x="64" y="88" fill="#6A6B67" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">Exact counts; sorted by collection size. Personal skills are the maintained first-party layer.</text>
+  <line x1="64" y1="116" x2="1136" y2="116" stroke="#A7A49C" stroke-width="1"/>
   <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">
-    <circle cx="76" cy="264" r="7" fill="#01696F"/><text x="94" y="270" fill="#D7E0E3">46% software-building OS</text>
-    <circle cx="372" cy="264" r="7" fill="#7A39BB"/><text x="390" y="270" fill="#D7E0E3">38% personal workflows</text>
-    <circle cx="676" cy="264" r="7" fill="#DA7101"/><text x="694" y="270" fill="#D7E0E3">16% media production</text>
-    <circle cx="964" cy="264" r="7" fill="#74D4DA"/><text x="982" y="270" fill="#D7E0E3">1 editorial skill</text>
+    <text x="64" y="159" fill="#272826">gstack</text>
+    <line x1="238" y1="153" x2="1011" y2="153" stroke="#4F504D" stroke-width="13"/>
+    <text x="1028" y="159" fill="#272826" font-weight="700">59</text>
+    <text x="1060" y="159" fill="#777873">46%</text>
+
+    <text x="64" y="219" fill="#272826">Personal</text>
+    <line x1="238" y1="213" x2="867" y2="213" stroke="#8C3F2B" stroke-width="13"/>
+    <text x="884" y="219" fill="#272826" font-weight="700">48</text>
+    <text x="916" y="219" fill="#777873">38%</text>
+
+    <text x="64" y="279" fill="#272826">HyperFrames</text>
+    <line x1="238" y1="273" x2="500" y2="273" stroke="#858680" stroke-width="13"/>
+    <text x="517" y="279" fill="#272826" font-weight="700">20</text>
+    <text x="549" y="279" fill="#777873">16%</text>
+
+    <text x="64" y="339" fill="#272826">no-ai-slop</text>
+    <line x1="238" y1="333" x2="251" y2="333" stroke="#B0ADA5" stroke-width="13"/>
+    <text x="268" y="339" fill="#272826" font-weight="700">1</text>
+    <text x="286" y="339" fill="#777873">&lt;1%</text>
   </g>
-  <text x="64" y="316" fill="#78909A" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">Snapshot · 2026-08-29</text>
+  <line x1="238" y1="365" x2="1024" y2="365" stroke="#C9C4B9" stroke-width="1"/>
+  <text x="238" y="385" fill="#777873" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">0</text>
+  <text x="1008" y="385" fill="#777873" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">60</text>
 </svg>

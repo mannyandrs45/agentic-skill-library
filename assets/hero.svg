@@ -1,31 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="380" viewBox="0 0 1200 380" role="img">
   <title>Agentic Skill Library</title>
-  <desc>128 field-tested workflows for agents that plan, build, write, research, and ship.</desc>
-  <rect width="1200" height="420" rx="28" fill="#101C24"/>
-  <circle cx="1080" cy="70" r="220" fill="#01696F" opacity=".34"/>
-  <circle cx="1130" cy="360" r="260" fill="#7A39BB" opacity=".20"/>
-  <circle cx="70" cy="410" r="170" fill="#DA7101" opacity=".20"/>
-  <g fill="none" stroke="#74D4DA" stroke-width="2" opacity=".72">
-    <path d="M858 99h92l46 80-46 80h-92l-46-80z"/>
-    <path d="M962 179h92l46 80-46 80h-92l-46-80z"/>
-    <path d="M754 179h92l46 80-46 80h-92l-46-80z"/>
+  <desc>128 field-tested agent workflows across 11 domains. The five largest domains are marketing, media, quality and release, design, and research and browser.</desc>
+  <rect width="1200" height="380" fill="#F3EFE5"/>
+  <line x1="64" y1="46" x2="1136" y2="46" stroke="#2B2C2A" stroke-width="2"/>
+  <text x="64" y="86" fill="#8C3F2B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14" font-weight="700" letter-spacing="2">CATALOG SNAPSHOT · v0.2</text>
+  <text x="64" y="168" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="63">Agentic Skill Library</text>
+  <text x="66" y="212" fill="#555753" font-family="ui-sans-serif, system-ui, sans-serif" font-size="20">Executable workflows for agents: plan, build, write, research, ship.</text>
+  <text x="66" y="270" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="29">128</text>
+  <text x="124" y="270" fill="#6A6B67" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">skills</text>
+  <text x="212" y="270" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="29">11</text>
+  <text x="254" y="270" fill="#6A6B67" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">domains</text>
+  <text x="362" y="270" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="29">4</text>
+  <text x="388" y="270" fill="#6A6B67" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">collections</text>
+  <text x="720" y="92" fill="#6A6B67" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" letter-spacing="1">LARGEST DOMAINS · SKILLS</text>
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">
+    <text x="720" y="132" fill="#272826">Marketing</text>
+    <line x1="842" y1="126" x2="1089" y2="126" stroke="#8C3F2B" stroke-width="6"/>
+    <text x="1110" y="132" fill="#272826">33</text>
+    <text x="720" y="170" fill="#272826">Media</text>
+    <line x1="842" y1="164" x2="1037" y2="164" stroke="#555753" stroke-width="6"/>
+    <text x="1058" y="170" fill="#272826">26</text>
+    <text x="720" y="208" fill="#272826">Quality + release</text>
+    <line x1="842" y1="202" x2="984" y2="202" stroke="#777873" stroke-width="6"/>
+    <text x="1005" y="208" fill="#272826">19</text>
+    <text x="720" y="246" fill="#272826">Design</text>
+    <line x1="842" y1="240" x2="947" y2="240" stroke="#92938D" stroke-width="6"/>
+    <text x="968" y="246" fill="#272826">14</text>
+    <text x="720" y="284" fill="#272826">Research + browser</text>
+    <line x1="842" y1="278" x2="902" y2="278" stroke="#ADADA6" stroke-width="6"/>
+    <text x="923" y="284" fill="#272826">8</text>
   </g>
-  <g fill="#74D4DA">
-    <circle cx="858" cy="99" r="6"/><circle cx="950" cy="99" r="6"/>
-    <circle cx="996" cy="179" r="6"/><circle cx="950" cy="259" r="6"/>
-    <circle cx="858" cy="259" r="6"/><circle cx="812" cy="179" r="6"/>
-    <circle cx="1054" cy="339" r="6"/><circle cx="754" cy="179" r="6"/>
-  </g>
-  <text x="72" y="92" fill="#74D4DA" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700" letter-spacing="2">OPEN SKILL VAULT · v0.2</text>
-  <text x="72" y="180" fill="#F7F6F2" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="760">Agentic Skill Library</text>
-  <text x="72" y="235" fill="#BFD0D5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25">Field-tested workflows for agents that plan, build, write,</text>
-  <text x="72" y="270" fill="#BFD0D5" font-family="ui-sans-serif, system-ui, sans-serif" font-size="25">research, design, market, and ship.</text>
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" font-weight="700">
-    <rect x="72" y="326" width="148" height="46" rx="23" fill="#01696F"/>
-    <text x="146" y="355" text-anchor="middle" fill="#FFFFFF">128 SKILLS</text>
-    <rect x="234" y="326" width="148" height="46" rx="23" fill="#006494"/>
-    <text x="308" y="355" text-anchor="middle" fill="#FFFFFF">11 DOMAINS</text>
-    <rect x="396" y="326" width="192" height="46" rx="23" fill="#7A39BB"/>
-    <text x="492" y="355" text-anchor="middle" fill="#FFFFFF">4 COLLECTIONS</text>
-  </g>
+  <line x1="64" y1="330" x2="1136" y2="330" stroke="#C9C4B9" stroke-width="1"/>
+  <text x="64" y="354" fill="#777873" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="13">README → CATALOG → SKILL.md</text>
 </svg>

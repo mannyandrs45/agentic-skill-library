@@ -3,11 +3,7 @@
 </p>
 
 <p align="center">
-  <a href="CATALOG.md"><img alt="128 skills" src="https://img.shields.io/badge/skills-128-01696F?style=flat-square"></a>
-  <a href="CATALOG.md"><img alt="11 domains" src="https://img.shields.io/badge/domains-11-006494?style=flat-square"></a>
-  <a href="skills/personal/README.md"><img alt="48 personal skills" src="https://img.shields.io/badge/personal-48-7A39BB?style=flat-square"></a>
-  <a href="SOURCES.md"><img alt="3 community sources" src="https://img.shields.io/badge/community_sources-3-DA7101?style=flat-square"></a>
-  <a href="https://github.com/mannyandrs45/agentic-skill-library/actions/workflows/validate.yml"><img alt="validation status" src="https://img.shields.io/github/actions/workflow/status/mannyandrs45/agentic-skill-library/validate.yml?style=flat-square&amp;label=validation"></a>
+  <a href="https://github.com/mannyandrs45/agentic-skill-library/actions/workflows/validate.yml"><img alt="validation status" src="https://img.shields.io/github/actions/workflow/status/mannyandrs45/agentic-skill-library/validate.yml?style=flat-square&amp;label=validation&amp;labelColor=E5E0D5&amp;color=555753"></a>
 </p>
 
 <p align="center">
