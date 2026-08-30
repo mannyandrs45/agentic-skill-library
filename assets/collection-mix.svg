@@ -1,32 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="400" viewBox="0 0 1200 400" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img">
   <title>Skills by collection</title>
   <desc>A sorted horizontal bar chart. gstack has 59 skills, personal has 48, HyperFrames has 20, and no-ai-slop has one.</desc>
-  <rect width="1200" height="400" fill="#F3EFE5"/>
-  <text x="64" y="60" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="28">Skills by collection</text>
-  <text x="64" y="88" fill="#6A6B67" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">Exact counts; sorted by collection size. Personal skills are the maintained first-party layer.</text>
-  <line x1="64" y1="116" x2="1136" y2="116" stroke="#A7A49C" stroke-width="1"/>
-  <g font-family="ui-sans-serif, system-ui, sans-serif" font-size="16">
-    <text x="64" y="159" fill="#272826">gstack</text>
-    <line x1="238" y1="153" x2="1011" y2="153" stroke="#4F504D" stroke-width="13"/>
-    <text x="1028" y="159" fill="#272826" font-weight="700">59</text>
-    <text x="1060" y="159" fill="#777873">46%</text>
+  <rect width="1200" height="390" fill="#F3EFE5"/>
+  <text x="64" y="56" fill="#272826" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700">Skills by collection</text>
+  <text x="64" y="84" fill="#6A6B67" font-family="DejaVu Sans, sans-serif" font-size="15">Exact counts, sorted by collection size.</text>
+  <line x1="64" y1="108" x2="1136" y2="108" stroke="#A7A49C" stroke-width="1"/>
+  <g font-family="DejaVu Sans, sans-serif" font-size="16">
+    <text x="64" y="153" fill="#272826">gstack</text>
+    <rect x="240" y="139" width="767" height="14" fill="#4F504D"/>
+    <text x="1026" y="153" fill="#272826" font-weight="700">59</text>
+    <text x="1064" y="153" fill="#777873">46%</text>
 
-    <text x="64" y="219" fill="#272826">Personal</text>
-    <line x1="238" y1="213" x2="867" y2="213" stroke="#8C3F2B" stroke-width="13"/>
-    <text x="884" y="219" fill="#272826" font-weight="700">48</text>
-    <text x="916" y="219" fill="#777873">38%</text>
+    <text x="64" y="213" fill="#272826">Personal</text>
+    <rect x="240" y="199" width="624" height="14" fill="#8C3F2B"/>
+    <text x="883" y="213" fill="#272826" font-weight="700">48</text>
+    <text x="921" y="213" fill="#777873">38%</text>
 
-    <text x="64" y="279" fill="#272826">HyperFrames</text>
-    <line x1="238" y1="273" x2="500" y2="273" stroke="#858680" stroke-width="13"/>
-    <text x="517" y="279" fill="#272826" font-weight="700">20</text>
-    <text x="549" y="279" fill="#777873">16%</text>
+    <text x="64" y="273" fill="#272826">HyperFrames</text>
+    <rect x="240" y="259" width="260" height="14" fill="#858680"/>
+    <text x="519" y="273" fill="#272826" font-weight="700">20</text>
+    <text x="557" y="273" fill="#777873">16%</text>
 
-    <text x="64" y="339" fill="#272826">no-ai-slop</text>
-    <line x1="238" y1="333" x2="251" y2="333" stroke="#B0ADA5" stroke-width="13"/>
-    <text x="268" y="339" fill="#272826" font-weight="700">1</text>
-    <text x="286" y="339" fill="#777873">&lt;1%</text>
+    <text x="64" y="333" fill="#272826">no-ai-slop</text>
+    <rect x="240" y="319" width="13" height="14" fill="#B0ADA5"/>
+    <text x="272" y="333" fill="#272826" font-weight="700">1</text>
+    <text x="292" y="333" fill="#777873">&lt;1%</text>
   </g>
-  <line x1="238" y1="365" x2="1024" y2="365" stroke="#C9C4B9" stroke-width="1"/>
-  <text x="238" y="385" fill="#777873" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">0</text>
-  <text x="1008" y="385" fill="#777873" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12">60</text>
+  <line x1="240" y1="357" x2="1020" y2="357" stroke="#C9C4B9" stroke-width="1"/>
+  <text x="240" y="378" fill="#777873" font-family="DejaVu Sans Mono, monospace" font-size="12">0</text>
+  <text x="1003" y="378" fill="#777873" font-family="DejaVu Sans Mono, monospace" font-size="12">60</text>
 </svg>

@@ -1,42 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img">
   <title>Three-layer skill library architecture</title>
-  <desc>All community and personal skills are indexed into one catalog and maintained by a small registry and scripts layer.</desc>
-  <rect width="1200" height="430" fill="#F3EFE5"/>
-  <text x="64" y="60" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="28">One library, three layers</text>
-  <text x="64" y="88" fill="#6A6B67" font-family="ui-sans-serif, system-ui, sans-serif" font-size="15">The shortest path from discovery to an executable workflow.</text>
-  <line x1="64" y1="116" x2="1136" y2="116" stroke="#A7A49C" stroke-width="1"/>
-  <g font-family="ui-sans-serif, system-ui, sans-serif">
-    <text x="64" y="158" fill="#8C3F2B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">01</text>
-    <text x="64" y="196" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="27">Skills</text>
-    <text x="64" y="228" fill="#555753" font-size="16">Every runnable workflow</text>
-    <line x1="64" y1="251" x2="330" y2="251" stroke="#C9C4B9"/>
-    <text x="64" y="284" fill="#272826" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">skills/community/</text>
-    <text x="64" y="311" fill="#777873" font-size="14">80 attributed upstream skills</text>
-    <text x="64" y="347" fill="#272826" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">skills/personal/</text>
-    <text x="64" y="374" fill="#777873" font-size="14">48 Perplexity exports</text>
+  <desc>Skills are indexed into one catalog and supported by a maintenance layer.</desc>
+  <rect width="1200" height="420" fill="#F3EFE5"/>
+  <text x="64" y="56" fill="#272826" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700">One library, three layers</text>
+  <text x="64" y="84" fill="#6A6B67" font-family="DejaVu Sans, sans-serif" font-size="15">The shortest path from discovery to an executable workflow.</text>
+  <line x1="64" y1="108" x2="1136" y2="108" stroke="#A7A49C" stroke-width="1"/>
+  <g font-family="DejaVu Sans, sans-serif">
+    <text x="64" y="151" fill="#8C3F2B" font-size="13" font-weight="700">01</text>
+    <text x="112" y="151" fill="#272826" font-size="20" font-weight="700">SKILLS</text>
+    <text x="300" y="151" fill="#555753" font-size="16">Every runnable workflow</text>
+    <text x="700" y="151" fill="#272826" font-family="DejaVu Sans Mono, monospace" font-size="14">skills/community/</text>
+    <text x="940" y="151" fill="#777873" font-size="14">80 upstream</text>
+    <text x="700" y="181" fill="#272826" font-family="DejaVu Sans Mono, monospace" font-size="14">skills/personal/</text>
+    <text x="940" y="181" fill="#777873" font-size="14">48 personal</text>
+    <line x1="64" y1="212" x2="1136" y2="212" stroke="#C9C4B9" stroke-width="1"/>
 
-    <line x1="366" y1="242" x2="418" y2="242" stroke="#555753" stroke-width="1.5"/>
-    <path d="M410 235l8 7-8 7" fill="none" stroke="#555753" stroke-width="1.5"/>
+    <text x="64" y="255" fill="#8C3F2B" font-size="13" font-weight="700">02</text>
+    <text x="112" y="255" fill="#272826" font-size="20" font-weight="700">CATALOG</text>
+    <text x="300" y="255" fill="#555753" font-size="16">One index, two formats</text>
+    <text x="700" y="255" fill="#272826" font-family="DejaVu Sans Mono, monospace" font-size="14">CATALOG.md</text>
+    <text x="940" y="255" fill="#777873" font-size="14">human</text>
+    <text x="700" y="285" fill="#272826" font-family="DejaVu Sans Mono, monospace" font-size="14">registry/catalog.json</text>
+    <text x="940" y="285" fill="#777873" font-size="14">machine</text>
+    <line x1="64" y1="316" x2="1136" y2="316" stroke="#C9C4B9" stroke-width="1"/>
 
-    <text x="454" y="158" fill="#8C3F2B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">02</text>
-    <text x="454" y="196" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="27">Catalog</text>
-    <text x="454" y="228" fill="#555753" font-size="16">One index, two formats</text>
-    <line x1="454" y1="251" x2="720" y2="251" stroke="#C9C4B9"/>
-    <text x="454" y="284" fill="#272826" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">CATALOG.md</text>
-    <text x="454" y="311" fill="#777873" font-size="14">Human discovery</text>
-    <text x="454" y="347" fill="#272826" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">registry/catalog.json</text>
-    <text x="454" y="374" fill="#777873" font-size="14">Machine discovery</text>
-
-    <line x1="756" y1="242" x2="808" y2="242" stroke="#555753" stroke-width="1.5"/>
-    <path d="M800 235l8 7-8 7" fill="none" stroke="#555753" stroke-width="1.5"/>
-
-    <text x="844" y="158" fill="#8C3F2B" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="14">03</text>
-    <text x="844" y="196" fill="#272826" font-family="Georgia, Times New Roman, serif" font-size="27">Maintenance</text>
-    <text x="844" y="228" fill="#555753" font-size="16">Provenance and checks</text>
-    <line x1="844" y1="251" x2="1136" y2="251" stroke="#C9C4B9"/>
-    <text x="844" y="284" fill="#272826" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">registry/</text>
-    <text x="844" y="311" fill="#777873" font-size="14">Sources · licenses · policy</text>
-    <text x="844" y="347" fill="#272826" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">scripts/</text>
-    <text x="844" y="374" fill="#777873" font-size="14">Import · sync · validate</text>
+    <text x="64" y="359" fill="#8C3F2B" font-size="13" font-weight="700">03</text>
+    <text x="112" y="359" fill="#272826" font-size="20" font-weight="700">MAINTAIN</text>
+    <text x="300" y="359" fill="#555753" font-size="16">Provenance and checks</text>
+    <text x="700" y="359" fill="#272826" font-family="DejaVu Sans Mono, monospace" font-size="14">registry/</text>
+    <text x="940" y="359" fill="#777873" font-size="14">sources · policy</text>
+    <text x="700" y="389" fill="#272826" font-family="DejaVu Sans Mono, monospace" font-size="14">scripts/</text>
+    <text x="940" y="389" fill="#777873" font-size="14">sync · validate</text>
   </g>
 </svg>

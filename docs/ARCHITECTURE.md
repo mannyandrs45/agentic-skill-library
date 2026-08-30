@@ -2,7 +2,7 @@
 
 The repository has one job: make strong agent skills easy to inspect, find, and maintain. It uses three layers.
 
-![Three-layer repository architecture](../assets/architecture.svg)
+![Three-layer repository architecture](../assets/architecture.png)
 
 ## Skills
 

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.svg" alt="Agentic Skill Library: 128 field-tested skills for agents that plan, build, write, research, and ship" width="100%">
+  <img src="assets/hero.png" alt="Agentic Skill Library: 128 field-tested skills for agents that plan, build, write, research, and ship" width="100%">
 </p>
 
 <p align="center">
@@ -23,7 +23,7 @@
 ## One library, three layers
 
 <p align="center">
-  <img src="assets/architecture.svg" alt="Simplified repository architecture: skills feed a generated catalog, maintained by lightweight tools" width="100%">
+  <img src="assets/architecture.png" alt="Simplified repository architecture: skills feed a generated catalog, maintained by lightweight tools" width="100%">
 </p>
 
 Everything runnable lives in `skills/`. Everything discoverable is generated into `CATALOG.md`. Everything needed to keep the library trustworthy lives in `registry/` and `scripts/`.
@@ -46,7 +46,7 @@ That is the whole architecture. There is no parallel vault, second atlas, or dup
 ## What is inside
 
 <p align="center">
-  <img src="assets/collection-mix.svg" alt="Collection composition: 59 gstack skills, 48 Perplexity personal skills, 20 HyperFrames skills, and one no-ai-slop skill" width="100%">
+  <img src="assets/collection-mix.png" alt="Collection composition: 59 gstack skills, 48 Perplexity personal skills, 20 HyperFrames skills, and one no-ai-slop skill" width="100%">
 </p>
 
 | Collection | Skills | Best for |
