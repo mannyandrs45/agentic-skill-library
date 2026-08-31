@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="390" viewBox="0 0 1200 390" role="img">
   <title>Skills by collection</title>
-  <desc>A sorted horizontal bar chart. gstack has 59 skills, personal has 48, HyperFrames has 20, and no-ai-slop has one.</desc>
+  <desc>A sorted horizontal bar chart. gstack has 59 skills, HyperFrames has 20, personal has four, and no-ai-slop has one.</desc>
   <rect width="1200" height="390" fill="#F5EBD9"/>
   <text x="64" y="56" fill="#171719" font-family="DejaVu Sans, sans-serif" font-size="27" font-weight="700">Skills by collection</text>
   <text x="64" y="84" fill="#504E4A" font-family="DejaVu Sans, sans-serif" font-size="15">Exact counts, sorted by collection size.</text>
@@ -9,22 +9,22 @@
     <text x="64" y="153" fill="#171719">gstack</text>
     <rect x="240" y="139" width="767" height="14" fill="#171719"/>
     <text x="1026" y="153" fill="#171719" font-weight="700">59</text>
-    <text x="1064" y="153" fill="#504E4A">46%</text>
+    <text x="1064" y="153" fill="#504E4A">70%</text>
 
-    <text x="64" y="213" fill="#171719">Personal</text>
-    <rect x="240" y="199" width="624" height="14" fill="#EC451C"/>
-    <text x="883" y="213" fill="#171719" font-weight="700">48</text>
-    <text x="921" y="213" fill="#504E4A">38%</text>
+    <text x="64" y="213" fill="#171719">HyperFrames</text>
+    <rect x="240" y="199" width="260" height="14" fill="#1A29E1"/>
+    <text x="519" y="213" fill="#171719" font-weight="700">20</text>
+    <text x="557" y="213" fill="#504E4A">24%</text>
 
-    <text x="64" y="273" fill="#171719">HyperFrames</text>
-    <rect x="240" y="259" width="260" height="14" fill="#1A29E1"/>
-    <text x="519" y="273" fill="#171719" font-weight="700">20</text>
-    <text x="557" y="273" fill="#504E4A">16%</text>
+    <text x="64" y="273" fill="#171719">Personal</text>
+    <rect x="240" y="259" width="52" height="14" fill="#EC451C"/>
+    <text x="311" y="273" fill="#171719" font-weight="700">4</text>
+    <text x="331" y="273" fill="#504E4A">5%</text>
 
     <text x="64" y="333" fill="#171719">no-ai-slop</text>
     <rect x="240" y="319" width="13" height="14" fill="#504E4A"/>
     <text x="272" y="333" fill="#171719" font-weight="700">1</text>
-    <text x="292" y="333" fill="#504E4A">&lt;1%</text>
+    <text x="292" y="333" fill="#504E4A">1%</text>
   </g>
   <line x1="240" y1="357" x2="1020" y2="357" stroke="#CFC4B1" stroke-width="1"/>
   <text x="240" y="378" fill="#504E4A" font-family="DejaVu Sans Mono, monospace" font-size="12">0</text>

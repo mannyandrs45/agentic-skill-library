@@ -2,21 +2,10 @@
   "schemaVersion": 1,
   "scope": "user",
   "platform": "Perplexity Computer",
-  "snapshotDate": "2026-08-29",
+  "snapshotDate": "2026-08-30",
   "included": [
-    "bar-selector",
-    "content-generator",
-    "footy-edge-webapp-agent",
     "grill-me",
-    "hotel-selector",
-    "interview-to-article",
-    "marketing",
-    "nightlife-selector",
     "no-ai-slop",
-    "office-hours",
-    "project-recap-substack",
-    "restaurant-selector",
-    "resume-builder",
     "skillopt",
     "tufte-charts"
   ],
@@ -43,4 +32,3 @@
     "reason": "Perplexity built-in skill definitions are platform-owned and supplied at runtime."
   }
 }
-

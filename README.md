@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/hero.png" alt="Agentic Skill Library: 128 field-tested skills for agents that plan, build, write, research, and ship" width="100%">
+  <img src="assets/hero.png" alt="Agentic Skill Library: 84 field-tested skills for agents that plan, build, write, research, and ship" width="100%">
 </p>
 
 <p align="center">
@@ -14,7 +14,7 @@
 
 | I want to… | Start here |
 | --- | --- |
-| Find the right workflow | **[Browse all 128 skills →](CATALOG.md)** |
+| Find the right workflow | **[Browse all 84 skills →](CATALOG.md)** |
 | Study complete agent systems | **[Explore community collections →](skills/community/)** |
 | Reuse Manny's Computer skills | **[Open personal skills →](skills/personal/README.md)** |
 | Port a skill to another agent | **[Read the portability guide →](docs/PORTABILITY.md)** |
@@ -46,14 +46,14 @@ That is the whole architecture. There is no parallel vault, second atlas, or dup
 ## What is inside
 
 <p align="center">
-  <img src="assets/collection-mix.png" alt="Collection composition: 59 gstack skills, 48 Perplexity personal skills, 20 HyperFrames skills, and one no-ai-slop skill" width="100%">
+  <img src="assets/collection-mix.png" alt="Collection composition: 59 gstack skills, 20 HyperFrames skills, four personal skills, and one no-ai-slop skill" width="100%">
 </p>
 
 | Collection | Skills | Best for |
 | --- | ---: | --- |
 | **[gstack](skills/community/gstack/README.md)** | 59 | Product thinking, engineering, QA, release, browser work, and long-running agent operations |
-| **[Personal](skills/personal/README.md)** | 48 | Marketing, travel, writing, sports intelligence, visualization, and Perplexity Computer workflows |
 | **[HyperFrames](skills/community/hyperframes/README.md)** | 20 | Video, motion, audio, captions, and media production |
+| **[Personal](skills/personal/README.md)** | 4 | Editing, pressure testing, skill optimization, and analytical visualization |
 | **[no-ai-slop](skills/community/no-ai-slop/README.md)** | 1 | Detecting and removing synthetic writing patterns without flattening voice |
 
 ## What counts as a skill

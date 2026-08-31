@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img">
   <title>Agentic Skill Library</title>
-  <desc>128 field-tested agent workflows across 11 domains and four collections.</desc>
+  <desc>84 field-tested agent workflows across nine domains and four collections.</desc>
   <rect width="1200" height="320" fill="#F5EBD9"/>
   <rect x="64" y="40" width="1072" height="4" fill="#EC451C"/>
   <text x="64" y="78" fill="#1A29E1" font-family="DejaVu Sans, sans-serif" font-size="13" font-weight="700" letter-spacing="2">CATALOG SNAPSHOT · v0.2</text>
@@ -8,9 +8,9 @@
   <text x="64" y="188" fill="#504E4A" font-family="DejaVu Sans, sans-serif" font-size="19">Executable workflows for agents that plan, build, write, research, and ship.</text>
   <line x1="64" y1="224" x2="1136" y2="224" stroke="#CFC4B1" stroke-width="1"/>
   <g font-family="DejaVu Sans, sans-serif">
-    <text x="64" y="270" fill="#171719" font-size="26" font-weight="700">128</text>
+    <text x="64" y="270" fill="#171719" font-size="26" font-weight="700">84</text>
     <text x="126" y="270" fill="#504E4A" font-size="15">skills</text>
-    <text x="258" y="270" fill="#171719" font-size="26" font-weight="700">11</text>
+    <text x="258" y="270" fill="#171719" font-size="26" font-weight="700">9</text>
     <text x="300" y="270" fill="#504E4A" font-size="15">domains</text>
     <text x="450" y="270" fill="#171719" font-size="26" font-weight="700">4</text>
     <text x="478" y="270" fill="#504E4A" font-size="15">collections</text>
