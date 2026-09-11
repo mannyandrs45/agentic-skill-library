@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-09-11T14:50:40.695Z",
+  "worldSeed": 20260911,
+  "catalogSkillCount": 84,
+  "residentCount": 1,
+  "residents": [
+    {
+      "id": "grill-me",
+      "name": "grill-me",
+      "summary": "Run a relentless, one-question-at-a-time interview that stress-tests a plan, design, architecture, or decision before any work starts. Walk…",
+      "description": "Run a relentless, one-question-at-a-time interview that stress-tests a plan, design, architecture, or decision before any work starts. Walks the decision tree branch by branch, resolving dependencies in order, and gives a recommended answer with every question. Use when the user says 'grill me', 'grill me on this', 'stress-test this plan', 'poke holes in this', 'interrogate my design', 'challenge my thinking', 'pressure-test this idea', or wants soft spots in a plan surfaced before building.",
+      "domain": "design",
+      "collection": "perplexity-user",
+      "version": "1.0",
+      "license": "MIT",
+      "author": "manny-rodriguez",
+      "adaptedFrom": "https://github.com/mattpocock/skills/tree/main/skills/productivity/grill-me",
+      "sourcePath": "skills/personal/grill-me/SKILL.md",
+      "sourceUrl": "https://github.com/mannyandrs45/agentic-skill-library/blob/main/skills/personal/grill-me/SKILL.md",
+      "markdownAsset": "/skills/grill-me/SKILL.md",
+      "contentHash": "sha256:327f6c9cc9f5a938adb8ef71fcf992fb273c778e092a2136a9eabcc0c7bf0b30"
+    }
+  ]
+}

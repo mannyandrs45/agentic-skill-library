@@ -1,0 +1,23 @@
+{
+  "name": "skill-crossing",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Interactive 3D archive garden that turns real skills from agentic-skill-library into Lumin residents. Catalog behavior only — no live LLM execution.",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate-world.mjs",
+    "dev": "npm run generate --silent && vite",
+    "build": "npm run generate --silent && vite build",
+    "preview": "vite preview",
+    "test": "node --test test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "three": "^0.186.0"
+  },
+  "devDependencies": {
+    "vite": "^8.3.0"
+  }
+}

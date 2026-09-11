@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skill Crossing — an archive garden of real agent skills</title>
+    <meta
+      name="description"
+      content="An interactive 3D catalog of agentic-skill-library's real skills. Click a Lumin resident to read its actual skill and download its SKILL.md."
+    />
+    <link rel="stylesheet" href="/src/ui/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#skill-panel">Skip to skill detail panel</a>
+
+    <header id="app-header">
+      <h1>Skill Crossing</h1>
+      <p>
+        An archive garden of <strong>agentic-skill-library</strong>'s real skills. Each Lumin
+        resident below is one real skill — wander, work, and rest are catalog metaphors, not
+        live AI activity.
+      </p>
+    </header>
+
+    <main id="app-main">
+      <div id="scene-container" role="img" aria-label="3D archive garden. Use the list below for an accessible, non-visual view of every resident."></div>
+
+      <section id="skill-list" aria-label="All residents (accessible list)">
+        <h2>Residents</h2>
+        <ul id="skill-list-items"></ul>
+      </section>
+
+      <aside id="skill-panel" aria-live="polite" aria-label="Selected skill detail">
+        <p id="skill-panel-empty">Select a resident to see its skill details here.</p>
+      </aside>
+    </main>
+
+    <footer id="app-footer">
+      <p>
+        No accounts, no live model execution, no GitHub mutations. Every skill shown is a real
+        file from
+        <a href="https://github.com/mannyandrs45/agentic-skill-library" target="_blank" rel="noreferrer">
+          mannyandrs45/agentic-skill-library</a>.
+      </p>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

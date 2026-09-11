@@ -2,7 +2,7 @@ import { readdir, readFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
-const ignored = ["/test/fixtures/", "/node_modules/", "/.git/"];
+const ignored = ["/test/fixtures/", "/node_modules/", "/.git/", "/app/"];
 
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
