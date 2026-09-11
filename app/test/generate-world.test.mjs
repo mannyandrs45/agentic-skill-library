@@ -20,8 +20,23 @@ test("generator produces valid, source-identical resident data", async () => {
   );
 
   assert.equal(manifest.schemaVersion, 1);
-  assert.ok(manifest.residentCount >= 1, "expected at least one generated resident");
+  assert.ok(manifest.residentCount >= 6, "expected the MVP roster of 6+ residents");
   assert.ok(manifest.catalogSkillCount >= 80, "expected the full real catalog to be validated");
+
+  const ids = manifest.residents.map((r) => r.id);
+  assert.equal(new Set(ids).size, ids.length, "resident ids must be unique");
+
+  // Two real upstream skills are both literally named "no-ai-slop" — the
+  // generator must key residents by catalog path, not bare name, or one
+  // would silently overwrite the other.
+  const personalSlop = manifest.residents.find((r) => r.id === "no-ai-slop-personal");
+  const communitySlop = manifest.residents.find((r) => r.id === "no-ai-slop-community");
+  assert.ok(personalSlop && communitySlop, "both no-ai-slop residents must be present");
+  assert.equal(personalSlop.name, "no-ai-slop");
+  assert.equal(communitySlop.name, "no-ai-slop");
+  assert.notEqual(personalSlop.sourcePath, communitySlop.sourcePath);
+  assert.equal(personalSlop.collection, "perplexity-user");
+  assert.equal(communitySlop.collection, "no-ai-slop");
 
   const grillMe = manifest.residents.find((r) => r.id === "grill-me");
   assert.ok(grillMe, "grill-me resident must be present");

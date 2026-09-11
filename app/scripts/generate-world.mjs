@@ -5,9 +5,9 @@
 //   - skills/**/SKILL.md     (raw frontmatter: license, nested metadata)
 //
 // This script does NOT invent skill content. It selects a subset of the real
-// catalog (RESIDENT_IDS below), validates every selected entry against disk,
-// copies each SKILL.md verbatim into public/skills/<id>/SKILL.md so the app
-// can offer an exact download with no GitHub API calls, and emits
+// catalog (RESIDENT_SELECTIONS below), validates every selected entry against
+// disk, copies each SKILL.md verbatim into public/skills/<id>/SKILL.md so the
+// app can offer an exact download with no GitHub API calls, and emits
 // src/generated/residents.json for the 3D world to render.
 
 import { createHash } from "node:crypto";
@@ -22,9 +22,23 @@ const repoRoot = path.dirname(appRoot);
 // dev sessions, and screenshots (see src/core/rng.js).
 const WORLD_SEED = 20260911;
 
-// Phase 1 vertical slice ships exactly one resident. Extending the world is
-// meant to be "add a name here" — no new plumbing required.
-const RESIDENT_IDS = ["grill-me"];
+// Each entry selects one real skill by its exact catalog path (not just its
+// name — two upstream/personal skills can legitimately share a name, e.g.
+// "no-ai-slop"). `id` is this resident's unique slug in the app: it drives
+// the URL for its bundled markdown, its userData.residentId for raycasting,
+// and its glow color — it does not have to match the skill's own `name`.
+// Extending the world is meant to be "add an entry here" — no new plumbing
+// required, and the station theme for each id lives in
+// src/residents/stationThemes.js (a presentation concern, not catalog data).
+const RESIDENT_SELECTIONS = [
+  { id: "grill-me", path: "skills/personal/grill-me/SKILL.md" },
+  { id: "tufte-charts", path: "skills/personal/tufte-charts/SKILL.md" },
+  { id: "skillopt", path: "skills/personal/skillopt/SKILL.md" },
+  { id: "no-ai-slop-personal", path: "skills/personal/no-ai-slop/SKILL.md" },
+  { id: "no-ai-slop-community", path: "skills/community/no-ai-slop/skills/no-ai-slop/SKILL.md" },
+  { id: "ship", path: "skills/community/gstack/ship/SKILL.md" },
+  { id: "slideshow", path: "skills/community/hyperframes/skills/slideshow/SKILL.md" },
+];
 
 function fail(failures, message) {
   failures.push(message);
@@ -116,10 +130,14 @@ function shortSummary(description, maxLength = 140) {
   return `${description.slice(0, maxLength - 1).trimEnd()}…`;
 }
 
-async function buildResident(catalog, id, failures) {
-  const record = catalog.skills?.find((skill) => skill.name === id);
+async function buildResident(catalog, selection, failures) {
+  const { id, path: selectionPath } = selection;
+  const record = catalog.skills?.find((skill) => skill.path === selectionPath);
   if (!record) {
-    fail(failures, `Resident "${id}" is not present in registry/catalog.json — add the real skill first.`);
+    fail(
+      failures,
+      `Resident "${id}" points to "${selectionPath}", which is not in registry/catalog.json — add the real skill first.`,
+    );
     return null;
   }
 
@@ -133,10 +151,10 @@ async function buildResident(catalog, id, failures) {
   }
 
   const { attrs, metadata } = parseFrontmatter(source);
-  if (!attrs.name || attrs.name !== id) {
+  if (!attrs.name || attrs.name !== record.name) {
     fail(
       failures,
-      `Resident "${id}" frontmatter name mismatch: SKILL.md says "${attrs.name ?? "(none)"}", catalog says "${id}".`,
+      `Resident "${id}" frontmatter name mismatch: SKILL.md says "${attrs.name ?? "(none)"}", catalog says "${record.name}".`,
     );
   }
 
@@ -173,11 +191,18 @@ async function main() {
   const catalog = await loadCatalog(failures);
   await validateCatalogAgainstDisk(catalog, failures);
 
+  const seenIds = new Set();
   const residents = [];
-  for (const id of RESIDENT_IDS) {
-    const resident = await buildResident(catalog, id, failures);
+  for (const selection of RESIDENT_SELECTIONS) {
+    if (seenIds.has(selection.id)) {
+      fail(failures, `Duplicate resident id "${selection.id}" in RESIDENT_SELECTIONS.`);
+      continue;
+    }
+    seenIds.add(selection.id);
+
+    const resident = await buildResident(catalog, selection, failures);
     if (!resident) continue;
-    await copyMarkdownAsset(id, resident._rawSource);
+    await copyMarkdownAsset(selection.id, resident._rawSource);
     delete resident._rawSource;
     residents.push(resident);
   }

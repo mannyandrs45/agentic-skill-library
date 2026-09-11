@@ -3,22 +3,6 @@ import { residentRng, hashSeed } from "../core/rng.js";
 import { createLumin, animateLumin, LuminPhase } from "./lumin.js";
 import { buildSchedule, sampleSchedule, BehaviorState } from "./behavior.js";
 
-// Domain -> accent color. Every domain in registry/catalog.json gets a
-// distinct glow; unrecognized/future domains fall back gracefully.
-const DOMAIN_COLORS = {
-  design: 0xffb347,
-  engineering: 0x8fd3ff,
-  media: 0xff8fd0,
-  writing: 0xa7ff8f,
-  marketing: 0xffe08f,
-  "quality-and-release": 0x8fffe0,
-  "research-and-browser": 0x8fa7ff,
-  "strategy-and-product": 0xd08fff,
-  orchestration: 0xcfcfcf,
-  travel: 0x8fffc2,
-  sports: 0xff8f8f,
-};
-
 // Catalog-behavior labels only — never implies live execution.
 export const STATE_LABELS = {
   [BehaviorState.WANDER]: "Wandering the garden",
@@ -27,8 +11,14 @@ export const STATE_LABELS = {
   [BehaviorState.REST]: "Resting",
 };
 
-export function domainAccentColor(domain) {
-  return DOMAIN_COLORS[domain] ?? 0xd9c9ff;
+// Each resident gets its own glow — deterministically derived from its id
+// (not the domain), so every Lumin reads as visually distinct even when two
+// residents share a domain.
+export function residentAccentColor(id) {
+  const hue = hashSeed(id) % 360;
+  const color = new THREE.Color();
+  color.setHSL(hue / 360, 0.62, 0.64);
+  return color.getHex();
 }
 
 export class Resident {
@@ -37,7 +27,8 @@ export class Resident {
     this.rng = residentRng(worldSeed, data.id);
     this.selected = false;
 
-    const accentColor = domainAccentColor(data.domain);
+    const accentColor = residentAccentColor(data.id);
+    this.accentColor = accentColor;
     this.mesh = createLumin({ accentColor, seed: hashSeed(data.id) % 1000 });
     this.mesh.userData.residentId = data.id;
     this.mesh.position.copy(restPosition);

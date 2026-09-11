@@ -47,11 +47,12 @@ npm run generate
 1. Reads `../registry/catalog.json` (the real, already-generated skill index) and cross-checks
    every entry exists on disk — this is a full validation pass over the whole real catalog, not
    just the residents below.
-2. For each id in the `RESIDENT_IDS` allowlist at the top of the script (currently just
-   `grill-me` — the Phase 1 vertical slice), finds its catalog record, reads its actual
-   `SKILL.md`, and parses `license` plus the nested `metadata:` block (`author`, `version`,
-   `adapted_from`, etc.) that the root catalog builder doesn't need but this app's detail panel
-   does.
+2. For each `{ id, path }` entry in the `RESIDENT_SELECTIONS` list at the top of the script,
+   finds the catalog record at that exact path (not by name — two real skills are both literally
+   named `no-ai-slop`, one upstream and one personal, so selection is by path and each gets its
+   own disambiguated `id`), reads its actual `SKILL.md`, and parses `license` plus the nested
+   `metadata:` block (`author`, `version`, `adapted_from`, etc.) that the root catalog builder
+   doesn't need but this app's detail panel does.
 3. Copies that `SKILL.md` byte-for-byte into `public/skills/<id>/SKILL.md`, so the app's download
    button works with no GitHub API call and no rate limit.
 4. Emits `src/generated/residents.json` with one record per resident, including a `sha256`
@@ -61,10 +62,23 @@ npm run generate
 Anything missing, mismatched, or unparsable makes the script exit non-zero with a specific
 failure message — it fails loudly rather than emitting a resident from partial data.
 
-**Adding a resident** is just adding its real skill name to `RESIDENT_IDS` in
-`scripts/generate-world.mjs` — the pipeline (validate → copy markdown → emit data) needs no
-changes. `RESIDENT_IDS` is a *selection* into the real catalog, not a second catalog: it carries
-no skill content of its own.
+**Adding a resident** is adding one `{ id, path }` entry to `RESIDENT_SELECTIONS` in
+`scripts/generate-world.mjs`, plus (optionally) a station theme for it in
+`src/residents/stationThemes.js` — the pipeline (validate → copy markdown → emit data) needs no
+changes. `RESIDENT_SELECTIONS` is a *selection* into the real catalog, not a second catalog: it
+carries no skill content of its own, only a pointer to a real `SKILL.md` and a display id.
+
+Current roster (7, spanning all four collections):
+
+| id | real skill | collection |
+| --- | --- | --- |
+| `grill-me` | grill-me | personal |
+| `tufte-charts` | tufte-charts | personal |
+| `skillopt` | skillopt | personal |
+| `no-ai-slop-personal` | no-ai-slop | personal |
+| `no-ai-slop-community` | no-ai-slop | no-ai-slop (upstream) |
+| `ship` | ship | gstack |
+| `slideshow` | slideshow | hyperframes |
 
 ## Tests
 
@@ -73,8 +87,9 @@ npm test
 ```
 
 Runs the generator and asserts its output: the manifest shape, that the full real catalog
-(80+ skills) was validated, and that the bundled `grill-me/SKILL.md` is byte-for-byte identical
-to `../skills/personal/grill-me/SKILL.md`.
+(80+ skills) was validated, that the two same-named `no-ai-slop` skills resolved to distinct
+residents by path rather than colliding, and that the bundled `grill-me/SKILL.md` is
+byte-for-byte identical to `../skills/personal/grill-me/SKILL.md`.
 
 ## Layout
 
@@ -83,8 +98,8 @@ app/
 ├── scripts/generate-world.mjs   # world-registry generator (see above)
 ├── src/
 │   ├── core/                    # engine bootstrap, seeded RNG, reduced-motion gate
-│   ├── world/                   # garden ground + workstations
-│   ├── residents/               # Lumin mesh + deterministic behavior loop
+│   ├── world/                   # garden ground, ring layout, a small kit of station shapes
+│   ├── residents/               # Lumin mesh, deterministic behavior loop, station-theme map
 │   ├── ui/                      # accessible list + detail panel (plain DOM, no 3D dependency)
 │   └── generated/residents.json # generator output — not hand-edited
 ├── public/skills/<id>/SKILL.md  # bundled exact copies for download
@@ -103,6 +118,14 @@ eyes, a diagonal scroll-satchel, and orbiting "record motes." No geometry, textu
 were imported from Bot Crossing or anywhere else. Bot Crossing's own bundled art (KayKit packs by
 Kay Lousberg) is CC0, but is not used here regardless of license, since the brief calls for a
 visibly original character design.
+
+Each resident's glow color is derived deterministically from its own id (`residentAccentColor` in
+`src/residents/resident.js`), not shared by domain, so every Lumin — and the workstation it
+matches — reads as visually distinct even when two residents cover similar ground. The station
+kit (`src/world/stations.js`) has six original shapes (an interrogation halo, a data-bar podium,
+a writing desk, a self-tuning loop ring, a shipping dock, a slideshow projector); which shape a
+resident gets is a presentation choice in `src/residents/stationThemes.js`, separate from the
+generator's real skill data.
 
 ## Deploying
 

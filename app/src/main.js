@@ -1,8 +1,9 @@
 import { Engine } from "./core/engine.js";
 import { createGarden } from "./world/garden.js";
-import { createGrillMeStation, animateStation } from "./world/station.js";
-import { REST_POSITION, WANDER_RADIUS } from "./world/layout.js";
-import { Resident, domainAccentColor } from "./residents/resident.js";
+import { createStation, animateStation } from "./world/stations.js";
+import { ringLayout } from "./world/layout.js";
+import { Resident, residentAccentColor } from "./residents/resident.js";
+import { stationThemeFor } from "./residents/stationThemes.js";
 import { renderPanel, clearPanel } from "./ui/panel.js";
 import { renderList } from "./ui/list.js";
 import worldManifest from "./generated/residents.json";
@@ -14,17 +15,24 @@ const listContainer = document.getElementById("skill-list-items");
 const engine = new Engine(sceneContainer);
 engine.scene.add(createGarden());
 
-const [firstResidentData] = worldManifest.residents;
-const station = createGrillMeStation(domainAccentColor(firstResidentData?.domain));
-engine.scene.add(station);
-engine.onUpdate((_delta, elapsed) => animateStation(station, elapsed));
+const stations = [];
+const residents = worldManifest.residents.map((data, index) => {
+  const layout = ringLayout(index, worldManifest.residents.length);
+  const accentColor = residentAccentColor(data.id);
 
-const residents = worldManifest.residents.map((data) => {
+  const station = createStation({
+    theme: stationThemeFor(data.id),
+    accentColor,
+    position: layout.stationPosition,
+  });
+  engine.scene.add(station);
+  stations.push(station);
+
   const resident = new Resident(data, {
     worldSeed: worldManifest.worldSeed,
-    restPosition: REST_POSITION,
-    wanderRadius: WANDER_RADIUS,
-    workAnchor: station.userData.workAnchor,
+    restPosition: layout.restPosition,
+    wanderRadius: layout.wanderRadius,
+    workAnchor: layout.workAnchor,
   });
   engine.scene.add(resident.mesh);
   engine.registerSelectable(resident.mesh);
@@ -32,6 +40,10 @@ const residents = worldManifest.residents.map((data) => {
   return resident;
 });
 const residentsById = new Map(residents.map((r) => [r.data.id, r]));
+
+engine.onUpdate((_delta, elapsed) => {
+  for (const station of stations) animateStation(station, elapsed);
+});
 
 clearPanel(panelContainer);
 let selectedId = null;
