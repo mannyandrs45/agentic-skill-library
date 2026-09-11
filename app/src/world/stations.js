@@ -8,7 +8,7 @@ import * as THREE from "three";
  * kit — every station here is assembled from primitives for this project.
  */
 
-function plinth(radius = 0.62, height = 0.32, color = 0x3a3226) {
+function plinth(radius = 0.62, height = 0.32, color = 0x1f3634) {
   const mesh = new THREE.Mesh(
     new THREE.CylinderGeometry(radius, radius + 0.1, height, 24),
     new THREE.MeshStandardMaterial({ color, roughness: 0.7 }),
@@ -51,7 +51,7 @@ function buildHalo(group, accentColor) {
 }
 
 function buildChartPodium(group, accentColor) {
-  group.add(plinth(0.7, 0.24, 0x2e3a36));
+  group.add(plinth(0.7, 0.24, 0x1c3230));
   const heights = [0.5, 0.85, 0.65, 1.05, 0.4];
   const material = emissiveMaterial(accentColor, 0.5);
   const bars = heights.map((h, i) => {
@@ -65,7 +65,7 @@ function buildChartPodium(group, accentColor) {
 }
 
 function buildWritingDesk(group, accentColor) {
-  group.add(plinth(0.55, 0.2, 0x33291e));
+  group.add(plinth(0.55, 0.2, 0x233a37));
   const page = new THREE.Mesh(
     new THREE.BoxGeometry(0.7, 0.03, 0.5),
     new THREE.MeshStandardMaterial({ color: 0xe9e2cf, roughness: 0.8 }),
@@ -85,7 +85,7 @@ function buildWritingDesk(group, accentColor) {
 }
 
 function buildLoopRing(group, accentColor) {
-  group.add(plinth(0.5, 0.2, 0x2a2a3a));
+  group.add(plinth(0.5, 0.2, 0x1c2c3a));
   const ring = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.045, 12, 48), emissiveMaterial(accentColor, 0.5));
   ring.rotation.x = Math.PI / 2.3;
   ring.position.y = 0.85;
@@ -98,7 +98,7 @@ function buildLoopRing(group, accentColor) {
 }
 
 function buildDockCrate(group, accentColor) {
-  group.add(plinth(0.6, 0.18, 0x3a3a3a));
+  group.add(plinth(0.6, 0.18, 0x223838));
   const post = new THREE.Mesh(
     new THREE.CylinderGeometry(0.04, 0.04, 1.1, 8),
     new THREE.MeshStandardMaterial({ color: 0x5a4632, roughness: 0.8 }),
@@ -124,7 +124,7 @@ function buildDockCrate(group, accentColor) {
 }
 
 function buildProjectorScreen(group, accentColor) {
-  group.add(plinth(0.45, 0.16, 0x252525));
+  group.add(plinth(0.45, 0.16, 0x1a2a2a));
   const screen = new THREE.Mesh(
     new THREE.PlaneGeometry(0.7, 0.5),
     new THREE.MeshStandardMaterial({ color: 0x101418, roughness: 0.9 }),

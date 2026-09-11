@@ -1,75 +1,89 @@
 import * as THREE from "three";
 
 /**
- * Original "Lumin" archivist design — emotionally adjacent to a soft
- * curious-alien archetype, but deliberately NOT that: no legs (it hovers,
- * rather than walks, on a soft light disc), a continuous teardrop-blob
- * silhouette instead of a humanoid head/torso split, a single glowing visor
- * ARC instead of eyes, and a diagonal scroll-satchel plus orbiting "record
- * motes" as its signature accessory. No meshes, textures, or geometry are
- * borrowed from any third party — every part below is a primitive.
+ * Original "Lumin" archivist design. The brief for a soft, round-headed
+ * alien child is a common enough silhouette trope on its own, so the
+ * distinguishing choices live in the details: a mouthless, matte-porcelain
+ * face with glossy dark eyes (not a glowing visor), a stub-legged standing
+ * body instead of a floating one, a diagonal scroll-satchel, and orbiting
+ * "record motes" as the signature accessory. Every part below is a
+ * primitive built for this project — no geometry, textures, or models are
+ * borrowed from any third party or any specific character.
  */
 export function createLumin({ accentColor = 0x8fd3ff, seed = 1 } = {}) {
   const group = new THREE.Group();
   group.name = "lumin";
 
-  const skinColor = 0xd9c9ff;
-  const skinMaterial = new THREE.MeshStandardMaterial({
-    color: skinColor,
+  const skinMaterial = new THREE.MeshPhysicalMaterial({
+    color: 0xf3ead9,
     roughness: 0.55,
-    metalness: 0.05,
+    clearcoat: 0.18,
+    clearcoatRoughness: 0.4,
   });
 
-  // Continuous soft-blob body: a wide lower cushion fused with a smaller
-  // upper dome, both flattened toward the front — silhouette reads as one
-  // teardrop, not a torso-plus-head.
-  const lower = new THREE.Mesh(new THREE.SphereGeometry(0.46, 24, 18), skinMaterial);
-  lower.scale.set(1, 0.82, 0.92);
-  lower.position.y = 0.5;
-  lower.castShadow = true;
-  group.add(lower);
+  // Exaggerated head-to-body ratio reads as "lifelike/childlike" without
+  // copying any one character's exact proportions.
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.44, 28, 22), skinMaterial);
+  head.scale.set(1, 0.94, 0.96);
+  head.position.y = 0.92;
+  head.castShadow = true;
+  group.add(head);
 
-  const upper = new THREE.Mesh(new THREE.SphereGeometry(0.33, 24, 18), skinMaterial);
-  upper.scale.set(0.95, 1, 0.9);
-  upper.position.y = 0.98;
-  upper.castShadow = true;
-  group.add(upper);
+  const body = new THREE.Mesh(new THREE.SphereGeometry(0.3, 22, 16), skinMaterial);
+  body.scale.set(1, 0.85, 0.9);
+  body.position.y = 0.34;
+  body.castShadow = true;
+  group.add(body);
 
-  // Visor arc: the only "face" element, a thin glowing band instead of eyes.
-  const visor = new THREE.Mesh(
-    new THREE.TorusGeometry(0.2, 0.02, 8, 24, Math.PI * 0.8),
-    new THREE.MeshStandardMaterial({
-      color: accentColor,
-      emissive: accentColor,
-      emissiveIntensity: 1,
-      roughness: 0.2,
-    }),
-  );
-  visor.rotation.set(0, 0, Math.PI * 0.1);
-  visor.position.set(0, 1.0, 0.28);
-  group.add(visor);
+  // Glossy dark eyes instead of a glowing visor — reads as a face, not a
+  // gadget, and keeps a soft rim highlight from the scene's warm key light.
+  const eyeMaterial = new THREE.MeshPhysicalMaterial({
+    color: 0x1c1712,
+    roughness: 0.15,
+    clearcoat: 0.6,
+  });
+  const eyeGeometry = new THREE.SphereGeometry(0.075, 16, 12);
+  const eyeLeft = new THREE.Mesh(eyeGeometry, eyeMaterial);
+  eyeLeft.position.set(-0.16, 0.96, 0.36);
+  eyeLeft.scale.set(0.85, 1, 0.6);
+  group.add(eyeLeft);
 
-  // Nub arms: short capsule-like limbs, one each side, for gesture during work.
-  const armMaterial = skinMaterial;
-  const armGeometry = new THREE.CapsuleGeometry(0.07, 0.22, 4, 8);
-  const armLeft = new THREE.Mesh(armGeometry, armMaterial);
-  armLeft.position.set(-0.42, 0.62, 0.05);
-  armLeft.rotation.z = Math.PI / 2.6;
+  const eyeRight = eyeLeft.clone();
+  eyeRight.position.x = 0.16;
+  group.add(eyeRight);
+
+  // Nub arms: short, rounded, pudgy limbs for gesture during work.
+  const armGeometry = new THREE.CapsuleGeometry(0.075, 0.14, 4, 8);
+  const armLeft = new THREE.Mesh(armGeometry, skinMaterial);
+  armLeft.position.set(-0.36, 0.42, 0.02);
+  armLeft.rotation.z = Math.PI / 2.4;
   armLeft.castShadow = true;
   group.add(armLeft);
 
   const armRight = armLeft.clone();
-  armRight.position.x = 0.42;
-  armRight.rotation.z = -Math.PI / 2.6;
+  armRight.position.x = 0.36;
+  armRight.rotation.z = -Math.PI / 2.4;
   group.add(armRight);
 
+  // Stub legs/feet — a standing, grounded silhouette rather than a hovering one.
+  const legMaterial = new THREE.MeshStandardMaterial({ color: 0xe4d7bf, roughness: 0.7 });
+  const legLeft = new THREE.Mesh(new THREE.SphereGeometry(0.12, 14, 10), legMaterial);
+  legLeft.scale.set(1, 0.6, 1.15);
+  legLeft.position.set(-0.14, 0.1, 0.02);
+  legLeft.castShadow = true;
+  group.add(legLeft);
+
+  const legRight = legLeft.clone();
+  legRight.position.x = 0.14;
+  group.add(legRight);
+
   // Scroll satchel: a flattened rounded box worn diagonally — the
-  // archivist's signature accessory.
+  // archivist's signature accessory, in a muted accent-adjacent tone.
   const satchel = new THREE.Mesh(
-    new THREE.BoxGeometry(0.34, 0.24, 0.08),
-    new THREE.MeshStandardMaterial({ color: 0x6a4a8f, roughness: 0.6 }),
+    new THREE.BoxGeometry(0.26, 0.19, 0.06),
+    new THREE.MeshStandardMaterial({ color: 0xa8623f, roughness: 0.65 }),
   );
-  satchel.position.set(0.16, 0.42, 0.32);
+  satchel.position.set(0.14, 0.36, 0.24);
   satchel.rotation.z = -0.35;
   satchel.castShadow = true;
   group.add(satchel);
@@ -81,43 +95,35 @@ export function createLumin({ accentColor = 0x8fd3ff, seed = 1 } = {}) {
     emissiveIntensity: 1.2,
   });
   const motes = [0, 1].map((i) => {
-    const mote = new THREE.Mesh(new THREE.SphereGeometry(0.045, 10, 10), moteMaterial);
+    const mote = new THREE.Mesh(new THREE.SphereGeometry(0.04, 10, 10), moteMaterial);
     mote.userData.orbitOffset = i * Math.PI;
     group.add(mote);
     return mote;
   });
 
-  // Hover disc: soft glow ring under the body, standing in for legs/feet —
-  // this is a floating archivist, not a walker.
-  const hoverDisc = new THREE.Mesh(
-    new THREE.CircleGeometry(0.3, 24),
-    new THREE.MeshStandardMaterial({
-      color: accentColor,
-      emissive: accentColor,
-      emissiveIntensity: 0.5,
-      transparent: true,
-      opacity: 0.5,
-      side: THREE.DoubleSide,
-    }),
+  // Soft contact shadow instead of a hover disc — grounded, not floating.
+  const contactShadow = new THREE.Mesh(
+    new THREE.CircleGeometry(0.32, 20),
+    new THREE.MeshBasicMaterial({ color: 0x061414, transparent: true, opacity: 0.35 }),
   );
-  hoverDisc.rotation.x = -Math.PI / 2;
-  hoverDisc.position.y = 0.06;
-  group.add(hoverDisc);
+  contactShadow.rotation.x = -Math.PI / 2;
+  contactShadow.position.y = 0.005;
+  group.add(contactShadow);
 
-  // Aura: a very soft translucent shell, the "unique color glow".
+  // Aura: a very soft translucent shell carrying the resident's accent glow.
   const aura = new THREE.Mesh(
-    new THREE.SphereGeometry(0.68, 16, 12),
+    new THREE.SphereGeometry(0.62, 16, 12),
     new THREE.MeshStandardMaterial({
       color: accentColor,
       transparent: true,
-      opacity: 0.08,
+      opacity: 0.07,
       depthWrite: false,
     }),
   );
-  aura.position.y = 0.62;
+  aura.position.y = 0.55;
   group.add(aura);
 
-  group.userData.animatedParts = { upper, lower, armLeft, armRight, motes, hoverDisc, visor };
+  group.userData.animatedParts = { head, body, armLeft, armRight, motes };
   group.userData.seed = seed;
 
   return group;
@@ -128,18 +134,17 @@ const WORK_PHASE = 1;
 
 /** Idle/gesture animation only — position/state transitions live in resident.js. */
 export function animateLumin(lumin, elapsed, phase = REST_PHASE) {
-  const { upper, armLeft, armRight, motes, hoverDisc, visor } = lumin.userData.animatedParts;
-  const bob = Math.sin(elapsed * 1.4 + lumin.userData.seed) * 0.03;
-  upper.position.y = 0.98 + bob;
-  hoverDisc.position.y = 0.06 + Math.sin(elapsed * 1.4 + lumin.userData.seed) * 0.01;
-  visor.material.emissiveIntensity = 0.8 + Math.sin(elapsed * 2.2) * 0.2;
+  const { head, body, armLeft, armRight, motes } = lumin.userData.animatedParts;
+  const bob = Math.sin(elapsed * 1.4 + lumin.userData.seed) * 0.025;
+  head.position.y = 0.92 + bob;
+  body.position.y = 0.34 + bob * 0.4;
 
   for (const mote of motes) {
     const angle = elapsed * 0.9 + mote.userData.orbitOffset;
-    mote.position.set(Math.cos(angle) * 0.5, 0.75 + Math.sin(angle * 1.7) * 0.08, Math.sin(angle) * 0.5);
+    mote.position.set(Math.cos(angle) * 0.46, 0.7 + Math.sin(angle * 1.7) * 0.08, Math.sin(angle) * 0.46);
   }
 
-  const gesture = phase === WORK_PHASE ? Math.sin(elapsed * 4) * 0.25 : Math.sin(elapsed * 0.8) * 0.05;
+  const gesture = phase === WORK_PHASE ? Math.sin(elapsed * 4) * 0.22 : Math.sin(elapsed * 0.8) * 0.04;
   armLeft.rotation.x = gesture;
   armRight.rotation.x = -gesture;
 }

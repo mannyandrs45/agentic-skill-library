@@ -1,4 +1,5 @@
 import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { prefersReducedMotion, onReducedMotionChange } from "./reducedMotion.js";
 
 /**
@@ -15,24 +16,40 @@ export class Engine {
     this.onSelect = null;
     this.reducedMotion = prefersReducedMotion();
 
+    // Moody dusk-on-water palette: cool teal fog/ambient with a warm rim
+    // light, and a reflective floor (see world/garden.js) — not the flat
+    // green-lawn look Phase 1 shipped with.
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x0e1420);
-    this.scene.fog = new THREE.Fog(0x0e1420, 14, 34);
+    this.scene.background = new THREE.Color(0x0b2323);
+    this.scene.fog = new THREE.Fog(0x0b2323, 16, 40);
 
     this.camera = new THREE.PerspectiveCamera(
-      42,
+      38,
       container.clientWidth / container.clientHeight,
       0.1,
       100,
     );
-    this.camera.position.set(6, 7, 9);
-    this.camera.lookAt(0, 0, 0);
+    this.camera.position.set(8, 8, 12);
+    this.camera.lookAt(0, 0.6, 0);
 
     this.renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.setSize(container.clientWidth, container.clientHeight);
     this.renderer.shadowMap.enabled = true;
     container.appendChild(this.renderer.domElement);
+
+    // No inertial damping: a drag/zoom responds and stops immediately, so
+    // orbiting never becomes its own bit of continuous animation to manage
+    // under prefers-reduced-motion. A 'change' listener re-renders on
+    // demand, so orbiting still works even while the main loop is paused.
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement);
+    this.controls.enableDamping = false;
+    this.controls.minDistance = 4;
+    this.controls.maxDistance = 26;
+    this.controls.maxPolarAngle = Math.PI / 2.05;
+    this.controls.target.set(0, 0.6, 0);
+    this.controls.addEventListener("change", () => this.renderOnce());
+    this.controls.update();
 
     this._addLights();
     this._bindEvents();
@@ -44,18 +61,28 @@ export class Engine {
   }
 
   _addLights() {
-    const hemi = new THREE.HemisphereLight(0x9ecbff, 0x1a1208, 0.85);
+    // Cool teal sky / dark teal-stone ground ambient...
+    const hemi = new THREE.HemisphereLight(0x6fd3c7, 0x0a1f1f, 0.75);
     this.scene.add(hemi);
 
-    const sun = new THREE.DirectionalLight(0xffe9c7, 1.1);
-    sun.position.set(6, 10, 4);
+    // ...against one warm, low, slightly golden rim light. The warm/cool
+    // split is what gives a matte character a lit edge against a teal scene
+    // instead of looking flat.
+    const sun = new THREE.DirectionalLight(0xffcf8f, 1.35);
+    sun.position.set(7, 6, -5);
     sun.castShadow = true;
     sun.shadow.mapSize.set(1024, 1024);
-    sun.shadow.camera.left = -10;
-    sun.shadow.camera.right = 10;
-    sun.shadow.camera.top = 10;
-    sun.shadow.camera.bottom = -10;
+    sun.shadow.camera.left = -11;
+    sun.shadow.camera.right = 11;
+    sun.shadow.camera.top = 11;
+    sun.shadow.camera.bottom = -11;
     this.scene.add(sun);
+
+    // A faint cool fill from the front-camera side so the shadowed side of
+    // residents still reads as teal, not pure black.
+    const fill = new THREE.DirectionalLight(0x2c5f5f, 0.4);
+    fill.position.set(-6, 3, 8);
+    this.scene.add(fill);
   }
 
   _bindEvents() {
@@ -68,9 +95,22 @@ export class Engine {
     };
     window.addEventListener("resize", this._resize);
 
+    // Distinguish a click (select) from an orbit-drag (look around) by how
+    // far the pointer moved between down and up — OrbitControls doesn't
+    // suppress the click event on its own.
     this._raycaster = new THREE.Raycaster();
     this._pointer = new THREE.Vector2();
-    this._onClick = (event) => {
+    this._pointerDown = null;
+    this._onPointerDown = (event) => {
+      this._pointerDown = { x: event.clientX, y: event.clientY };
+    };
+    this._onPointerUp = (event) => {
+      if (!this._pointerDown) return;
+      const dx = event.clientX - this._pointerDown.x;
+      const dy = event.clientY - this._pointerDown.y;
+      this._pointerDown = null;
+      if (Math.hypot(dx, dy) > 6) return; // was a drag, not a click
+
       const rect = this.renderer.domElement.getBoundingClientRect();
       this._pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
       this._pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
@@ -82,7 +122,8 @@ export class Engine {
         if (target) this.onSelect(target.userData.residentId);
       }
     };
-    this.renderer.domElement.addEventListener("click", this._onClick);
+    this.renderer.domElement.addEventListener("pointerdown", this._onPointerDown);
+    this.renderer.domElement.addEventListener("pointerup", this._onPointerUp);
   }
 
   /** Register a mesh (or group) as clickable; it must carry userData.residentId. */
@@ -110,6 +151,7 @@ export class Engine {
       // resize or selection still triggers a single re-render via renderOnce().
       if (this.reducedMotion) return;
 
+      this.controls.update();
       for (const callback of this.updateCallbacks) callback(delta, elapsed);
       this.renderOnce();
     };
@@ -119,7 +161,9 @@ export class Engine {
 
   dispose() {
     window.removeEventListener("resize", this._resize);
-    this.renderer.domElement.removeEventListener("click", this._onClick);
+    this.renderer.domElement.removeEventListener("pointerdown", this._onPointerDown);
+    this.renderer.domElement.removeEventListener("pointerup", this._onPointerUp);
+    this.controls.dispose();
     this.renderer.dispose();
   }
 }

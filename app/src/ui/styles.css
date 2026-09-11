@@ -1,11 +1,11 @@
 :root {
   color-scheme: dark;
-  --bg: #0e1420;
-  --panel-bg: #171f2e;
-  --text: #e9edf5;
-  --muted: #a6b0c3;
+  --bg: #0b1f1f;
+  --panel-bg: #122b2a;
+  --text: #e9f2ef;
+  --muted: #9fc3ba;
   --accent: #ffb347;
-  --border: #2a3548;
+  --border: #234240;
 }
 
 * {
@@ -55,9 +55,16 @@ body {
   padding: 1rem 1.5rem;
 }
 
-#scene-container {
+#scene-wrap {
   grid-column: 1;
   grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+#scene-container {
   aspect-ratio: 4 / 3;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -66,6 +73,14 @@ body {
 }
 #scene-container canvas {
   display: block;
+  touch-action: none;
+}
+
+#scene-hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
 }
 
 #skill-panel {
@@ -177,12 +192,12 @@ body {
   #app-main {
     grid-template-columns: 1fr;
   }
-  #scene-container,
+  #scene-wrap,
   #skill-panel,
   #skill-list {
     grid-column: 1;
   }
-  #scene-container {
+  #scene-wrap {
     grid-row: auto;
   }
   #skill-panel,
