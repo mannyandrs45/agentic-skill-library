@@ -1,163 +1,147 @@
 import * as THREE from "three";
 
 /**
- * A small kit of original workstation shapes, each loosely themed to the
- * kind of work its skill actually does (an interview halo, a data-bar
- * podium, a writing desk, a self-tuning loop, a shipping dock, a slideshow
- * projector). None of this borrows geometry from Bot Crossing's build/repair
- * kit — every station here is assembled from primitives for this project.
+ * A small kit of original plant shapes a resident tends: an orchid spike
+ * (four native Florida orchid species, each a size/bloom-count variation),
+ * a palm, and a low palmetto/coontie-style fan. None of this borrows
+ * geometry from Bot Crossing or anywhere else — every plant here is
+ * assembled from primitives for this project, loosely proportioned like the
+ * real species named in residents/stationThemes.js but not botanically
+ * exact models.
  */
 
-function plinth(radius = 0.62, height = 0.32, color = 0x1f3634) {
+function soilMound(radius = 0.5) {
   const mesh = new THREE.Mesh(
-    new THREE.CylinderGeometry(radius, radius + 0.1, height, 24),
-    new THREE.MeshStandardMaterial({ color, roughness: 0.7 }),
+    new THREE.CylinderGeometry(radius, radius + 0.08, 0.2, 20),
+    new THREE.MeshStandardMaterial({ color: 0x241d12, roughness: 0.95 }),
   );
-  mesh.position.y = height / 2;
+  mesh.position.y = 0.1;
   mesh.castShadow = true;
   mesh.receiveShadow = true;
   return mesh;
 }
 
-function emissiveMaterial(color, intensity = 0.6) {
+function bloomMaterial(color) {
   return new THREE.MeshStandardMaterial({
     color,
     emissive: color,
-    emissiveIntensity: intensity,
-    roughness: 0.3,
-    metalness: 0.1,
+    emissiveIntensity: 0.35,
+    roughness: 0.4,
   });
 }
 
-function buildHalo(group, accentColor) {
-  group.add(plinth());
-  const material = emissiveMaterial(accentColor, 0.55);
-  const haloA = new THREE.Mesh(new THREE.TorusGeometry(0.9, 0.03, 12, 48), material);
-  haloA.rotation.x = Math.PI / 2.6;
-  haloA.position.y = 1.1;
-  group.add(haloA);
-
-  const haloB = haloA.clone();
-  haloB.rotation.z = Math.PI / 2;
-  group.add(haloB);
-
-  const shard = new THREE.Mesh(new THREE.IcosahedronGeometry(0.16, 0), emissiveMaterial(accentColor, 0.9));
-  shard.position.set(0, 1.55, 0);
-  shard.userData.baseY = shard.position.y;
-  shard.castShadow = true;
-  group.add(shard);
-
-  return { spin: [haloA, haloB], bob: [shard] };
+function sway(mesh, phase = 0) {
+  mesh.userData.baseRotZ = mesh.rotation.z;
+  mesh.userData.swayPhase = phase;
+  return mesh;
 }
 
-function buildChartPodium(group, accentColor) {
-  group.add(plinth(0.7, 0.24, 0x1c3230));
-  const heights = [0.5, 0.85, 0.65, 1.05, 0.4];
-  const material = emissiveMaterial(accentColor, 0.5);
-  const bars = heights.map((h, i) => {
-    const bar = new THREE.Mesh(new THREE.BoxGeometry(0.12, h, 0.12), material);
-    bar.position.set(-0.4 + i * 0.2, 0.24 + h / 2, 0);
-    bar.castShadow = true;
-    group.add(bar);
-    return bar;
-  });
-  return { pulse: bars };
-}
+function buildOrchidSpike(group, accentColor, { stemHeight = 0.7, bloomCount = 4, spread = 0.12 } = {}) {
+  group.add(soilMound(0.42));
 
-function buildWritingDesk(group, accentColor) {
-  group.add(plinth(0.55, 0.2, 0x233a37));
-  const page = new THREE.Mesh(
-    new THREE.BoxGeometry(0.7, 0.03, 0.5),
-    new THREE.MeshStandardMaterial({ color: 0xe9e2cf, roughness: 0.8 }),
+  const stem = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.02, 0.026, stemHeight, 8),
+    new THREE.MeshStandardMaterial({ color: 0x3f6b3a, roughness: 0.8 }),
   );
-  page.position.y = 0.24;
-  page.rotation.x = -0.25;
-  page.castShadow = true;
-  group.add(page);
+  stem.position.y = 0.2 + stemHeight / 2;
+  stem.castShadow = true;
+  group.add(stem);
 
-  const nib = new THREE.Mesh(new THREE.ConeGeometry(0.06, 0.26, 12), emissiveMaterial(accentColor, 0.8));
-  nib.position.set(0, 0.75, 0.05);
-  nib.userData.baseY = nib.position.y;
-  nib.rotation.x = Math.PI;
-  group.add(nib);
+  const material = bloomMaterial(accentColor);
+  const blooms = [];
+  for (let i = 0; i < bloomCount; i += 1) {
+    const t = bloomCount === 1 ? 1 : i / (bloomCount - 1);
+    const bloom = new THREE.Mesh(new THREE.SphereGeometry(0.07, 10, 8), material);
+    bloom.scale.set(1, 0.45, 0.7);
+    const side = i % 2 === 0 ? 1 : -1;
+    bloom.position.set(side * spread, 0.35 + t * stemHeight * 0.85, side * spread * 0.6);
+    bloom.rotation.z = side * 0.5;
+    bloom.castShadow = true;
+    group.add(sway(bloom, i * 0.7));
+    blooms.push(bloom);
+  }
 
-  return { bob: [nib] };
+  const leaf = new THREE.Mesh(
+    new THREE.ConeGeometry(0.09, 0.3, 6, 1, true),
+    new THREE.MeshStandardMaterial({ color: 0x2f5a2c, roughness: 0.85, side: THREE.DoubleSide }),
+  );
+  leaf.position.set(-0.08, 0.32, 0);
+  leaf.rotation.z = 0.5;
+  group.add(leaf);
+
+  return { sway: blooms };
 }
 
-function buildLoopRing(group, accentColor) {
-  group.add(plinth(0.5, 0.2, 0x1c2c3a));
-  const ring = new THREE.Mesh(new THREE.TorusGeometry(0.62, 0.045, 12, 48), emissiveMaterial(accentColor, 0.5));
-  ring.rotation.x = Math.PI / 2.3;
-  ring.position.y = 0.85;
-  group.add(ring);
+function buildPalm(group, accentColor, { frondCount = 6, trunkHeight = 0.65 } = {}) {
+  group.add(soilMound(0.48));
 
-  const node = new THREE.Mesh(new THREE.SphereGeometry(0.09, 12, 12), emissiveMaterial(accentColor, 1));
-  group.add(node);
+  const trunk = new THREE.Mesh(
+    new THREE.CylinderGeometry(0.05, 0.07, trunkHeight, 10),
+    new THREE.MeshStandardMaterial({ color: 0x6b5334, roughness: 0.85 }),
+  );
+  trunk.position.y = 0.2 + trunkHeight / 2;
+  trunk.castShadow = true;
+  group.add(trunk);
 
-  return { spin: [ring], orbit: [{ mesh: node, radius: 0.62, tiltX: Math.PI / 2.3, height: 0.85 }] };
+  const frondMaterial = new THREE.MeshStandardMaterial({ color: 0x3f8a44, roughness: 0.7, side: THREE.DoubleSide });
+  const fronds = [];
+  for (let i = 0; i < frondCount; i += 1) {
+    const frond = new THREE.Mesh(new THREE.BoxGeometry(0.06, 0.5, 0.02), frondMaterial);
+    const angle = (i / frondCount) * Math.PI * 2;
+    frond.position.set(0, 0.2 + trunkHeight, 0);
+    frond.rotation.z = Math.PI / 2.6;
+    frond.rotation.y = angle;
+    frond.translateY(0.25);
+    frond.castShadow = true;
+    group.add(sway(frond, i * 0.5));
+    fronds.push(frond);
+  }
+
+  const bud = new THREE.Mesh(new THREE.SphereGeometry(0.05, 8, 8), bloomMaterial(accentColor));
+  bud.position.y = 0.24 + trunkHeight;
+  group.add(bud);
+
+  return { sway: fronds };
 }
 
-function buildDockCrate(group, accentColor) {
-  group.add(plinth(0.6, 0.18, 0x223838));
-  const post = new THREE.Mesh(
-    new THREE.CylinderGeometry(0.04, 0.04, 1.1, 8),
-    new THREE.MeshStandardMaterial({ color: 0x5a4632, roughness: 0.8 }),
-  );
-  post.position.y = 0.73;
-  post.castShadow = true;
-  group.add(post);
+function buildPalmettoFan(group, accentColor, { frondCount = 9, frondLength = 0.42, height = 0.22 } = {}) {
+  group.add(soilMound(0.5));
 
-  const flag = new THREE.Mesh(new THREE.PlaneGeometry(0.32, 0.2), emissiveMaterial(accentColor, 0.7));
-  flag.material.side = THREE.DoubleSide;
-  flag.position.set(0.18, 1.15, 0);
-  group.add(flag);
+  const frondMaterial = new THREE.MeshStandardMaterial({ color: 0x4a6b3a, roughness: 0.75, side: THREE.DoubleSide });
+  const fronds = [];
+  for (let i = 0; i < frondCount; i += 1) {
+    const frond = new THREE.Mesh(new THREE.BoxGeometry(0.05, frondLength, 0.015), frondMaterial);
+    const angle = (i / frondCount) * Math.PI * 2;
+    frond.position.set(0, 0.2 + height, 0);
+    frond.rotation.z = Math.PI / 2.2;
+    frond.rotation.y = angle;
+    frond.translateY(frondLength / 2);
+    frond.castShadow = true;
+    group.add(sway(frond, i * 0.4));
+    fronds.push(frond);
+  }
 
-  const crate = new THREE.Mesh(
-    new THREE.BoxGeometry(0.32, 0.32, 0.32),
-    new THREE.MeshStandardMaterial({ color: 0x6b5230, roughness: 0.75 }),
-  );
-  crate.position.set(-0.45, 0.34, 0);
-  crate.castShadow = true;
-  group.add(crate);
+  const heart = new THREE.Mesh(new THREE.SphereGeometry(0.06, 8, 8), bloomMaterial(accentColor));
+  heart.position.y = 0.24 + height;
+  group.add(heart);
 
-  return { wave: [flag] };
-}
-
-function buildProjectorScreen(group, accentColor) {
-  group.add(plinth(0.45, 0.16, 0x1a2a2a));
-  const screen = new THREE.Mesh(
-    new THREE.PlaneGeometry(0.7, 0.5),
-    new THREE.MeshStandardMaterial({ color: 0x101418, roughness: 0.9 }),
-  );
-  screen.position.set(0, 0.65, -0.3);
-  group.add(screen);
-
-  const beamMaterial = emissiveMaterial(accentColor, 0.8);
-  beamMaterial.transparent = true;
-  beamMaterial.opacity = 0.55;
-  const beam = new THREE.Mesh(new THREE.ConeGeometry(0.3, 0.5, 4, 1, true), beamMaterial);
-  beam.rotation.x = Math.PI / 2;
-  beam.rotation.z = Math.PI / 4;
-  beam.position.set(0, 0.5, 0.05);
-  beam.userData.baseY = beam.position.y;
-  group.add(beam);
-
-  return { flicker: [screen], bob: [beam] };
+  return { sway: fronds };
 }
 
 const BUILDERS = {
-  halo: buildHalo,
-  "chart-podium": buildChartPodium,
-  "writing-desk": buildWritingDesk,
-  "loop-ring": buildLoopRing,
-  "dock-crate": buildDockCrate,
-  "projector-screen": buildProjectorScreen,
+  "orchid-ghost": (group, color) => buildOrchidSpike(group, color, { stemHeight: 0.55, bloomCount: 2, spread: 0.08 }),
+  "orchid-cowhorn": (group, color) => buildOrchidSpike(group, color, { stemHeight: 0.95, bloomCount: 6, spread: 0.14 }),
+  "orchid-butterfly": (group, color) => buildOrchidSpike(group, color, { stemHeight: 0.6, bloomCount: 5, spread: 0.1 }),
+  "orchid-clamshell": (group, color) => buildOrchidSpike(group, color, { stemHeight: 0.5, bloomCount: 3, spread: 0.16 }),
+  palm: (group, color) => buildPalm(group, color, { frondCount: 6, trunkHeight: 0.65 }),
+  "palmetto-saw": (group, color) => buildPalmettoFan(group, color, { frondCount: 9, frondLength: 0.44, height: 0.2 }),
+  "palmetto-coontie": (group, color) => buildPalmettoFan(group, color, { frondCount: 13, frondLength: 0.24, height: 0.1 }),
 };
 
 export function createStation({ theme, accentColor, position }) {
-  const build = BUILDERS[theme] ?? buildHalo;
+  const build = BUILDERS[theme] ?? BUILDERS["orchid-ghost"];
   const group = new THREE.Group();
-  group.name = `station-${theme}`;
+  group.name = `plant-${theme}`;
   group.position.copy(position);
   group.userData.animated = build(group, accentColor);
   return group;
@@ -165,19 +149,7 @@ export function createStation({ theme, accentColor, position }) {
 
 export function animateStation(station, elapsed) {
   const animated = station.userData.animated ?? {};
-  for (const mesh of animated.spin ?? []) mesh.rotation.z = elapsed * 0.3;
-  for (const mesh of animated.bob ?? []) {
-    mesh.position.y = mesh.userData.baseY + Math.sin(elapsed * 1.6) * 0.05;
-  }
-  for (const mesh of animated.wave ?? []) mesh.rotation.y = Math.sin(elapsed * 2) * 0.3;
-  for (const mesh of animated.flicker ?? []) {
-    mesh.material.emissiveIntensity = 0.4 + Math.sin(elapsed * 3) * 0.1;
-  }
-  (animated.pulse ?? []).forEach((bar, i) => {
-    bar.material.emissiveIntensity = 0.4 + Math.sin(elapsed * 1.4 + i) * 0.2;
-  });
-  for (const { mesh, radius, tiltX, height } of animated.orbit ?? []) {
-    const angle = elapsed * 0.8;
-    mesh.position.set(Math.cos(angle) * radius, height + Math.sin(angle) * radius * Math.sin(tiltX), Math.sin(angle) * radius * Math.cos(tiltX));
+  for (const mesh of animated.sway ?? []) {
+    mesh.rotation.z = mesh.userData.baseRotZ + Math.sin(elapsed * 1.1 + mesh.userData.swayPhase) * 0.12;
   }
 }

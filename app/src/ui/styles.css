@@ -1,11 +1,11 @@
 :root {
   color-scheme: dark;
-  --bg: #0b1f1f;
-  --panel-bg: #122b2a;
-  --text: #e9f2ef;
-  --muted: #9fc3ba;
+  --bg: #101c12;
+  --panel-bg: #16241a;
+  --text: #eaf2e6;
+  --muted: #a8c79a;
   --accent: #ffb347;
-  --border: #234240;
+  --border: #2c4228;
 }
 
 * {
@@ -113,6 +113,18 @@ body {
   font-size: 0.85rem;
   color: var(--accent);
   margin: 0.5rem 0;
+}
+#skill-panel .plant-line {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  padding: 0.5rem 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-left: 2px solid var(--accent);
+  border-radius: 4px;
+}
+#skill-panel .plant-line strong {
+  color: var(--text);
 }
 #skill-panel .actions {
   display: flex;

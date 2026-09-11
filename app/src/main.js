@@ -3,7 +3,8 @@ import { createGarden } from "./world/garden.js";
 import { createStation, animateStation } from "./world/stations.js";
 import { ringLayout } from "./world/layout.js";
 import { Resident, residentAccentColor } from "./residents/resident.js";
-import { stationThemeFor } from "./residents/stationThemes.js";
+import { BehaviorState } from "./residents/behavior.js";
+import { stationThemeFor, gardenPlantFor } from "./residents/stationThemes.js";
 import { renderPanel, clearPanel } from "./ui/panel.js";
 import { renderList } from "./ui/list.js";
 import worldManifest from "./generated/residents.json";
@@ -49,6 +50,18 @@ clearPanel(panelContainer);
 let selectedId = null;
 let lastPanelState = null;
 
+function displayStateFor(resident, plant) {
+  if (resident.currentState === BehaviorState.WORK && plant) {
+    return `Tending its ${plant.commonName}`;
+  }
+  return resident.stateLabel;
+}
+
+function updatePanel(resident) {
+  const plant = gardenPlantFor(resident.data.id);
+  renderPanel(panelContainer, resident.data, displayStateFor(resident, plant), plant);
+}
+
 function selectResident(id) {
   const resident = residentsById.get(id);
   if (!resident) return;
@@ -56,7 +69,7 @@ function selectResident(id) {
   resident.setSelected(true);
   selectedId = id;
   lastPanelState = resident.stateLabel;
-  renderPanel(panelContainer, resident.data, resident.stateLabel);
+  updatePanel(resident);
   listController.setActive(id);
   engine.renderOnce();
 }
@@ -70,7 +83,7 @@ engine.onUpdate((_delta, elapsed) => {
     resident.update(elapsed);
     if (resident.data.id === selectedId && resident.stateLabel !== lastPanelState) {
       lastPanelState = resident.stateLabel;
-      renderPanel(panelContainer, resident.data, resident.stateLabel);
+      updatePanel(resident);
       listController.setActive(selectedId);
     }
   }

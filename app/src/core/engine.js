@@ -16,12 +16,11 @@ export class Engine {
     this.onSelect = null;
     this.reducedMotion = prefersReducedMotion();
 
-    // Moody dusk-on-water palette: cool teal fog/ambient with a warm rim
-    // light, and a reflective floor (see world/garden.js) — not the flat
-    // green-lawn look Phase 1 shipped with.
+    // A garden palette: layered greens with a warm dappled-sunlight key
+    // light, and a reflective, moss-tinted pond floor (see world/garden.js).
     this.scene = new THREE.Scene();
-    this.scene.background = new THREE.Color(0x0b2323);
-    this.scene.fog = new THREE.Fog(0x0b2323, 16, 40);
+    this.scene.background = new THREE.Color(0x101c11);
+    this.scene.fog = new THREE.Fog(0x101c11, 16, 40);
 
     this.camera = new THREE.PerspectiveCamera(
       38,
@@ -61,14 +60,14 @@ export class Engine {
   }
 
   _addLights() {
-    // Cool teal sky / dark teal-stone ground ambient...
-    const hemi = new THREE.HemisphereLight(0x6fd3c7, 0x0a1f1f, 0.75);
+    // Fresh spring-green sky / deep forest-floor ground ambient...
+    const hemi = new THREE.HemisphereLight(0xb7e08a, 0x14200f, 0.8);
     this.scene.add(hemi);
 
-    // ...against one warm, low, slightly golden rim light. The warm/cool
-    // split is what gives a matte character a lit edge against a teal scene
+    // ...against one warm, dappled-sunlight key light. The warm/cool split
+    // is what gives a matte character a lit edge against a green scene
     // instead of looking flat.
-    const sun = new THREE.DirectionalLight(0xffcf8f, 1.35);
+    const sun = new THREE.DirectionalLight(0xfff0c2, 1.3);
     sun.position.set(7, 6, -5);
     sun.castShadow = true;
     sun.shadow.mapSize.set(1024, 1024);
@@ -79,8 +78,8 @@ export class Engine {
     this.scene.add(sun);
 
     // A faint cool fill from the front-camera side so the shadowed side of
-    // residents still reads as teal, not pure black.
-    const fill = new THREE.DirectionalLight(0x2c5f5f, 0.4);
+    // residents still reads as green-shaded, not pure black.
+    const fill = new THREE.DirectionalLight(0x2f4a2a, 0.4);
     fill.position.set(-6, 3, 8);
     this.scene.add(fill);
   }

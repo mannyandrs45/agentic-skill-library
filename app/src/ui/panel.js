@@ -10,7 +10,7 @@ function row(dl, label, value) {
   dl.append(dt, dd);
 }
 
-export function renderPanel(container, resident, stateLabel) {
+export function renderPanel(container, resident, stateLabel, plant) {
   container.replaceChildren();
 
   const heading = document.createElement("h2");
@@ -22,6 +22,22 @@ export function renderPanel(container, resident, stateLabel) {
     state.className = "state-line";
     state.textContent = `Currently: ${stateLabel}`;
     container.append(state);
+  }
+
+  if (plant) {
+    const tending = document.createElement("p");
+    tending.className = "plant-line";
+    const label = document.createElement("strong");
+    label.textContent = `Tends the ${plant.commonName}`;
+    const species = document.createElement("em");
+    species.textContent = ` (${plant.scientificName}, Florida native)`;
+    tending.append(label, species);
+    if (plant.note) {
+      const note = document.createElement("span");
+      note.textContent = ` — ${plant.note}`;
+      tending.append(note);
+    }
+    container.append(tending);
   }
 
   const description = document.createElement("p");
