@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "cases": [
+    {
+      "skill": "brand-extraction-handoff",
+      "positive": ["Extract this site's visual system into reusable tokens.", "Reverse-engineer this reference into design guidance, not a build."],
+      "negative": "Write a brand positioning strategy without a website reference.",
+      "expectedOutput": "DESIGN.md, tokens.css and HANDOFF.md with traceable evidence.",
+      "mustPreserve": ["Distinguish measured from inferred values.", "Keep distinct page families separate.", "Report inaccessible states."],
+      "mustStopBefore": "Copying proprietary assets or building and deploying a site."
+    },
+    {
+      "skill": "reference-faithful-interface-iteration",
+      "positive": ["Match this existing card to the supplied screenshot; leave the rest alone.", "Revise this interface against the named reference and check the actual render."],
+      "negative": "Brainstorm a new visual direction without an existing artifact or reference.",
+      "expectedOutput": "Scoped visual correction with target-render evidence and preserved interactions.",
+      "mustPreserve": ["Freeze reference and invariants.", "Keep unrequested layout and content.", "Inspect desktop and mobile target renders."],
+      "mustStopBefore": "Unapproved production publication or unrelated redesign."
+    },
+    {
+      "skill": "implementation-handoff-builder",
+      "positive": ["Turn our settled design and repository constraints into a coding-agent handoff.", "Write a self-contained build instruction set and companion prompt."],
+      "negative": "Implement the agreed code change directly in this repository.",
+      "expectedOutput": "Self-contained Markdown implementation contract and companion prompt.",
+      "mustPreserve": ["Separate verified facts from assumptions.", "Carry constraints and acceptance checks.", "Resolve references instead of relying on prior conversation."],
+      "mustStopBefore": "Implementing or deploying when only a handoff was requested."
+    },
+    {
+      "skill": "stateful-system-update-guard",
+      "positive": ["Refresh this deployed app's data without losing its stored records.", "Update this live service while keeping its identity, configuration and sources."],
+      "negative": "Change only the color of this static mockup.",
+      "expectedOutput": "Preservation map, scoped update evidence and verified runtime/source behavior.",
+      "mustPreserve": ["Record unknown configuration as unknown.", "Do not expose secret values.", "Verify state and real runtime paths, not just build success."],
+      "mustStopBefore": "Production push, empty retrigger commit or live rollback without explicit authorization."
+    },
+    {
+      "skill": "event-anchored-trip-planner",
+      "positive": ["Plan a group weekend around our fixed Saturday wedding.", "Compare feasible bases and returns for this ticketed festival trip."],
+      "negative": "Find a good restaurant for dinner tonight, without a trip plan.",
+      "expectedOutput": "Event-locked calendar, viable transport/base options and normalized group costs.",
+      "mustPreserve": ["Use the actual event location and time.", "Account for every night and difficult return.", "Keep room, currency and per-person cost bases explicit."],
+      "mustStopBefore": "Booking or purchasing transport, lodging or tickets."
+    },
+    {
+      "skill": "hotel-selector",
+      "positive": ["Compare hotels for these dates, two rooms and our budget.", "Pick a lodging shortlist weighted to our neighborhood and comfort preferences."],
+      "negative": "Plan an outdoor hiking route without accommodation recommendations.",
+      "expectedOutput": "Preference-weighted hotel shortlist, comparison report and schema-compatible JSON.",
+      "mustPreserve": ["Read scoring and output references.", "Check date-specific primary-page rates.", "Disclose missing evidence and score normalization."],
+      "mustStopBefore": "Booking a room or presenting illustrative prices as current."
+    },
+    {
+      "skill": "restaurant-selector",
+      "positive": ["Rank good affordable restaurants near our hotel.", "Make a dining shortlist using our budget and dietary constraints."],
+      "negative": "Find a concert or DJ event for Saturday night.",
+      "expectedOutput": "Sourced dining shortlist with value/fit scoring and structured output.",
+      "mustPreserve": ["Use relevant editorial and regional evidence.", "Apply user budget and dietary filters.", "Separate any priority boost from a capped displayed percentage."],
+      "mustStopBefore": "Making a reservation or inventing unavailable ratings."
+    },
+    {
+      "skill": "bar-selector",
+      "positive": ["Where should we drink near the hotel? Rank cocktail and wine bars.", "Build a bar crawl balancing prestige, value and practical access."],
+      "negative": "Find ticketed dance parties and DJ sets on a particular date.",
+      "expectedOutput": "Scored bar shortlist with source evidence and structured output.",
+      "mustPreserve": ["Balance prestige with fit and value.", "Keep bars distinct from ticketed nightlife.", "Verify practical details before relying on them."],
+      "mustStopBefore": "Booking a bar or fabricating current hours or availability."
+    },
+    {
+      "skill": "nightlife-selector",
+      "positive": ["Find house DJ sets for our actual trip dates.", "Curate Saturday parties and live concerts, not just evergreen club names."],
+      "negative": "Rank quiet wine bars without any event or date-specific requirement.",
+      "expectedOutput": "Date-specific event picks and JSON separating confirmed events from venue discovery.",
+      "mustPreserve": ["Use event-led sources.", "Check current event and ticket pages.", "Keep unconfirmed venues separate from dated listings."],
+      "mustStopBefore": "Buying tickets or treating sold-out or undated listings as available events."
+    }
+  ]
+}

@@ -23,6 +23,10 @@ A proposed skill should satisfy most of these criteria:
 4. Add an evaluation note or fixture that exercises both a positive and negative trigger.
 5. Run `npm run catalog` and `npm run validate`.
 
+For a source export, preserve the original manifest and all supporting files. Record its hashes and snapshot date, add trigger/non-trigger fixtures, and document harness adapters rather than silently rewriting the source. Run `npm test` and consult [evaluation scope](docs/EVALUATION.md); structural checks are not end-to-end behavior benchmarks.
+
+For the reviewed November batch, `node scripts/snapshot-personal.mjs` regenerates integrity metadata. Run it only after reviewing source changes and their publication safety, not as an automatic response to a failing integrity test. A future import may intentionally fail these tests until its changed snapshots have been reviewed.
+
 Recommended frontmatter:
 
 ```yaml

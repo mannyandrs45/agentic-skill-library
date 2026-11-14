@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-08-31T01:41:10.512Z",
-  "count": 84,
+  "generatedAt": "2026-11-12T19:47:02.114Z",
+  "count": 93,
   "skills": [
     {
       "name": "autoplan",
@@ -10,6 +10,14 @@
       "collection": "gstack",
       "path": "skills/community/gstack/autoplan/SKILL.md",
       "version": "1.0.0"
+    },
+    {
+      "name": "brand-extraction-handoff",
+      "description": "Extract website design systems into evidence-backed DESIGN.md, framework-neutral CSS tokens, and an implementation handoff. Use for brand extraction, reverse-engineering a site's visual system, or turning reference URLs into design guidance. Not for building websites, copying proprietary assets, or writing brand strategy.",
+      "domain": "design",
+      "collection": "perplexity-user",
+      "path": "skills/personal/brand-extraction-handoff/SKILL.md",
+      "version": null
     },
     {
       "name": "design-html",
@@ -100,6 +108,14 @@
       "version": "2.0.0"
     },
     {
+      "name": "reference-faithful-interface-iteration",
+      "description": "Build and revise concrete reference-driven interfaces, diagrams, slides, and graphics through scoped visual changes and target-render QA. Load when the user supplies or iterates on an existing visual, screenshot, video, or named design reference; do not load for generic design ideation without a concrete artifact or reference.",
+      "domain": "design",
+      "collection": "perplexity-user",
+      "path": "skills/personal/reference-faithful-interface-iteration/SKILL.md",
+      "version": null
+    },
+    {
       "name": "tufte-charts",
       "description": "Design charts and tables using Edward Tufte's data-visualization methodology from The Visual Display of Quantitative Information. Use when the user asks for Tufte-style charts, high data-ink visuals, small multiples, minimal/clean charts, executive-grade graphics, or says to apply Tufte principles, maximize data-ink, remove chartjunk, or design for comparison and analytical clarity. Tool-agnostic — applies to matplotlib, plotly, D3, ggplot, Excel, or any rendering tool.",
       "domain": "design",
@@ -122,6 +138,14 @@
       "collection": "gstack",
       "path": "skills/community/gstack/devex-review/SKILL.md",
       "version": "1.0.0"
+    },
+    {
+      "name": "implementation-handoff-builder",
+      "description": "Create self-contained Markdown implementation handoffs and companion prompts from project discussions, repository context, and fixed constraints. Load when the user asks for a build instruction set, architecture handoff, or prompt for a coding agent; do not load when the user wants the code changed directly.",
+      "domain": "engineering",
+      "collection": "perplexity-user",
+      "path": "skills/personal/implementation-handoff-builder/SKILL.md",
+      "version": null
     },
     {
       "name": "pair-agent",
@@ -524,6 +548,14 @@
       "version": "1.0.0"
     },
     {
+      "name": "stateful-system-update-guard",
+      "description": "Preserves configuration, data sources, deployment identity, runtime records, and live behavior while updating deployed apps or automations. Use for an existing system's code change, static-data refresh, or redeploy; do not use for greenfield builds, purely visual edits, or implementation handoffs with no live target.",
+      "domain": "quality-and-release",
+      "collection": "perplexity-user",
+      "path": "skills/personal/stateful-system-update-guard/SKILL.md",
+      "version": null
+    },
+    {
       "name": "unfreeze",
       "description": "Clear the freeze boundary set by /freeze, allowing edits to all directories again. (gstack)",
       "domain": "quality-and-release",
@@ -626,6 +658,46 @@
       "collection": "gstack",
       "path": "skills/community/gstack/spec/SKILL.md",
       "version": "0.1.0"
+    },
+    {
+      "name": "bar-selector",
+      "description": "Finds and ranks bars for a destination using top-bar prestige lists, Eater, Infatuation, New York Times, and user intelligence. Balances prestige with usability and value. Produces a scored shortlist with structured output (JSON/CSV) for downstream travel skills. Use when the user wants cocktail bars, wine bars, dive bars, lounges, hotel bars, rooftop bars, a bar shortlist, bar crawl planning, or \"where should I drink\".",
+      "domain": "travel",
+      "collection": "perplexity-user",
+      "path": "skills/personal/bar-selector/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "event-anchored-trip-planner",
+      "description": "Plan trips around fixed weddings, games, festivals, or ticketed nights by locking dates, origins, conflicts, timed transport, lodging, and normalized group costs. Load for event-anchored weekends or multi-stop group holidays; do not load for outdoor route planning or standalone hotel, restaurant, or nightlife recommendations.",
+      "domain": "travel",
+      "collection": "perplexity-user",
+      "path": "skills/personal/event-anchored-trip-planner/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "hotel-selector",
+      "description": "Hotel selection skill for the Travel Agency system. Uses a personalization-first, Multi-Criteria Decision Making (MCDM) framework to research, filter, score, and rank hotels in any target city. Produces a cost-benefit ranked shortlist with structured output (JSON/CSV) for downstream travel skills. Use when the user asks to \"find hotels\", \"pick a hotel\", \"hotel search\", \"where should we stay\", \"hotel recommendations\", \"compare hotels\", or any hotel selection task.",
+      "domain": "travel",
+      "collection": "perplexity-user",
+      "path": "skills/personal/hotel-selector/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "nightlife-selector",
+      "description": "Finds nightlife options for a destination using Resident Advisor, Dice, Time Out, Songkick, and Bandsintown. Event and discovery led rather than strict price-quality scoring. Produces curated picks with structured output (JSON/CSV) for downstream travel skills. Use when the user wants parties, concerts, DJ sets, club nights, live events, nightlife plans, \"what to do at night\", or same-night/trip-night planning.",
+      "domain": "travel",
+      "collection": "perplexity-user",
+      "path": "skills/personal/nightlife-selector/SKILL.md",
+      "version": null
+    },
+    {
+      "name": "restaurant-selector",
+      "description": "Finds and ranks restaurants for a destination using Infatuation, Eater, New York Times, Michelin, and region-specific sources, then applies price and quality filters plus user intelligence. Produces a scored shortlist with structured output (JSON/CSV) for downstream travel skills. Use when the user wants a restaurant shortlist, dining recommendations, \"where should I eat\", \"best casual spots\", \"good affordable restaurants\", or help deciding where to eat on a trip.",
+      "domain": "travel",
+      "collection": "perplexity-user",
+      "path": "skills/personal/restaurant-selector/SKILL.md",
+      "version": null
     },
     {
       "name": "design-review",

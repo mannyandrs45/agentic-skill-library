@@ -5,12 +5,17 @@
   "description": "A curated library of field-tested agent skills and workflows.",
   "type": "module",
   "scripts": {
+    "test": "node --test tests/*.test.mjs",
     "catalog": "node scripts/build-catalog.mjs",
+    "visuals": "node scripts/render-visuals.mjs",
     "validate": "node scripts/validate.mjs",
     "sync:upstreams": "node scripts/sync-upstreams.mjs",
     "import:perplexity": "node scripts/import-perplexity-user.mjs"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5"
   }
 }
