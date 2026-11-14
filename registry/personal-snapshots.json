@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-11-12",
+  "policy": "Verbatim user-owned source export; host adapters are documented separately.",
+  "skills": [
+    {
+      "name": "brand-extraction-handoff",
+      "source": "Perplexity Computer user:brand-extraction-handoff",
+      "path": "skills/personal/brand-extraction-handoff",
+      "sha256": {
+        "SKILL.md": "e3a6a56209c9cb230ef2ac03db9a3394da7096003389f0cffeefd75ca967e673"
+      }
+    },
+    {
+      "name": "reference-faithful-interface-iteration",
+      "source": "Perplexity Computer user:reference-faithful-interface-iteration",
+      "path": "skills/personal/reference-faithful-interface-iteration",
+      "sha256": {
+        "SKILL.md": "e8cfcce4de88ac3914647d8e368c700e2103d16c4770f4fe0e99f738cdc5db76"
+      }
+    },
+    {
+      "name": "implementation-handoff-builder",
+      "source": "Perplexity Computer user:implementation-handoff-builder",
+      "path": "skills/personal/implementation-handoff-builder",
+      "sha256": {
+        "SKILL.md": "5613cb86e317826656c829737f0adf2f19947d389e66595e2a1984f8b964da70"
+      }
+    },
+    {
+      "name": "stateful-system-update-guard",
+      "source": "Perplexity Computer user:stateful-system-update-guard",
+      "path": "skills/personal/stateful-system-update-guard",
+      "sha256": {
+        "SKILL.md": "7ec7475121f94414d5e0dc5527c94b3200330fe1395f8c70da4eee03ad3649d9"
+      }
+    },
+    {
+      "name": "event-anchored-trip-planner",
+      "source": "Perplexity Computer user:event-anchored-trip-planner",
+      "path": "skills/personal/event-anchored-trip-planner",
+      "sha256": {
+        "SKILL.md": "be5d596ad5ff1d429ec73af03812911c6577f7933e19cb43ecd6ff2c6e0f153b"
+      }
+    },
+    {
+      "name": "hotel-selector",
+      "source": "Perplexity Computer user:hotel-selector",
+      "path": "skills/personal/hotel-selector",
+      "sha256": {
+        "references/output-schema.md": "0f32b1499fb608629e5eef291260f75bf65cafaf3b2150071234a04b160897ab",
+        "references/scoring-rubric.md": "253eacbb2d0f4116f12e7b3c55167565aceb1f3dd4396a470a13216152ef28c7",
+        "SKILL.md": "fe16fc751c3afa01897738a1c061bb76e9803a6b8fdf5de4a7307a78c3bc7c90"
+      }
+    },
+    {
+      "name": "restaurant-selector",
+      "source": "Perplexity Computer user:restaurant-selector",
+      "path": "skills/personal/restaurant-selector",
+      "sha256": {
+        "references/scoring.md": "f1bd15b37a84b700d5dd4993ad4e3f3f1b9ff82dba9ad113e62a51a61fd794f4",
+        "SKILL.md": "e1b8b2d70cef2d1510cb1447fb0203a8072fb04ef53de0a06d105969392c3ae4"
+      }
+    },
+    {
+      "name": "bar-selector",
+      "source": "Perplexity Computer user:bar-selector",
+      "path": "skills/personal/bar-selector",
+      "sha256": {
+        "references/scoring.md": "27b97932a878e5a2a4cee02db834de664e9c26981be40d899446a30f775c1263",
+        "SKILL.md": "7ff14f8746bfdd27ebcbf9e00f152f326f09b20f8ea0774b7638ffeee3f348c6"
+      }
+    },
+    {
+      "name": "nightlife-selector",
+      "source": "Perplexity Computer user:nightlife-selector",
+      "path": "skills/personal/nightlife-selector",
+      "sha256": {
+        "references/sources.md": "ab063d24595b7c814f73d6b4fa65c3eb055d272be6d1d2d078310a48a521e754",
+        "SKILL.md": "20d6b2fc139927ede73531855e8066ab718742d55125195376ea68d4b7de804d"
+      }
+    }
+  ]
+}

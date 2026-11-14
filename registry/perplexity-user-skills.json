@@ -2,11 +2,22 @@
   "schemaVersion": 1,
   "scope": "user",
   "platform": "Perplexity Computer",
-  "snapshotDate": "2026-08-30",
+  "snapshotDate": "2026-11-12",
+  "license": "MIT",
+  "snapshotNotes": "The original four exports remain unchanged. The November batch adds nine user-owned design, engineering and travel source snapshots with supporting references; it does not export built-ins or private business material.",
   "included": [
+    "bar-selector",
+    "brand-extraction-handoff",
+    "event-anchored-trip-planner",
     "grill-me",
+    "hotel-selector",
+    "implementation-handoff-builder",
+    "nightlife-selector",
     "no-ai-slop",
+    "reference-faithful-interface-iteration",
+    "restaurant-selector",
     "skillopt",
+    "stateful-system-update-guard",
     "tufte-charts"
   ],
   "referenceOnly": [

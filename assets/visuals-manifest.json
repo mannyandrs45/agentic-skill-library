@@ -1,0 +1,22 @@
+{
+  "catalogCount": 93,
+  "personalCount": 13,
+  "collectionCounts": {
+    "gstack": 59,
+    "hyperframes": 20,
+    "no-ai-slop": 1,
+    "perplexity-user": 13
+  },
+  "domainCount": 10,
+  "workflowCount": 2,
+  "palette": {
+    "background": "#1b1b1b",
+    "surface": "#262626",
+    "foreground": "#ffffff",
+    "muted": "#9e9e9e",
+    "border": "#3b3b3b"
+  },
+  "font": "Figtree",
+  "reference": "manny-portfolio@38ddf7b",
+  "artwork": "Same monochrome voxel office used on the portfolio"
+}

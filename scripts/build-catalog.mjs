@@ -1,5 +1,6 @@
 import { readdir, readFile, mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
+import { frontmatter } from "./lib/frontmatter.mjs";
 
 const root = process.cwd();
 const ignored = ["/test/fixtures/", "/node_modules/", "/.git/"];
@@ -17,32 +18,6 @@ async function walk(directory) {
   return files;
 }
 
-function frontmatter(source) {
-  if (!source.startsWith("---\n")) return {};
-  const end = source.indexOf("\n---", 4);
-  if (end === -1) return {};
-  const block = source.slice(4, end);
-  const result = {};
-  for (const line of block.split("\n")) {
-    const match = line.match(/^([a-zA-Z0-9_-]+):\s*(.*)$/);
-    if (!match) continue;
-    const [, key, raw] = match;
-    if (!raw || raw === ">" || raw === "|") continue;
-    result[key] = raw.replace(/^["']|["']$/g, "").trim();
-  }
-  const descriptionMatch = block.match(
-    /^description:\s*[>|]\s*\n((?:[ \t]+.*\n?)*)/m,
-  );
-  if (descriptionMatch) {
-    result.description = descriptionMatch[1]
-      .split("\n")
-      .map((line) => line.trim())
-      .filter(Boolean)
-      .join(" ");
-  }
-  return result;
-}
-
 function collectionFor(relativePath) {
   const community = relativePath.match(/^skills\/community\/([^/]+)/);
   if (community) return community[1];
@@ -51,6 +26,22 @@ function collectionFor(relativePath) {
 }
 
 function domainFor(name, relativePath, description) {
+  // Explicit ownership prevents words such as "framework" and "betting" in a
+  // non-media/non-sports description from misfiling the new personal exports.
+  const personalDomains = {
+    "brand-extraction-handoff": "design",
+    "reference-faithful-interface-iteration": "design",
+    "implementation-handoff-builder": "engineering",
+    "stateful-system-update-guard": "quality-and-release",
+    "event-anchored-trip-planner": "travel",
+    "hotel-selector": "travel",
+    "restaurant-selector": "travel",
+    "bar-selector": "travel",
+    "nightlife-selector": "travel",
+  };
+  if (relativePath.startsWith("skills/personal/") && personalDomains[name]) {
+    return personalDomains[name];
+  }
   const text = `${name} ${relativePath} ${description}`.toLowerCase();
   const rules = [
     ["media", /video|motion|frame|caption|audio|music|slideshow|figma|media/],
